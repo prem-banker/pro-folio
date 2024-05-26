@@ -3,7 +3,7 @@ import { Fira_Code, Inter } from "next/font/google";
 
 import "./globals.css";
 import Header from "./components/header/header";
-import Footer from "./components/footer";
+import Footer from "./components/footer/footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 const firacode = Fira_Code({ subsets: ["latin"] })

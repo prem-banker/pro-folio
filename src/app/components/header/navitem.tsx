@@ -12,7 +12,8 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({ text, href, paddingX = 2, borderLeft = false, borderRight = true }) => {
-    const paddingClass = `px-[${paddingX}px]`;
+    // TODO: FIX THIS HARDCODE
+    const paddingClass = `px-[18px]`;
 
     const horizontalBorder = `${borderLeft ? 'border-l border-line ' : ' '} ${borderRight ? 'border-r border-line ' : ' '}  `
 

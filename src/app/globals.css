@@ -38,7 +38,7 @@ body {
 }
 
 /* globals.css */
-.flex-center-item {
+.flex-center-items {
   @apply flex items-center justify-center h-full;
 }
 
@@ -46,4 +46,5 @@ body {
 .flex-vertical-center {
   @apply flex items-center h-full;
 }
+
 
