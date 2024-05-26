@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* 24 > 96px > 6rem */
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,3 +36,14 @@ body {
     text-wrap: balance;
   }
 }
+
+/* globals.css */
+.flex-center-item {
+  @apply flex items-center justify-center h-full;
+}
+
+
+.flex-vertical-center {
+  @apply flex items-center h-full;
+}
+

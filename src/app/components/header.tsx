@@ -4,42 +4,49 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-primaryDarkNavyBlue text-secondaryWhite p-4 border-b border-line">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex space-x-4">
-          <span className="font-sans text-xl font-bold border border-secondaryWhite p-2">My Logo</span>
+    <header className="bg-primaryDarkNavyBlue text-secondaryWhite h-16 flex items-center justify-between border-b border-line rounded-lg">
+      <div className="container mx-auto  h-full ">
+        <div className="flex space-x-4  h-full items-center">
+          <div className="w-[311px] pl-[22px] border-r border-line h-full flex-vertical-center">
+            <Link href="/" passHref className="  hover:bg-secondaryLightBlue">
+              prem-banker
+            </Link>
+          </div>
+
           <Link
             href="/"
             passHref
-            className="font-sans text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
-            
-              Home
-            
+            className="text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
+
+            Home
+
           </Link>
           <Link
             href="/about"
             passHref
-            className="font-sans text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
-            
-              About Me
-            
+            className="text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
+
+            About Me
+
           </Link>
           <Link
             href="/projects"
             passHref
-            className="font-sans text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
-            
-              Projects
-            
+            className="text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
+
+            Projects
+
           </Link>
         </div>
+      </div>
+      <div>
         <Link
           href="/contact"
           passHref
-          className="font-sans text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
-          
-            Contact Me
-          
+          className="text-labels border border-secondaryWhite p-2 hover:bg-secondaryLightBlue">
+
+          Contact Me
+
         </Link>
       </div>
     </header>

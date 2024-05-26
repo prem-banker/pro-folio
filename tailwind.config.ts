@@ -46,6 +46,9 @@ const config: Config = {
       borderRadius: {
         '0.5em': '0.5em',
       },
+      spacing: {
+        '69px': '69px',
+      },
       buttonVariants: {
         primary: {
           backgroundColor: '#FEA55F',

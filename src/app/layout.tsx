@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
 
 
-      <body className={firacode.className}>
+<body className={`bg-010C15 m-69px rounded-lg border border-line ${firacode.className}`}>
         <Header />
         {children}
         <Footer />
