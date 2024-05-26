@@ -5,7 +5,7 @@ import NavItem from './navitem';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-primaryLightNavyBlue text-secondaryLightBlue h-16 flex items-center justify-between border-b border-line rounded-lg">
+    <header className="bg-primaryLightNavyBlue text-secondaryLightBlue h-[56px] flex items-center justify-between border-b border-line rounded-lg">
 
       <div className="flex-vertical-center">
         <div className="w-[311px] pl-[22px] border-r border-line h-full flex-vertical-center">
