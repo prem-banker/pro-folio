@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // html bckground
+        baseColor: '#010C15',
         // Primary colors
         primaryDarkNavyBlue: '#01080E',
         primaryLightNavyBlue: '#011627',

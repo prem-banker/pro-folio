@@ -19,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-baseColor">
 
 
-<body className={`bg-010C15 m-69px rounded-lg border border-line ${firacode.className}`}>
+<body className={`bg-primaryLightNavyBlue m-69px rounded-lg border border-line ${firacode.className}`}>
         <Header />
         {children}
         <Footer />
