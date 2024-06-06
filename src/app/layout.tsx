@@ -24,13 +24,13 @@ export default function RootLayout({
 
       <body className={`bg-primaryLightNavyBlue m-69px rounded-lg border border-line ${firacode.className}`}>
 
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col ">
 
           <div className="flex-none"><Header /></div>
 
     
-          {/* <div className="flex-grow bg-gray-100">{children}</div> */}
-          {children}
+          <div className="flex flex-col site-content">{children}</div>
+          {/* {children} */}
   
           <div className="flex-none"><Footer /></div>
 

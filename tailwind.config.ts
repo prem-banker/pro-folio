@@ -48,6 +48,13 @@ const config: Config = {
       borderRadius: {
         '0.5em': '0.5em',
       },
+      lineHeight: {
+        extra: '3',
+        shrink: '1.2'
+      },
+      minHeight: {
+        inherit: 'inherit',
+      },
       spacing: {
         '69px': '69px',
       },
