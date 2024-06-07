@@ -3,8 +3,8 @@ import './home.css'
 
 export default function Home() {
   return (
-    <div className="min-h-inherit flex-center-items">
-      <div className="container mx-auto flex items-center justify-center w-[1080px]">
+    <div className="min-h-inherit flex-center-items home-bg">
+      <div className="mx-auto flex items-center justify-center w-[1080px] ">
 
         <div className="w-1/2 p-8 ">
           <p className="text-body">
@@ -22,7 +22,7 @@ export default function Home() {
 
         <div
           className="w-1/2 min-h-[600px] bg-contain bg-no-repeat bg-center relative overflow-hidden"
-          style={{ backgroundImage: "url('/home/bg-gradient.png')" }}
+          // style={{ backgroundImage: "url('/home/bg-gradient.png')" }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-[510px] h-[475px]  rounded border border-stroke">
