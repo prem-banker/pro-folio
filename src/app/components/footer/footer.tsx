@@ -30,17 +30,13 @@ const Footer: React.FC = () => {
 
 
       </div>
-      <a href="https://github.com" className="hover:text-secondaryFluorescentGreen">
-        <div className="flex items-center h-full border-l border-line px-2">
-          <span>@prem-banker</span>
-          <div className="p-2 mr-4">
-            <a href="https://github.com/yourusername">
-              <FaGithub  />
-            </a>
-          </div>
+      <div className="border-r border-line flex-center-items">
+        <a href="https://github.com/prem-banker" className='px-[14px] flex-center-items'>
+          <span className='mr-2'>@prem-banker</span> <FaGithub />
+          
 
-        </div>
-      </a>
+        </a>
+      </div>
 
 
     </footer>
