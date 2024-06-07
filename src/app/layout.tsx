@@ -6,7 +6,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 
 // const inter = Inter({ subsets: ["latin"] });
-const firacode = Fira_Code({ subsets: ["latin"] })
+const firacode = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,27 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-baseColor">
+      <body
+        className={`bg-primaryLightNavyBlue m-69px rounded-lg border border-line ${firacode.className}`}
+      >
+        <div>
+          <Header />
 
-
-      <body className={`bg-primaryLightNavyBlue m-69px rounded-lg border border-line ${firacode.className}`}>
-
-        <div className="flex flex-col ">
-
-          <div className="flex-none"><Header /></div>
-
-    
-          <div className="flex flex-col site-content">{children}</div>
           {/* {children} */}
-  
-          <div className="flex-none"><Footer /></div>
+          <div className="site-content">{children}</div>
 
-
-
+          <Footer />
         </div>
-
       </body>
-
-
     </html>
   );
 }
