@@ -31,6 +31,8 @@ const config: Config = {
         // Gradients
         gradient1: '#4D5BCE',
         gradient2: '#43D9AD',
+        // border color,
+        stroke: '#0C1616'
       },
       fontFamily: {
         sans: ['Fira Code', 'sans-serif'],

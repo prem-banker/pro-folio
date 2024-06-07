@@ -1,0 +1,14 @@
+.gradient-background {
+    width: 510px;
+    height: 475px;
+    border-radius: 8px;
+    border: 1px solid #0C1616;
+    background: linear-gradient(to bottom,
+            rgba(23, 85, 83, 0.7) 0%,
+            /* 70% opacity */
+            rgba(67, 217, 173, 0.7) 13%,
+            /* 70% opacity */
+            rgba(23, 85, 83, 0.7) 100%
+            /* 70% opacity */
+        );
+}
