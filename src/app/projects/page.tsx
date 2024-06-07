@@ -6,6 +6,7 @@ import meta from "../../../public/data/meta.json";
 import TechIcon from "../components/techicon";
 import "../styles/projects.css";
 import { standardizeName } from "../utils/utils";
+import { RiCloseLine } from "react-icons/ri";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
@@ -20,6 +21,22 @@ export default function Page() {
     }
   };
 
+  const clearSelectedTechnologies = () => {
+    setActiveTechnologies([]); // Clear the selected technologies
+  };
+
+  const getTabName = () => {
+    if (activeTechnologies.length > 0) {
+      if (activeTechnologies.length === 1) {
+        return activeTechnologies[0];
+      } else {
+        return activeTechnologies[0] + ` + ${activeTechnologies.length - 1}`;
+      }
+    } else {
+      return "Tech";
+    }
+  };
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
@@ -29,6 +46,19 @@ export default function Page() {
             <FaCaretDown className="text-white mr-2" />
             <span className="text-white">projects</span>
           </div>
+
+          {activeTechnologies.length > 0 && (
+            <div className="text-secondaryLightBlue w-[200px] px-4 border-r border-line  flex h-full items-center justify-between">
+              <span>{getTabName()}</span>
+
+              <button
+                className="bg-transparent border-none outline-none cursor-pointer"
+                onClick={clearSelectedTechnologies}
+              >
+                <RiCloseLine className="text-xl" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -60,14 +90,7 @@ export default function Page() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex-col flex-grow h-full"></div>
-
-        {/* <div className="flex-vertical-center">
-          <div className="w-[311px] pl-[22px] border-r border-line  flex-vertical-center">
-            <FaCaretDown className="text-white  mr-2" />
-            <span className="text-white">projects</span>
-          </div>
-        </div> */}
+        <div className="flex-col flex-grow h-full">{/* Tab bar */}</div>
       </div>
     </div>
   );
