@@ -1,3 +1,12 @@
 {
-  "technologies": ["java", "javascript", "python"]
+  "technologies": [
+    "java",
+    "javascript",
+    "python",
+    "C",
+    "typescript",
+    "go",
+    "flutter",
+    "docker"
+  ]
 }

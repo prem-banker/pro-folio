@@ -1,0 +1,11 @@
+input[type="checkbox"] {
+  outline: 1px solid #607b96;
+  background-color: transparent !important;
+  accent-color: transparent;
+}
+
+input:checked {
+  outline: 1px solid #607b96;
+  background: transparent;
+  accent-color: #607b96;
+}
