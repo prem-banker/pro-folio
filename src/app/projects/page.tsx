@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
-import meta from "../../../public/data/meta.json";
+import metadata from "../../../public/data/meta.json";
+import userdata from "../../../public/data/user.json";
 import TechIcon from "../components/techicon";
 import "../styles/projects.css";
 import { standardizeName } from "../utils/utils";
 import { RiCloseLine } from "react-icons/ri";
+import Link from "next/link";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
-  const { technologies } = meta;
+  const { technologies } = metadata;
+  const { projects } = userdata;
   const [activeTechnologies, setActiveTechnologies] = useState(technologies);
 
   const toggleCheckbox = (tech: string) => {
@@ -90,7 +93,26 @@ export default function Page() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex-col flex-grow h-full">{/* Tab bar */}</div>
+        <div className="flex-col flex-grow h-full">
+          <div className="flex-col flex-grow h-full">
+            {projects.map((project, index) => (
+              <div key={index} className="flex flex-col mb-4">
+                <h2 className="text-lg font-semibold">{project.name}</h2>
+                <div className="border border-gray-300 p-4 rounded-md shadow-md">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-40 object-cover rounded-md mb-4"
+                  />
+                  <p className="text-sm mb-4">{project.description}</p>
+                  <Link href={project.url}>
+                    <a className="text-blue-500 hover:underline">Read more</a>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
