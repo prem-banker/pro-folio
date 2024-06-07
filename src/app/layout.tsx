@@ -27,7 +27,7 @@ export default function RootLayout({
           <Header />
 
           {/* {children} */}
-          <div className="site-content">{children}</div>
+          <div className="flex-col site-content">{children}</div>
 
           <Footer />
         </div>

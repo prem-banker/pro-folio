@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* 24 > 96px > 6rem */
-
-
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -42,22 +39,22 @@ body {
   @apply flex items-center justify-center h-full;
 }
 
-
 .flex-vertical-center {
   @apply flex items-center h-full;
 }
-
 
 .test-box {
   border: 1px solid red;
 }
 
-.site-content {
-  min-height: calc(100vh - 56px - 56px - 69px - 69px);
-  /* height: 1px; */
+.test-box-2 {
+  border: 1px solid green;
 }
 
-
+.site-content {
+  height: calc(100vh - 56px - 56px - 69px - 69px);
+  /* height: 1px; */
+}
 
 /* html {
   line-height: 1 !important;
