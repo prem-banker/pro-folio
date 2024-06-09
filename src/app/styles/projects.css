@@ -9,3 +9,18 @@ input:checked {
   background: transparent;
   accent-color: #607b96;
 }
+
+/* .projects-content {
+  overflow-y: auto;
+} */
+
+.maintain-size {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.card-content {
+  width: 0px;
+  overflow-y: auto;
+  /* overflow: hidden; */
+}

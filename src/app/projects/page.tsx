@@ -67,7 +67,7 @@ export default function Page() {
 
       {/* Sidebar + content */}
 
-      <div className="text-secondaryLightBlue flex flex-grow items-start">
+      <div className="text-secondaryLightBlue flex items-start h-full test-box-2 maintain-size">
         {/* Sidebar - Tech Select */}
         <div className="w-[311px] border-r border-line h-full">
           {technologies.map((tech, index) => (
@@ -93,7 +93,7 @@ export default function Page() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex h-full flex-wrap mt-16 mx-auto justify-center">
+        <div className="flex flex-grow h-full flex-wrap pt-16  justify-center test-box card-content">
           {projects.map((project, index) => (
             <div key={index} className="my-4 mx-4">
               <div className="text-body text-secondaryLightBlue w-[350px] truncate mb-2">
@@ -115,12 +115,6 @@ export default function Page() {
                 <button className="mx-4 mt-4 w-[150px] bg-buttonbackground py-2.5 px-3.5 rounded-md text-white">
                   view-project
                 </button>
-                {/* <Link
-                  href={project.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  Read more
-                </Link> */}
               </div>
             </div>
           ))}
