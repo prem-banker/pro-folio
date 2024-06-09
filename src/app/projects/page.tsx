@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
+import { RiCloseLine } from "react-icons/ri";
 import metadata from "../../../public/data/meta.json";
 import userdata from "../../../public/data/user.json";
 import TechIcon from "../components/techicon";
 import "../styles/projects.css";
-import { standardizeName } from "../utils/utils";
-import { RiCloseLine } from "react-icons/ri";
-import Link from "next/link";
 import Project from "../utils/interfaces";
+import { standardizeName } from "../utils/utils";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
