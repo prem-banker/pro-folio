@@ -4,7 +4,7 @@
       "name": "E-commerce Website",
       "description": "A fully functional e-commerce website built with React and Node.js",
       "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-      "techstack": ["React", "Node.js", "Express", "MongoDB"],
+      "techstack": ["React", "Node.js", "Express", "MongoDB", "Python"],
       "github": "https://github.com/username/ecommerce",
       "url": "https://example.com/ecommerce"
     },
@@ -12,7 +12,7 @@
       "name": "Blog App",
       "description": "A simple blog application with user authentication built using Django",
       "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-      "techstack": ["Django", "HTML", "CSS", "JavaScript"],
+      "techstack": ["Django", "HTML", "CSS", "JavaScript", "Docker"],
       "github": "https://github.com/username/blog-app",
       "url": "https://example.com/blog"
     },
@@ -20,7 +20,7 @@
       "name": "Social Media Platform",
       "description": "A social media platform built with React and Firebase",
       "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-      "techstack": ["React", "Firebase", "Material-UI"],
+      "techstack": ["React", "Firebase", "Material-UI", "Angular"],
       "github": "https://github.com/username/social-media",
       "url": "https://example.com/social-media"
     },
@@ -28,7 +28,7 @@
       "name": "Weather App",
       "description": "An app that provides real-time weather information using OpenWeatherMap API",
       "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-      "techstack": ["React", "OpenWeatherMap API", "Bootstrap"],
+      "techstack": ["React", "OpenWeatherMap API", "Bootstrap", "Go"],
       "github": "https://github.com/username/weather-app",
       "url": "https://example.com/weather"
     },
@@ -36,7 +36,7 @@
       "name": "Task Management System",
       "description": "A web application for managing tasks and projects",
       "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-      "techstack": ["Node.js", "Express", "MongoDB", "Bootstrap"],
+      "techstack": ["Node.js", "Express", "MongoDB", "Bootstrap", "Java"],
       "github": "https://github.com/username/task-management",
       "url": "https://example.com/task-management"
     },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import metadata from "../../../public/data/meta.json";
 import userdata from "../../../public/data/user.json";
@@ -9,12 +9,30 @@ import "../styles/projects.css";
 import { standardizeName } from "../utils/utils";
 import { RiCloseLine } from "react-icons/ri";
 import Link from "next/link";
+import Project from "../utils/interfaces";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
   const { technologies } = metadata;
   const { projects } = userdata;
   const [activeTechnologies, setActiveTechnologies] = useState(technologies);
+
+  const initTech: Project[] = [];
+  const [filteredProjects, setFilteredProjects] = useState(initTech);
+
+  useEffect(() => {
+    // Filter projects based on active technologies
+    const newFilteredProjects = projects.filter((project) => {
+      return project.techstack.some((tech) =>
+        activeTechnologies.includes(tech.toLowerCase())
+      );
+    });
+
+    console.log(newFilteredProjects);
+    console.log(projects);
+    // Update the state with the filtered projects
+    setFilteredProjects(newFilteredProjects);
+  }, [activeTechnologies, projects]); // Trigger effect when active technologies or projects change
 
   const toggleCheckbox = (tech: string) => {
     if (activeTechnologies.includes(tech)) {
@@ -25,7 +43,7 @@ export default function Page() {
   };
 
   const clearSelectedTechnologies = () => {
-    setActiveTechnologies([]); // Clear the selected technologies
+    setActiveTechnologies([]);
   };
 
   const getTabName = () => {
@@ -94,20 +112,20 @@ export default function Page() {
 
         {/* Content - Projects */}
         {/* w-0 coz it was expanding and causing its siblings to shrink */}
-        <div className="flex flex-grow w-0 h-full flex-wrap pt-8 justify-center maintain-size custom-scrollbar">
-          {projects.map((project, index) => (
-            <div key={index} className="my-4 mx-4">
-              <div className="text-body text-secondaryLightBlue w-[350px] truncate mb-2">
+        <div className="flex flex-grow w-0 h-full flex-wrap pt-8 maintain-size custom-scrollbar">
+          {filteredProjects.map((project, index) => (
+            <div key={index} className="my-4 mx-4 w-[30%]">
+              <div className="text-body text-secondaryLightBlue truncate mb-2">
                 <span className="text-semibold text-secondaryBrightPurple">
                   Project {index + 1} &nbsp;
                 </span>
                 // {project.name}
               </div>
-              <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col w-[350px] h-[320px]">
+              <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col h-[320px]">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-[350px] h-[150px] object-cover rounded-md mb-4"
+                  className="h-[150px] object-cover rounded-md mb-4"
                 />
                 <div className="text-body text-secondaryLightBlue mx-4 truncate-2">
                   {project.description}
