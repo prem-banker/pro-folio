@@ -14,13 +14,18 @@ input:checked {
   overflow-y: auto;
 } */
 
+/* was facing issue with flex child taking its sibligns space so made this class1 */
 .maintain-size {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.card-content {
-  width: 0px;
-  overflow-y: auto;
-  /* overflow: hidden; */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  border-left: 1px solid #1e2d3d;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #607b96;
+  border-radius: 5px;
 }

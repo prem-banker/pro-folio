@@ -67,7 +67,7 @@ export default function Page() {
 
       {/* Sidebar + content */}
 
-      <div className="text-secondaryLightBlue flex items-start h-full test-box-2 maintain-size">
+      <div className="text-secondaryLightBlue flex items-start h-full maintain-size">
         {/* Sidebar - Tech Select */}
         <div className="w-[311px] border-r border-line h-full">
           {technologies.map((tech, index) => (
@@ -93,7 +93,8 @@ export default function Page() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex flex-grow h-full flex-wrap pt-16  justify-center test-box card-content">
+        {/* w-0 coz it was expanding and causing its siblings to shrink */}
+        <div className="flex flex-grow w-0 h-full flex-wrap pt-8 justify-center maintain-size custom-scrollbar">
           {projects.map((project, index) => (
             <div key={index} className="my-4 mx-4">
               <div className="text-body text-secondaryLightBlue w-[350px] truncate mb-2">
