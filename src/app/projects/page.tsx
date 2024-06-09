@@ -93,25 +93,37 @@ export default function Page() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex-col flex-grow h-full">
-          <div className="flex-col flex-grow h-full">
-            {projects.map((project, index) => (
-              <div key={index} className="flex flex-col mb-4">
-                <h2 className="text-lg font-semibold">{project.name}</h2>
-                <div className="border border-gray-300 p-4 rounded-md shadow-md">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-40 object-cover rounded-md mb-4"
-                  />
-                  <p className="text-sm mb-4">{project.description}</p>
-                  <Link href={project.url}>
-                    <a className="text-blue-500 hover:underline">Read more</a>
-                  </Link>
-                </div>
+        <div className="flex h-full flex-wrap mt-16 mx-auto justify-center">
+          {projects.map((project, index) => (
+            <div key={index} className="my-4 mx-4">
+              <div className="text-body text-secondaryLightBlue w-[350px] truncate mb-2">
+                <span className="text-semibold text-secondaryBrightPurple">
+                  Project {index + 1} &nbsp;
+                </span>
+                // {project.name}
               </div>
-            ))}
-          </div>
+              <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col w-[350px] h-[320px]">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-[350px] h-[150px] object-cover rounded-md mb-4"
+                />
+                <div className="text-body text-secondaryLightBlue mx-4 truncate-2">
+                  {project.description}
+                </div>
+
+                <button className="mx-4 mt-4 w-[150px] bg-buttonbackground py-2.5 px-3.5 rounded-md text-white">
+                  view-project
+                </button>
+                {/* <Link
+                  href={project.url}
+                  className="text-blue-500 hover:underline"
+                >
+                  Read more
+                </Link> */}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

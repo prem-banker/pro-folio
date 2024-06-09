@@ -38,7 +38,7 @@ const NavItem: React.FC<NavItemProps> = ({
         href={`${href}`}
         passHref
         className="hover:text-secondaryFluorescentGreen"
-      >
+        legacyBehavior>
         {text}
       </Link>
     </div>
