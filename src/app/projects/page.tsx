@@ -7,17 +7,16 @@ import metadata from "../../../public/data/meta.json";
 import userdata from "../../../public/data/user.json";
 import TechIcon from "../components/techicon";
 import "../styles/projects.css";
-import Project from "../utils/interfaces";
+import { Project, User } from "../utils/interfaces";
 import { standardizeName } from "../utils/utils";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
   const { technologies } = metadata;
-  const { projects } = userdata;
+  const projects: Project[] = userdata.user.projects;
   const [activeTechnologies, setActiveTechnologies] = useState(technologies);
 
-  const initTech: Project[] = [];
-  const [filteredProjects, setFilteredProjects] = useState(initTech);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     // Filter projects based on active technologies
@@ -26,9 +25,6 @@ export default function Page() {
         activeTechnologies.includes(tech.toLowerCase())
       );
     });
-
-    console.log(newFilteredProjects);
-    console.log(projects);
     // Update the state with the filtered projects
     setFilteredProjects(newFilteredProjects);
   }, [activeTechnologies, projects]); // Trigger effect when active technologies or projects change
@@ -45,17 +41,12 @@ export default function Page() {
     setActiveTechnologies([]);
   };
 
-  const getTabName = () => {
-    if (activeTechnologies.length > 0) {
-      if (activeTechnologies.length === 1) {
-        return activeTechnologies[0];
-      } else {
-        return activeTechnologies[0] + ` + ${activeTechnologies.length - 1}`;
-      }
-    } else {
-      return "Tech";
-    }
-  };
+  const getTabName = () =>
+    activeTechnologies.length > 0
+      ? activeTechnologies.length === 1
+        ? activeTechnologies[0]
+        : `${activeTechnologies[0]} + ${activeTechnologies.length - 1}`
+      : "Tech";
 
   return (
     <div className="flex flex-col h-full">
