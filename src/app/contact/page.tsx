@@ -6,12 +6,34 @@ import "../styles/projects.css";
 import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
 import { FaUpRightFromSquare } from "react-icons/fa6";
+import ReactCodeMirror from "@uiw/react-codemirror";
+import { githubDark } from "@uiw/codemirror-theme-github";
+import { javascript } from "@codemirror/lang-javascript";
+import "../styles/contact.css";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
   const user: User = userdata.user;
   const email = user.email;
   const socials = user.socials;
+
+  const extensions = [javascript({ typescript: true, jsx: true })];
+
+  const name = "";
+  const codesnippet = `
+  const button = document.querySelector('#sendBtn');
+
+const message = {
+	name: "Jonathan Davis",
+	email: "jonathan-davis@gmail.com",
+	message: "Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium. Lerned a few nice tips. Thanks!",
+	date: "Thu 21 Apr"
+}
+
+button.addEventListener('click', () => {
+	form.send(message);
+})
+    `;
 
   //code mirror
   // forms
@@ -61,7 +83,17 @@ export default function Page() {
 
         {/* Content - Projects */}
         {/* w-0 coz it was expanding and causing its siblings to shrink */}
-        <div className="flex flex-grow w-0 h-full flex-wrap pt-8 maintain-size custom-scrollbar"></div>
+        <div className="flex flex-grow  h-full maintain-size custom-scrollbar pl-24">
+          <div className="w-1/2"></div>
+          <div className="w-1/2">
+            <ReactCodeMirror
+              theme={githubDark}
+              readOnly={true}
+              editable={false}
+              extensions={extensions}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
