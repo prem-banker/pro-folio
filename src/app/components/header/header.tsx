@@ -26,7 +26,7 @@ const Header: React.FC = () => {
 
       <NavItem
         href="/contact"
-        text="_contact"
+        text="_contact-me"
         paddingX={18}
         borderLeft={true}
         borderRight={false}

@@ -6,10 +6,12 @@ import "../styles/projects.css";
 import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
 import { FaUpRightFromSquare } from "react-icons/fa6";
-import ReactCodeMirror from "@uiw/react-codemirror";
+import ReactCodeMirror, { EditorState } from "@uiw/react-codemirror";
 import { githubDark } from "@uiw/codemirror-theme-github";
 import { javascript } from "@codemirror/lang-javascript";
 import "../styles/contact.css";
+import { useState } from "react";
+import FormComponent from "./form";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
@@ -17,23 +19,24 @@ export default function Page() {
   const email = user.email;
   const socials = user.socials;
 
-  const extensions = [javascript({ typescript: true, jsx: true })];
+  const readOnlyExtension = EditorState.readOnly.of(true);
 
-  const name = "";
-  const codesnippet = `
-  const button = document.querySelector('#sendBtn');
+  const extensions = [javascript({ typescript: true }), readOnlyExtension];
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const codesnippet = `const button = document.querySelector('#sendBtn');
 const message = {
-	name: "Jonathan Davis",
-	email: "jonathan-davis@gmail.com",
-	message: "Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium. Lerned a few nice tips. Thanks!",
-	date: "Thu 21 Apr"
+	name: ${formData.name ?? ""},
+	email: ${formData.email ?? ""},
+	message: ${formData.message ?? ""}
 }
-
 button.addEventListener('click', () => {
 	form.send(message);
-})
-    `;
+})`;
 
   //code mirror
   // forms
@@ -65,7 +68,7 @@ button.addEventListener('click', () => {
           </div>
 
           {socials.map((social, index) => (
-            <div className="flex items-center mb-2 px-[22px]">
+            <div key={index} className="flex items-center mb-2 px-[22px]">
               <a
                 href={social.link}
                 target="_blank"
@@ -83,13 +86,17 @@ button.addEventListener('click', () => {
 
         {/* Content - Projects */}
         {/* w-0 coz it was expanding and causing its siblings to shrink */}
-        <div className="flex flex-grow  h-full maintain-size custom-scrollbar pl-24">
-          <div className="w-1/2"></div>
+        <div className="flex flex-grow  h-full maintain-size custom-scrollbar">
+          <div className="w-1/2 flex justify-center items-center">
+            <FormComponent setFormData={setFormData} />
+          </div>
           <div className="w-1/2">
             <ReactCodeMirror
+              height="200px"
+              value={codesnippet}
               theme={githubDark}
-              readOnly={true}
               editable={false}
+              readOnly={true}
               extensions={extensions}
             />
           </div>
