@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.2",
+    "@lezer/highlight": "^1.2.0",
     "@nextui-org/react": "^2.3.6",
     "@uiw/codemirror-theme-github": "^4.22.2",
-    "@uiw/react-codemirror": "^4.22.2",
+    "@uiw/codemirror-themes": "^4.22.2",
+    "@uiw/react-codemirror": "4.21.18",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -1,32 +1,26 @@
 "use client";
 
 import { javascript } from "@codemirror/lang-javascript";
-import { githubDark } from "@uiw/codemirror-theme-github";
-import ReactCodeMirror, {
-  EditorState,
-  EditorView,
-} from "@uiw/react-codemirror";
+import CodeMirror, { EditorState, EditorView } from "@uiw/react-codemirror";
 import { useState } from "react";
 import { FaCaretDown, FaEnvelope } from "react-icons/fa";
 import { FaUpRightFromSquare } from "react-icons/fa6";
 import userdata from "../../../public/data/user.json";
 import "../styles/contact.css";
 import "../styles/projects.css";
+import { editorTheme } from "../utils/editortheme";
 import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
 import FormComponent from "./form";
 
-// `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
   const user: User = userdata.user;
   const email = user.email;
   const socials = user.socials;
 
-  const readOnlyExtension = EditorState.readOnly.of(true);
-
   const extensions = [
     EditorView.editable.of(false),
-    // readOnlyExtension,
+    EditorState.readOnly.of(true),
     javascript({ typescript: true }),
   ];
 
@@ -102,14 +96,25 @@ button.addEventListener('click', () => {
 
             {/* <CodeEditor code={codesnippet} /> */}
 
-            <ReactCodeMirror
+            <CodeMirror
+              editable={false}
+              extensions={extensions}
+              value={codesnippet}
+              height="200px"
+              theme={editorTheme}
+              onChange={(value, viewUpdate) => {
+                console.log("value:", value);
+              }}
+            />
+
+            {/* <ReactCodeMirror
               extensions={extensions}
               value={codesnippet}
               height="200px"
               theme={githubDark}
               editable={false}
               // readOnly={true}
-            />
+            /> */}
           </div>
         </div>
       </div>
