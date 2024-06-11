@@ -91,6 +91,7 @@ button.addEventListener('click', () => {
             <FormComponent setFormData={setFormData} />
           </div>
           <div className="w-1/2">
+            {/* TODO : Read only not working h3js */}
             <ReactCodeMirror
               height="200px"
               value={codesnippet}
