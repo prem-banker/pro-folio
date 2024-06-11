@@ -4,14 +4,14 @@ import { tags as t } from "@lezer/highlight";
 export const editorTheme = createTheme({
   theme: "dark",
   settings: {
-    background: "#011627",
+    background: "#011221",
     backgroundImage: "",
     foreground: "#c9d1d9",
     caret: "#c9d1d9",
     selection: "#003d73",
     selectionMatch: "#003d73",
     lineHighlight: "#36334280",
-    gutterBackground: "#011627",
+    gutterBackground: "#011221",
     gutterForeground: "#8a919966",
   },
   styles: [

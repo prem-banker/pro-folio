@@ -12,8 +12,13 @@
 
 .cm-line {
   -webkit-user-modify: read-only !important;
-  pointer-events: none !important; /* Prevent all interactions */
-  user-select: none !important; /* Prevent text selection */
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.cm-content {
+  pointer-events: none !important;
+  user-select: none !important;
 }
 
 .no-interaction {

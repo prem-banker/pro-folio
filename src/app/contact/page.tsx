@@ -91,7 +91,7 @@ button.addEventListener('click', () => {
           <div className="w-1/2 flex justify-center items-center">
             <FormComponent setFormData={setFormData} />
           </div>
-          <div className="w-1/2">
+          <div className="w-1/2 no-interaction">
             {/* TODO : Read only not working h3js */}
 
             {/* <CodeEditor code={codesnippet} /> */}
