@@ -1,16 +1,19 @@
 "use client";
 
-import { FaCaretDown, FaEnvelope, FaLink, FaMailBulk } from "react-icons/fa";
+import { javascript } from "@codemirror/lang-javascript";
+import { githubDark } from "@uiw/codemirror-theme-github";
+import ReactCodeMirror, {
+  EditorState,
+  EditorView,
+} from "@uiw/react-codemirror";
+import { useState } from "react";
+import { FaCaretDown, FaEnvelope } from "react-icons/fa";
+import { FaUpRightFromSquare } from "react-icons/fa6";
 import userdata from "../../../public/data/user.json";
+import "../styles/contact.css";
 import "../styles/projects.css";
 import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
-import { FaUpRightFromSquare } from "react-icons/fa6";
-import ReactCodeMirror, { EditorState } from "@uiw/react-codemirror";
-import { githubDark } from "@uiw/codemirror-theme-github";
-import { javascript } from "@codemirror/lang-javascript";
-import "../styles/contact.css";
-import { useState } from "react";
 import FormComponent from "./form";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
@@ -21,7 +24,11 @@ export default function Page() {
 
   const readOnlyExtension = EditorState.readOnly.of(true);
 
-  const extensions = [javascript({ typescript: true }), readOnlyExtension];
+  const extensions = [
+    EditorView.editable.of(false),
+    // readOnlyExtension,
+    javascript({ typescript: true }),
+  ];
 
   const [formData, setFormData] = useState({
     name: "",
@@ -92,13 +99,16 @@ button.addEventListener('click', () => {
           </div>
           <div className="w-1/2">
             {/* TODO : Read only not working h3js */}
+
+            {/* <CodeEditor code={codesnippet} /> */}
+
             <ReactCodeMirror
-              height="200px"
+              extensions={extensions}
               value={codesnippet}
+              height="200px"
               theme={githubDark}
               editable={false}
-              readOnly={true}
-              extensions={extensions}
+              // readOnly={true}
             />
           </div>
         </div>

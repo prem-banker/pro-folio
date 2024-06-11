@@ -5,3 +5,18 @@
 .cm-theme {
   height: 100% !important;
 }
+
+.cm-content[contenteditable="true"] {
+  -webkit-user-modify: read-only !important;
+}
+
+.cm-line {
+  -webkit-user-modify: read-only !important;
+  pointer-events: none !important; /* Prevent all interactions */
+  user-select: none !important; /* Prevent text selection */
+}
+
+.no-interaction {
+  pointer-events: none !important; /* Prevent all interactions */
+  user-select: none !important; /* Prevent text selection */
+}
