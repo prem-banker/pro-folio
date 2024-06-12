@@ -21,6 +21,7 @@
   user-select: none !important;
 }
 
+/* TODO : find real solutiom */
 .no-interaction {
   pointer-events: none !important; /* Prevent all interactions */
   user-select: none !important; /* Prevent text selection */
