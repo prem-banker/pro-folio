@@ -1,10 +1,50 @@
 "use client";
 
+import React from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { RiCloseLine } from "react-icons/ri";
+import CommandPrompt from "./command-prompt";
+import { useHistory } from "../components/history/hook";
+import { banner } from "../utils/cmd-prompt/bin";
+import History from "../components/history/History";
+import Input from "../components/cmd-input/input";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
+
+interface CommandPromptProps {
+  inputRef: React.MutableRefObject<HTMLInputElement>;
+}
 export default function Page() {
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
+  const onClickAnywhere = () => {
+    inputRef.current.focus();
+  };
+
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const {
+    history,
+    command,
+    lastCommandIndex,
+    setCommand,
+    setHistory,
+    clearHistory,
+    setLastCommandIndex,
+  } = useHistory([]);
+
+  const init = React.useCallback(() => setHistory(banner()), []);
+
+  React.useEffect(() => {
+    init();
+  }, [init]);
+
+  React.useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.scrollIntoView();
+      inputRef.current.focus({ preventScroll: true });
+    }
+  }, [history]);
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
@@ -35,7 +75,25 @@ export default function Page() {
         {/* w-0 coz it was expanding and causing its siblings to shrink */}
         <div className="flex flex-grow  h-full maintain-size custom-scrollbar">
           <div className="w-1/2 flex justify-center items-center test-box"></div>
-          <div className="w-1/2 test-box-2"></div>
+          <div className="w-1/2 test-box-2" onClick={onClickAnywhere}>
+            <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
+              <div ref={containerRef} className="overflow-y-auto h-full">
+                <History history={history} />
+
+                <Input
+                  inputRef={inputRef}
+                  containerRef={containerRef}
+                  command={command}
+                  history={history}
+                  lastCommandIndex={lastCommandIndex}
+                  setCommand={setCommand}
+                  setHistory={setHistory}
+                  setLastCommandIndex={setLastCommandIndex}
+                  clearHistory={clearHistory}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
