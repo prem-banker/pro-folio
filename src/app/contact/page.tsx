@@ -85,8 +85,7 @@ button.addEventListener('click', () => {
           ))}
         </div>
 
-        {/* Content - Projects */}
-        {/* w-0 coz it was expanding and causing its siblings to shrink */}
+        {/* contact form */}
         <div className="flex flex-grow  h-full maintain-size custom-scrollbar">
           <div className="w-1/2 flex justify-center items-center">
             <FormComponent setFormData={setFormData} />
