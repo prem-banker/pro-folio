@@ -1,9 +1,8 @@
-import Head from "next/head";
 import React from "react";
-import { useHistory } from "../components/history/hook";
-import { History } from "../components/history/History";
-import { banner } from "../utils/cmd-prompt/bin";
 import Input from "../components/cmd-input/input";
+import { History } from "../components/history/History";
+import { useHistory } from "../components/history/hook";
+import { banner } from "../utils/cmd-prompt/bin";
 
 interface CommandPromptProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
@@ -21,14 +20,14 @@ const CommandPrompt: React.FC<CommandPromptProps> = ({ inputRef }) => {
     setLastCommandIndex,
   } = useHistory([]);
 
-  const init = React.useCallback(() => setHistory(banner()), [setHistory]);
+  const init = React.useCallback(() => setHistory(banner()), []);
 
   React.useEffect(() => {
     init();
+    inputRef.current.focus();
   }, [init]);
 
   React.useEffect(() => {
-    console.log("here ?");
     if (inputRef.current) {
       inputRef.current.scrollIntoView();
       inputRef.current.focus({ preventScroll: true });
@@ -37,8 +36,11 @@ const CommandPrompt: React.FC<CommandPromptProps> = ({ inputRef }) => {
 
   return (
     <>
-      <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
-        <div ref={containerRef} className="overflow-y-auto h-full">
+      <div className="p-2 overflow-hidden h-full">
+        <div
+          ref={containerRef}
+          className="overflow-y-auto h-full custom-scrollbar"
+        >
           <History history={history} />
 
           <Input

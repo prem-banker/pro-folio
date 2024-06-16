@@ -35,6 +35,8 @@ const config: Config = {
         stroke: "#0C1616",
         //button color
         buttonbackground: "#1C2B3A",
+        red: "#FF0000",
+        green: "#00FF00",
       },
       fontFamily: {
         sans: ["Fira Code", "sans-serif"],
