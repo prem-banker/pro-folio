@@ -20,6 +20,18 @@ input:checked {
   overflow-x: hidden;
 }
 
+.maintain-size-x {
+  overflow-x: hidden;
+}
+.maintain-size-y {
+  overflow-y: auto;
+}
+
+.custom-scrollbar {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 10px;
   border-left: 1px solid #1e2d3d;

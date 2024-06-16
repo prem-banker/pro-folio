@@ -49,6 +49,7 @@ export default function Page() {
       : "Tech";
 
   return (
+    // TODO: REVISE THE MAINTAIN SIZE SOLUTION
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="h-[40px] flex items-center justify-between border-b border-line">
@@ -75,7 +76,7 @@ export default function Page() {
 
       {/* Sidebar + content */}
 
-      <div className="text-secondaryLightBlue flex items-start h-full maintain-size">
+      <div className="flex-1 text-secondaryLightBlue flex items-start maintain-size-x">
         {/* Sidebar - Tech Select */}
         <div className="w-[311px] border-r border-line h-full">
           {technologies.map((tech, index) => (
@@ -102,7 +103,7 @@ export default function Page() {
 
         {/* Content - Projects */}
         {/* w-0 coz it was expanding and causing its siblings to shrink */}
-        <div className="flex flex-grow w-0 h-full flex-wrap pt-8 maintain-size custom-scrollbar">
+        <div className="flex flex-1 w-0 h-full flex-wrap pt-8 custom-scrollbar">
           {filteredProjects.map((project, index) => (
             <div key={index} className="my-4 mx-4 w-[30%]">
               <div className="text-body text-secondaryLightBlue truncate mb-2">
