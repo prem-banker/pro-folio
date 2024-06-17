@@ -39,3 +39,8 @@ export interface User {
   work: Work[];
   bio: string;
 }
+
+export interface FileProps {
+  text: string;
+  onTap: () => void;
+}

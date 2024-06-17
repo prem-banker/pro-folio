@@ -1,14 +1,9 @@
 // Folder.tsx
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronRight, FaFolder } from "react-icons/fa";
-
+import { usePathname } from "next/navigation";
 import CustomFile from "./file";
-
-interface FileProps {
-  text: string;
-  onTap: () => void;
-  isActive: boolean;
-}
+import { FileProps } from "../utils/interfaces";
 
 interface FolderProps {
   color: string;
@@ -17,7 +12,10 @@ interface FolderProps {
 }
 
 const Folder: React.FC<FolderProps> = ({ color, name, files: list }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // if the route of this folder is open, make it open by default
+  // TODO: this fix is kinda patchy (or not but cases like having similar folder names would cause issue!),
+  // a concrete solution would be to check the whole path with including folder + file name together
+  const [isOpen, setIsOpen] = useState(usePathname().includes(name));
 
   const toggleFolder = () => {
     setIsOpen(!isOpen);
@@ -29,7 +27,11 @@ const Folder: React.FC<FolderProps> = ({ color, name, files: list }) => {
         className="cursor-pointer flex justify-between items-center"
         onClick={toggleFolder}
       >
-        <div className="flex items-center">
+        <div
+          className={`${
+            isOpen ? "flex items-center text-white" : "flex items-center"
+          }`}
+        >
           {isOpen ? (
             <FaChevronDown className="mr-2" />
           ) : (
@@ -37,7 +39,7 @@ const Folder: React.FC<FolderProps> = ({ color, name, files: list }) => {
           )}
 
           <FaFolder style={{ color }} className="mr-2" />
-          <div className={`${isOpen ? "text-white" : ""}`}>{name}</div>
+          <div>{name}</div>
         </div>
       </div>
       {isOpen && (

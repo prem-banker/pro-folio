@@ -22,7 +22,7 @@ export default function AboutLayout({
   const router = useRouter();
 
   useEffect(() => {
-    // Programmatically navigate to 'education/masters' relative to the current route
+    // initial route
     router.push("/about/bio");
   }, [router]);
 
@@ -48,6 +48,7 @@ export default function AboutLayout({
 
       <div className="text-secondaryLightBlue flex items-start flex-1 maintain-size">
         <div className="w-[311px] border-r border-line h-full flex-col">
+          {/* Contains information in form of folders and files */}
           <Sidebar />
         </div>
 

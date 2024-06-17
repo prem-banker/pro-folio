@@ -1,18 +1,16 @@
 // File.tsx
+import { usePathname } from "next/navigation";
 import React from "react";
 import { FaFile } from "react-icons/fa";
+import { FileProps } from "../utils/interfaces";
 
-interface FileProps {
-  text: string;
-  onTap: () => void;
-  isActive: boolean;
-}
+const CustomFile: React.FC<FileProps> = ({ text, onTap }) => {
+  const isOpen = usePathname().includes(text);
 
-const CustomFile: React.FC<FileProps> = ({ text, onTap, isActive }) => {
   return (
     <div
       className={`flex items-center p-2 cursor-pointer ${
-        isActive ? "bg-gray-300" : "bg-transparent"
+        isOpen ? "bg-gray-300" : "bg-transparent"
       }`}
       onClick={onTap}
     >
