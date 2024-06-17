@@ -25,7 +25,8 @@ const NavItem: React.FC<NavItemProps> = ({
     borderRight ? "border-r border-line " : " "
   }  `;
 
-  const isActive = usePathname() === href;
+  const isActive =
+    href === "/" ? usePathname() === href : usePathname().startsWith(href);
   const verticalBorder = `${
     isActive ? "border-b border-b-accentOrange border-b-4" : ""
   }`;
