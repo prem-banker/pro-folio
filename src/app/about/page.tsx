@@ -35,18 +35,23 @@ export default function Page() {
 
       {/* Sidebar + content */}
 
-      <div className="text-secondaryLightBlue flex items-start h-full maintain-size">
+      <div className="text-secondaryLightBlue flex items-start flex-1 maintain-size">
         {/* Sidebar - about me Select */}
         <div className="w-[311px] border-r border-line h-full"></div>
 
         {/* Content - info + command prompt */}
         {/* w-0 coz it was expanding and causing its siblings to shrink */}
-        <div className="flex flex-grow  h-full maintain-size custom-scrollbar">
-          <div className="w-1/2 flex justify-center items-center"></div>
-          <div className="w-1/2 border-x border-line" onClick={onClickAnywhere}>
-            <CommandPrompt inputRef={inputRef} />
-          </div>
+        <div className="flex-1 flex justify-center items-center"></div>
+        <div
+          className="flex-1 h-full border-x border-line maintain-size"
+          onClick={onClickAnywhere}
+        >
+          <CommandPrompt inputRef={inputRef} />
         </div>
+
+        {/* <div className="flex flex-grow  h-full ">
+          
+        </div> */}
       </div>
     </div>
   );
