@@ -2,6 +2,40 @@
   "user": {
     "name": "Prem Banker",
     "email": "bankerprem3@gmail.com",
+    "education": [
+      {
+        "title": "masters",
+        "school": "Virginia Tech",
+        "degree": "Masters in Computer Science",
+        "description": "Going to school here in Dc",
+        "place": "Wahsington DC"
+      },
+      {
+        "title": "bachelors",
+        "school": "PDEU",
+        "degree": "BTech in Computer Science",
+        "description": "Going to school here in Dc",
+        "place": "Wahsington DC"
+      }
+    ],
+    "work": [
+      {
+        "title": "Full Stack Dev",
+        "company": "Quicko",
+        "start": "May 21",
+        "end": "Jun 23",
+        "description": "Some Random Job Responsibilities",
+        "place": "Ahmedabad India"
+      },
+      {
+        "title": "Application Dev Intern",
+        "company": "Evosys",
+        "start": "Jan 21",
+        "end": "April 21",
+        "description": "Some Random Job Responsibilities",
+        "place": "Ahmedabad India"
+      }
+    ],
     "projects": [
       {
         "name": "E-commerce Website",

@@ -3,8 +3,10 @@
 import React from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { RiCloseLine } from "react-icons/ri";
-import CommandPrompt from "./command-prompt";
+import Folder from "../components/folder";
 import "../styles/about.css";
+import CommandPrompt from "./command-prompt";
+import Sidebar from "./sidebar";
 
 export default function Page() {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -37,7 +39,10 @@ export default function Page() {
 
       <div className="text-secondaryLightBlue flex items-start flex-1 maintain-size">
         {/* Sidebar - about me Select */}
-        <div className="w-[311px] border-r border-line h-full"></div>
+        <div className="w-[311px] border-r border-line h-full flex-col">
+          {/* <Folder color={"pink"} name={"Education"} files={[]} /> */}
+          <Sidebar />
+        </div>
 
         {/* Content - info + command prompt */}
         {/* w-0 coz it was expanding and causing its siblings to shrink */}

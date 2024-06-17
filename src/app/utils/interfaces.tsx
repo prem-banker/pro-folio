@@ -13,9 +13,28 @@ export interface Social {
   type: string;
 }
 
+export interface Education {
+  title: string;
+  school: string;
+  degree: string;
+  description: string;
+  place: string;
+}
+
+export interface Work {
+  title: string;
+  company: string;
+  start: string;
+  end: string;
+  description: string;
+  place: string;
+}
+
 export interface User {
   name: string;
   email: string;
   socials: Social[];
   projects: Project[];
+  education: Education[];
+  work: Work[];
 }
