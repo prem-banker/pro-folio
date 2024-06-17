@@ -37,4 +37,5 @@ export interface User {
   projects: Project[];
   education: Education[];
   work: Work[];
+  bio: string;
 }

@@ -1,6 +1,5 @@
 import React from "react";
 
-import { FaFileAlt } from "react-icons/fa";
 import userdata from "../../../public/data/user.json";
 import Folder from "../components/folder";
 

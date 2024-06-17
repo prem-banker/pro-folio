@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface NavItemProps {
   text: string;
@@ -38,7 +38,8 @@ const NavItem: React.FC<NavItemProps> = ({
         href={`${href}`}
         passHref
         className="hover:text-secondaryFluorescentGreen"
-        legacyBehavior>
+        legacyBehavior
+      >
         {text}
       </Link>
     </div>
