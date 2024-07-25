@@ -12,6 +12,7 @@ import { editorTheme } from "../utils/editortheme";
 import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
 import FormComponent from "./form";
+import customKeymap from "../utils/code-editor/keymap";
 
 export default function Page() {
   const user: User = userdata.user;
@@ -22,6 +23,7 @@ export default function Page() {
     EditorView.editable.of(false),
     EditorState.readOnly.of(true),
     javascript({ typescript: true }),
+    customKeymap,
   ];
 
   const [formData, setFormData] = useState({
@@ -90,7 +92,7 @@ button.addEventListener('click', () => {
           <div className="w-1/2 flex justify-center items-center">
             <FormComponent setFormData={setFormData} />
           </div>
-          <div className="w-1/2 no-interaction">
+          <div className="w-1/2">
             {/* TODO : Read only not working h3js */}
 
             {/* <CodeEditor code={codesnippet} /> */}
