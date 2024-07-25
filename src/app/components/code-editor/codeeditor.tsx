@@ -1,16 +1,18 @@
 // components/CustomCodeEditor.tsx
-import React from "react";
-import Link from "next/link";
+import customKeymap from "@/app/utils/code-editor/keymap";
+import { editorTheme } from "@/app/utils/editortheme";
+import { javascript } from "@codemirror/lang-javascript";
 import ReactCodeMirror, {
   EditorState,
   EditorView,
 } from "@uiw/react-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
-import customKeymap from "@/app/utils/code-editor/keymap";
-import { editorTheme } from "@/app/utils/editortheme";
+import React from "react";
 
-const CustomCodeEditor: React.FC = () => {
-  const codesnippet = `const button = document.querySelector('#sendBtn');`;
+interface EditorProps {
+  code: string;
+}
+
+const CustomCodeEditor: React.FC<EditorProps> = ({ code }) => {
   const extensions = [
     EditorView.editable.of(false),
     EditorState.readOnly.of(true),
@@ -22,12 +24,8 @@ const CustomCodeEditor: React.FC = () => {
     <ReactCodeMirror
       editable={false}
       extensions={extensions}
-      value={codesnippet}
-      height="200px"
+      value={code}
       theme={editorTheme}
-      onChange={(value, viewUpdate) => {
-        console.log("value:", value);
-      }}
     />
   );
 };

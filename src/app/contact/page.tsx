@@ -13,6 +13,7 @@ import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
 import FormComponent from "./form";
 import customKeymap from "../utils/code-editor/keymap";
+import CustomCodeEditor from "../components/code-editor/codeeditor";
 
 export default function Page() {
   const user: User = userdata.user;
@@ -93,29 +94,8 @@ button.addEventListener('click', () => {
             <FormComponent setFormData={setFormData} />
           </div>
           <div className="w-1/2">
-            {/* TODO : Read only not working h3js */}
-
-            {/* <CodeEditor code={codesnippet} /> */}
-
-            <CodeMirror
-              editable={false}
-              extensions={extensions}
-              value={codesnippet}
-              height="200px"
-              theme={editorTheme}
-              onChange={(value, viewUpdate) => {
-                console.log("value:", value);
-              }}
-            />
-
-            {/* <ReactCodeMirror
-              extensions={extensions}
-              value={codesnippet}
-              height="200px"
-              theme={githubDark}
-              editable={false}
-              // readOnly={true}
-            /> */}
+            {/* codeeditor */}
+            <CustomCodeEditor code={codesnippet} />
           </div>
         </div>
       </div>

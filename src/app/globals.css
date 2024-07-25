@@ -72,3 +72,11 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+.cm-editor {
+  height: 100% !important;
+}
+
+.cm-theme {
+  height: 100% !important;
+}
