@@ -8,14 +8,14 @@
         "title": "masters",
         "school": "Virginia Tech",
         "degree": "Masters in Computer Science",
-        "description": "Going to school here in Dc",
+        "description": "I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development",
         "place": "Wahsington DC"
       },
       {
         "title": "bachelors",
         "school": "PDEU",
         "degree": "BTech in Computer Science",
-        "description": "Going to school here in Dc",
+        "description": "I am currently pursuing my ",
         "place": "Wahsington DC"
       }
     ],
@@ -42,7 +42,13 @@
         "name": "E-commerce Website",
         "description": "A fully functional e-commerce website built with React and Node.js",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "Node.js", "Express", "MongoDB", "Python"],
+        "techstack": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Python"
+        ],
         "github": "https://github.com/username/ecommerce",
         "url": "https://example.com/ecommerce"
       },
@@ -50,7 +56,13 @@
         "name": "Blog App",
         "description": "A simple blog application with user authentication built using Django",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["Django", "HTML", "CSS", "JavaScript", "Docker"],
+        "techstack": [
+          "Django",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Docker"
+        ],
         "github": "https://github.com/username/blog-app",
         "url": "https://example.com/blog"
       },
@@ -58,7 +70,12 @@
         "name": "Social Media Platform",
         "description": "A social media platform built with React and Firebase",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "Firebase", "Material-UI", "Angular"],
+        "techstack": [
+          "React",
+          "Firebase",
+          "Material-UI",
+          "Angular"
+        ],
         "github": "https://github.com/username/social-media",
         "url": "https://example.com/social-media"
       },
@@ -66,7 +83,12 @@
         "name": "Weather App",
         "description": "An app that provides real-time weather information using OpenWeatherMap API",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "OpenWeatherMap API", "Bootstrap", "Go"],
+        "techstack": [
+          "React",
+          "OpenWeatherMap API",
+          "Bootstrap",
+          "Go"
+        ],
         "github": "https://github.com/username/weather-app",
         "url": "https://example.com/weather"
       },
@@ -74,7 +96,13 @@
         "name": "Task Management System",
         "description": "A web application for managing tasks and projects",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["Node.js", "Express", "MongoDB", "Bootstrap", "Java"],
+        "techstack": [
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Bootstrap",
+          "Java"
+        ],
         "github": "https://github.com/username/task-management",
         "url": "https://example.com/task-management"
       },
@@ -82,7 +110,11 @@
         "name": "Portfolio Website",
         "description": "A personal portfolio website showcasing projects and skills",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "Next.js", "Tailwind CSS"],
+        "techstack": [
+          "React",
+          "Next.js",
+          "Tailwind CSS"
+        ],
         "github": "https://github.com/username/portfolio",
         "url": "https://example.com/portfolio"
       },
@@ -90,7 +122,12 @@
         "name": "Recipe App",
         "description": "An application for searching and saving recipes",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+        "techstack": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Tailwind CSS"
+        ],
         "github": "https://github.com/username/recipe-app",
         "url": "https://example.com/recipe"
       },
@@ -98,7 +135,12 @@
         "name": "Chat Application",
         "description": "A real-time chat application using Socket.io",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "Node.js", "Socket.io", "Bootstrap"],
+        "techstack": [
+          "React",
+          "Node.js",
+          "Socket.io",
+          "Bootstrap"
+        ],
         "github": "https://github.com/username/chat-app",
         "url": "https://example.com/chat"
       },
@@ -106,7 +148,12 @@
         "name": "Expense Tracker",
         "description": "An application for tracking expenses and income",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "Node.js", "MongoDB", "Material-UI"],
+        "techstack": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Material-UI"
+        ],
         "github": "https://github.com/username/expense-tracker",
         "url": "https://example.com/expense-tracker"
       },
@@ -114,7 +161,12 @@
         "name": "Music Player",
         "description": "A simple music player application built with React",
         "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": ["React", "HTML", "CSS", "JavaScript"],
+        "techstack": [
+          "React",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
         "github": "https://github.com/username/music-player",
         "url": "https://example.com/music-player"
       }

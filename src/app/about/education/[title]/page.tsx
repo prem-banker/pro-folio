@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import userdata from "../../../../../public/data/user.json";
+import CustomCodeEditor from "@/app/components/code-editor/codeeditor";
+import { addLineBreaks } from "@/app/utils/utils";
 
 export default function EducationPage({
   params,
@@ -11,20 +14,9 @@ export default function EducationPage({
     (edu) => edu.title === params.title
   );
 
-  // Display the description if education is found, otherwise show a message
   return (
-    <div>
-      {education ? (
-        <>
-          <h1>{education.title}</h1>
-          <p>School: {education.school}</p>
-          <p>Degree: {education.degree}</p>
-          <p>Description: {education.description}</p>
-          <p>Place: {education.place}</p>
-        </>
-      ) : (
-        <p>Educational details not found for {params.title}</p>
-      )}
+    <div className="h-full">
+      <CustomCodeEditor code={addLineBreaks(education.description, 50)} />
     </div>
   );
 }

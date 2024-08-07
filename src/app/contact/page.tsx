@@ -32,15 +32,17 @@ export default function Page() {
     email: "",
     message: "",
   });
+
+  // const codesnippet = `I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development`;
   const codesnippet = `const button = document.querySelector('#sendBtn');
-const message = {
-	name: ${formData.name ?? ""},
-	email: ${formData.email ?? ""},
-	message: ${formData.message ?? ""}
-}
-button.addEventListener('click', () => {
-	form.send(message);
-})`;
+  const message = {
+  	name: ${formData.name ?? ""},
+  	email: ${formData.email ?? ""},
+  	message: ${formData.message ?? ""}
+  }
+  button.addEventListener('click', () => {
+  	form.send(message);
+  })`;
 
   //code mirror
   // forms
