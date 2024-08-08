@@ -3,13 +3,19 @@ import React from "react";
 import userdata from "../../../public/data/user.json";
 import Folder from "../components/folder";
 import { useRouter } from "next/navigation";
+import { useOpenedFiles } from "../contexts/routestackcontext";
 
 const Sidebar: React.FC = () => {
   const router = useRouter();
+  const { openFile } = useOpenedFiles();
+  const links = ["link1", "link2", "link3"];
 
   const educationFiles = userdata.user.education.map((edu, index) => ({
     text: edu.title,
-    onTap: () => router.push(`/about/education/${edu.title}`),
+    onTap: () => {
+      openFile(edu.title);
+      router.push(`/about/education/${edu.title}`);
+    },
   }));
 
   const workFiles = userdata.user.work.map((work, index) => ({
