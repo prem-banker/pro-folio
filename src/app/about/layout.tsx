@@ -1,6 +1,7 @@
+// AboutLayout.tsx
 "use client";
 
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { RiCloseLine } from "react-icons/ri";
 import "../styles/about.css";
@@ -11,12 +12,13 @@ import {
   RouteStackProvider,
   useOpenedFiles,
 } from "../contexts/routestackcontext";
+import CustomTab from "../components/filetab";
 
 const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const { openedFiles } = useOpenedFiles(); // Ensure this hook is used within the provider
+  const { openedFiles, openFile, closeFile } = useOpenedFiles();
 
   const onClickAnywhere = () => {
     inputRef.current?.focus();
@@ -29,6 +31,20 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
     router.push("/about/bio");
   }, [router]);
 
+  const handleTabClick = (file: string) => {
+    console.log(router);
+    console.log(file);
+    router.push(file);
+  };
+
+  const handleTabClose = (file: string) => {
+    // removeOpenedFile(file);
+    if (file === openedFiles[openedFiles.length - 1]) {
+      router.back();
+    }
+    closeFile(file);
+  };
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
@@ -39,17 +55,14 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
             <span className="text-white">about-me</span>
           </div>
 
-          <div className="text-secondaryLightBlue w-[200px] px-4 border-r border-line flex h-full items-center justify-between">
-            <span>hi</span>
-            {openedFiles.map((file, index) => (
-              <span key={index} className="ml-2">
-                {file}
-              </span>
-            ))}
-            <button className="bg-transparent border-none outline-none cursor-pointer">
-              <RiCloseLine className="text-xl" />
-            </button>
-          </div>
+          {openedFiles.map((file, index) => (
+            <CustomTab
+              key={index}
+              text={file}
+              onTap={() => handleTabClick(file)}
+              onClose={() => handleTabClose(file)}
+            />
+          ))}
         </div>
       </div>
 
@@ -60,10 +73,7 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
         </div>
 
         <div className="flex flex-1 h-full">
-          <div className="w-1/2 justify-center items-center">
-            {/* INSERT CHILDREN COMPONENTS HERE */}
-            {children}
-          </div>
+          <div className="w-1/2 justify-center items-center">{children}</div>
           <div
             className="w-1/2 h-full border-x border-line maintain-size"
             onClick={onClickAnywhere}

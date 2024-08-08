@@ -44,3 +44,9 @@ export interface FileProps {
   text: string;
   onTap: () => void;
 }
+
+export interface FileTabProps {
+  text: string;
+  onTap: () => void;
+  onClose: () => void;
+}
