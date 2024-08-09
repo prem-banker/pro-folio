@@ -4,12 +4,10 @@ import React from "react";
 export const Ps1 = () => {
   return (
     <div>
-      <span className="text-light-yellow dark:text-dark-yellow">
-        @prem-banker
-      </span>
-      <span className="text-light-gray dark:text-dark-gray">@</span>
-      <span className="text-light-green dark:text-dark-green">github</span>
-      <span className="text-light-gray dark:text-dark-gray">:$ ~ </span>
+      <span className="text-green">@prem-banker</span>
+      <span className="text-green">@</span>
+      <span className="text-accentMagenta">github</span>
+      <span className="text-accentMagenta ">:$ ~ </span>
     </div>
   );
 };

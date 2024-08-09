@@ -36,15 +36,6 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const handleTabClose = (file: string) => {
-    // removeOpenedFile(file);
-    // if (file === openedFiles[openedFiles.length - 1]) {
-    //   router.back();
-    // }
-    // if (openedFiles.length === 1) {
-    //   router.push("/about/bio");
-    // } else {
-    //   router.back();
-    // }
     closeFile(file);
   };
 
@@ -57,6 +48,8 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
             <FaCaretDown className="text-white mr-2" />
             <span className="text-white">about-me</span>
           </div>
+
+          {/* The tab bar consisting of files that are opened previously */}
 
           {openedFiles.map((file, index) => (
             <CustomTab

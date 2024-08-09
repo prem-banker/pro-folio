@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import Input from "../components/cmd-input/input";
 import { History } from "../components/history/History";
 import { useHistory } from "../components/history/hook";
@@ -9,7 +9,7 @@ interface CommandPromptProps {
 }
 
 const CommandPrompt: React.FC<CommandPromptProps> = ({ inputRef }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const {
     history,
     command,
@@ -20,14 +20,14 @@ const CommandPrompt: React.FC<CommandPromptProps> = ({ inputRef }) => {
     setLastCommandIndex,
   } = useHistory([]);
 
-  const init = React.useCallback(() => setHistory(banner()), []);
+  const init = useCallback(() => setHistory(banner()), []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     init();
     inputRef.current.focus();
   }, [init]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inputRef.current) {
       inputRef.current.scrollIntoView();
       inputRef.current.focus({ preventScroll: true });
