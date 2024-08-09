@@ -5,7 +5,7 @@ import { FaFile } from "react-icons/fa";
 import { FileTabProps } from "../utils/interfaces";
 import { RiCloseLine } from "react-icons/ri";
 import { getLastElement } from "../utils/utils";
-import { useOpenedFiles } from "../contexts/routestackcontext";
+import { useOpenedFiles } from "../contexts/filestackcontext";
 import { useRouter } from "next/navigation";
 
 const CustomTab: React.FC<FileTabProps> = ({ text, onTap, onClose }) => {

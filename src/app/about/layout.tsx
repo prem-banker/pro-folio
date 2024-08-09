@@ -9,9 +9,9 @@ import CommandPrompt from "./command-prompt";
 import Sidebar from "./sidebar";
 import { useRouter } from "next/navigation";
 import {
-  RouteStackProvider,
+  FileStackProvider,
   useOpenedFiles,
-} from "../contexts/routestackcontext";
+} from "../contexts/filestackcontext";
 import CustomTab from "../components/filetab";
 
 const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
@@ -88,8 +88,8 @@ export default function AboutLayout({
   children: React.ReactNode;
 }) {
   return (
-    <RouteStackProvider>
+    <FileStackProvider>
       <AboutLayoutContent>{children}</AboutLayoutContent>
-    </RouteStackProvider>
+    </FileStackProvider>
   );
 }

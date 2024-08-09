@@ -3,7 +3,7 @@ import React from "react";
 import userdata from "../../../public/data/user.json";
 import Folder from "../components/folder";
 import { useRouter } from "next/navigation";
-import { useOpenedFiles } from "../contexts/routestackcontext";
+import { useOpenedFiles } from "../contexts/filestackcontext";
 
 const Sidebar: React.FC = () => {
   const router = useRouter();

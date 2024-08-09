@@ -1,16 +1,16 @@
 import React, { ReactNode, createContext, useContext, useState } from "react";
 
-interface RouteStackContextType {
+interface FileStackContextType {
   openedFiles: string[];
   openFile: (link: string) => void;
   closeFile: (link: string) => void;
 }
 
-const RouteStackContext = createContext<RouteStackContextType | undefined>(
+const FileStackContext = createContext<FileStackContextType | undefined>(
   undefined
 );
 
-export const RouteStackProvider: React.FC<{ children: ReactNode }> = ({
+export const FileStackProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [openedFiles, setOpenedFiles] = useState<string[]>([]);
@@ -24,14 +24,14 @@ export const RouteStackProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   return (
-    <RouteStackContext.Provider value={{ openedFiles, openFile, closeFile }}>
+    <FileStackContext.Provider value={{ openedFiles, openFile, closeFile }}>
       {children}
-    </RouteStackContext.Provider>
+    </FileStackContext.Provider>
   );
 };
 
 export const useOpenedFiles = () => {
-  const context = useContext(RouteStackContext);
+  const context = useContext(FileStackContext);
   if (context === undefined) {
     throw new Error("useOpenedFiles must be used within a RouteStackProvider");
   }
