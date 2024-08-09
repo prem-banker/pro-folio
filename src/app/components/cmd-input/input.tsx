@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Ps1 } from "./Ps1";
+import { TerminalUsername } from "./terminalusername";
 import { handleTabCompletion } from "@/app/utils/cmd-prompt/tabCompletion";
 import { commandExists } from "@/app/utils/cmd-prompt/commandExists";
 import { shell } from "@/app/utils/cmd-prompt/shell";
@@ -82,7 +82,7 @@ export const Input = ({
   return (
     <div className="flex flex-row space-x-2">
       <label htmlFor="prompt" className="flex-shrink">
-        <Ps1 />
+        <TerminalUsername />
       </label>
 
       <input

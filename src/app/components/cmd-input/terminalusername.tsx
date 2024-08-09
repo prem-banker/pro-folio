@@ -1,7 +1,7 @@
 import React from "react";
 // import config from '../../config.json';
 
-export const Ps1 = () => {
+export const TerminalUsername = () => {
   return (
     <div>
       <span className="text-green">@prem-banker</span>
@@ -12,4 +12,4 @@ export const Ps1 = () => {
   );
 };
 
-export default Ps1;
+export default TerminalUsername;
