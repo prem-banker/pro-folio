@@ -24,3 +24,8 @@ export const addLineBreaks = (desc: string, maxLineLength: number): string => {
   result += currentLine + "\n*/";
   return result;
 };
+
+export const getLastElement = (str, delimiter) => {
+  const parts = str.split(delimiter);
+  return parts[parts.length - 1];
+};

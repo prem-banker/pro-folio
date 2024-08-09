@@ -32,16 +32,19 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   }, [router]);
 
   const handleTabClick = (file: string) => {
-    console.log(router);
-    console.log(file);
     router.push(file);
   };
 
   const handleTabClose = (file: string) => {
     // removeOpenedFile(file);
-    if (file === openedFiles[openedFiles.length - 1]) {
-      router.back();
-    }
+    // if (file === openedFiles[openedFiles.length - 1]) {
+    //   router.back();
+    // }
+    // if (openedFiles.length === 1) {
+    //   router.push("/about/bio");
+    // } else {
+    //   router.back();
+    // }
     closeFile(file);
   };
 
