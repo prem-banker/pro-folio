@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-primaryLightNavyBlue text-secondaryLightBlue h-[56px] flex items-center justify-between border-b border-line rounded-lg">
       <div className="flex-vertical-center">
-        <div className="w-[311px] pl-[22px] border-r border-line h-full flex-vertical-center">
+        <div className="w-[311px] pl-[22px] border-r border-line flex-vertical-center">
           <Link
             href="/"
             passHref
@@ -17,11 +17,13 @@ const Header: React.FC = () => {
           </Link>
         </div>
 
-        <NavItem href="/" text="_hello" paddingX={18} />
+        <div className="flex h-full">
+          <NavItem href="/" text="_hello" paddingX={18} />
 
-        <NavItem href="/about" text="_about-me" paddingX={18} />
+          <NavItem href="/about" text="_about-me" paddingX={18} />
 
-        <NavItem href="/projects" text="_projects" paddingX={18} />
+          <NavItem href="/projects" text="_projects" paddingX={18} />
+        </div>
       </div>
 
       <NavItem

@@ -19,7 +19,7 @@ const NavItem: React.FC<NavItemProps> = ({
   borderRight = true,
 }) => {
   // TODO: FIX THIS HARDCODE
-  const paddingClass = `px-[18px]`;
+  const paddingClass = `px-[${paddingX}px]`;
 
   const horizontalBorder = `${borderLeft ? "border-l border-line " : " "} ${
     borderRight ? "border-r border-line " : " "
@@ -32,19 +32,29 @@ const NavItem: React.FC<NavItemProps> = ({
   }`;
 
   return (
-    <div
-      className={`${paddingClass} ${verticalBorder} ${horizontalBorder} h-full flex-vertical-center`}
-    >
-      <Link
-        href={`${href}`}
-        passHref
-        className="hover:text-secondaryFluorescentGreen"
-        legacyBehavior
+    <Link href={`${href}`} passHref legacyBehavior>
+      <div
+        className={`${paddingClass} ${verticalBorder} ${horizontalBorder} h-full flex-vertical-center hover:bg-gray-700 hover:text-secondaryFluorescentGreen cursor-pointer`}
       >
         {text}
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
+
+  // return (
+  //   <div
+  //     className={`${paddingClass} ${verticalBorder} ${horizontalBorder} h-full flex-vertical-center`}
+  //   >
+  //     <Link
+  //       href={`${href}`}
+  //       passHref
+  //       className="hover:text-secondaryFluorescentGreen"
+  //       legacyBehavior
+  //     >
+  //       {text}
+  //     </Link>
+  //   </div>
+  // );
 };
 
 export default NavItem;
