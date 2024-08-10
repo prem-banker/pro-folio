@@ -1,13 +1,13 @@
+import { Execution } from "@/app/utils/interfaces";
 import React from "react";
-import { History as HistoryInterface } from "./interface";
-import TerminalUsername from "../cmd-input/terminalusername";
+import TerminalUsername from "./username";
+import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
 
-export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
-  history,
-}) => {
+export const PreviousExecutions: React.FC = ({}) => {
+  const { executions } = useExecutions();
   return (
     <>
-      {history.map((entry: HistoryInterface, index: number) => (
+      {executions.map((entry: Execution, index: number) => (
         <div key={entry.command + index}>
           <div className="flex flex-row space-x-2">
             <div className="flex-shrink">
@@ -28,4 +28,4 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
   );
 };
 
-export default History;
+export default PreviousExecutions;

@@ -5,7 +5,6 @@ import React, { useEffect } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { RiCloseLine } from "react-icons/ri";
 import "../styles/about.css";
-import CommandPrompt from "./command-prompt";
 import Sidebar from "./sidebar";
 import { useRouter } from "next/navigation";
 import {
@@ -13,6 +12,8 @@ import {
   useOpenedFiles,
 } from "../contexts/filestackcontext";
 import CustomTab from "../components/filetab";
+import { TerminalProvider } from "../contexts/terminal/terminalcontext";
+import Terminal from "./terminal/terminal";
 
 const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -74,7 +75,7 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
             className="w-1/2 h-full border-x border-line maintain-size"
             onClick={onClickAnywhere}
           >
-            <CommandPrompt inputRef={inputRef} />
+            <Terminal inputRef={inputRef} />
           </div>
         </div>
       </div>
@@ -89,7 +90,9 @@ export default function AboutLayout({
 }) {
   return (
     <FileStackProvider>
-      <AboutLayoutContent>{children}</AboutLayoutContent>
+      <TerminalProvider>
+        <AboutLayoutContent>{children}</AboutLayoutContent>
+      </TerminalProvider>
     </FileStackProvider>
   );
 }

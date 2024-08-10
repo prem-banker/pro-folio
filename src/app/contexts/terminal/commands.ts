@@ -1,7 +1,7 @@
 // List of commands that do not require API calls
 
 import * as bin from "./index";
-import config from "../../../../../config.json";
+import config from "../../../../config.json";
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
@@ -136,6 +136,10 @@ export const emacs = async (args?: string[]): Promise<string> => {
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank"); // ...I'm sorry
   return `Permission denied: with little power comes... no responsibility? `;
+};
+
+export const summary = async (args?: string[]): Promise<string> => {
+  return `tis my summary biatch.`;
 };
 
 // Banner

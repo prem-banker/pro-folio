@@ -50,3 +50,10 @@ export interface FileTabProps {
   onTap: () => void;
   onClose: () => void;
 }
+
+export interface Execution {
+  id: number;
+  date: Date;
+  command: string;
+  output: string;
+}
