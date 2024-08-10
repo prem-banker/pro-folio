@@ -11,7 +11,11 @@ interface TerminalProps {
 const Terminal: React.FC<TerminalProps> = ({ inputRef }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { executions, addExecution } = useExecutions();
+  const { executions } = useExecutions();
+
+  useEffect(() => {
+    containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+  }, [executions]);
 
   return (
     <>
@@ -22,7 +26,7 @@ const Terminal: React.FC<TerminalProps> = ({ inputRef }) => {
         >
           <PreviousExecutions />
 
-          <TerminalInput containerRef={containerRef} />
+          <TerminalInput />
         </div>
       </div>
     </>

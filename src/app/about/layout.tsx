@@ -19,7 +19,7 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const { openedFiles, openFile, closeFile } = useOpenedFiles();
+  const { openedFiles, closeFile } = useOpenedFiles();
 
   const onClickAnywhere = () => {
     inputRef.current?.focus();

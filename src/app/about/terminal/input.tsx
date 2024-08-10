@@ -4,7 +4,7 @@ import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
 import { TerminalUsername } from "./username";
 import { banner } from "@/app/contexts/terminal";
 
-export const TerminalInput = ({ containerRef }) => {
+export const TerminalInput = () => {
   const {
     executions,
     command,
@@ -27,7 +27,6 @@ export const TerminalInput = ({ containerRef }) => {
 
   useEffect(() => {
     setLastViewedCommand(executions.length - 1);
-    containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
 
     if (inputRef.current) {
       inputRef.current.scrollIntoView();
