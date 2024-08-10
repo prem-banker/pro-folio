@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
 import { TerminalUsername } from "./username";
+import { banner } from "@/app/contexts/terminal";
 
-export const TerminalInput = ({ inputRef, containerRef }) => {
+export const TerminalInput = ({ containerRef }) => {
   const {
     executions,
     command,
@@ -15,11 +16,23 @@ export const TerminalInput = ({ inputRef, containerRef }) => {
     autocomplete,
   } = useExecutions();
 
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
   const [lastViewedCommand, setLastViewedCommand] = useState<number>(0);
+
+  useEffect(() => {
+    addExecution(banner());
+    inputRef.current.focus();
+  }, []);
 
   useEffect(() => {
     setLastViewedCommand(executions.length - 1);
     containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+
+    if (inputRef.current) {
+      inputRef.current.scrollIntoView();
+      inputRef.current.focus({ preventScroll: true });
+    }
   }, [executions]);
 
   const onKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {

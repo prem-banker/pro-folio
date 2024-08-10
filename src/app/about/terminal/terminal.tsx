@@ -11,25 +11,7 @@ interface TerminalProps {
 const Terminal: React.FC<TerminalProps> = ({ inputRef }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const {
-    executions,
-    command,
-    addExecution,
-    setCommand,
-    clearExecutions,
-  } = useExecutions();
-
-  useEffect(() => {
-    addExecution(banner());
-    inputRef.current.focus();
-  }, []);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.scrollIntoView();
-      inputRef.current.focus({ preventScroll: true });
-    }
-  }, [executions]);
+  const { executions, addExecution } = useExecutions();
 
   return (
     <>
@@ -40,7 +22,7 @@ const Terminal: React.FC<TerminalProps> = ({ inputRef }) => {
         >
           <PreviousExecutions />
 
-          <TerminalInput inputRef={inputRef} containerRef={containerRef} />
+          <TerminalInput containerRef={containerRef} />
         </div>
       </div>
     </>
