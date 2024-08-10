@@ -113,7 +113,7 @@ export const TerminalInput = () => {
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-primaryLightNavyBlue focus:outline-none flex-grow ${
+        className={`bg-black focus:outline-none flex-grow ${
           isValidCommand(command) || command === "" ? "text-green" : "text-red"
         }`}
         value={command}

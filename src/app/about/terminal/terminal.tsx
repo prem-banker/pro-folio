@@ -19,7 +19,7 @@ const Terminal: React.FC<TerminalProps> = ({ inputRef }) => {
 
   return (
     <>
-      <div className="p-2 overflow-hidden h-full">
+      <div className="p-2 overflow-hidden h-full bg-black">
         <div
           ref={containerRef}
           className="overflow-y-auto h-full custom-scrollbar"
