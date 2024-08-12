@@ -4,10 +4,11 @@ import userdata from "../../public/data/user.json";
 import ParticleAnimation from "./components/particle-animation/particleanimation";
 import BubbleAnimation from "./components/particle-animation/bubbleanimation";
 import Image from "next/image";
+import AnimatedText from "./components/animatedtext/animatedtext";
 
 export default function Home() {
   return (
-    <div className="min-h-inherit flex-center-items home-bg relative ">
+    <div className="min-h-inherit flex-center-items relative ">
       {/* <BubbleAnimation /> */}
       <div className="mx-auto flex items-center justify-center w-[1080px]">
         <div className="w-1/2 p-8 ">
@@ -16,8 +17,7 @@ export default function Home() {
             {userdata.user.name}
           </h1>
           <h4 className="text-secondaryBrightPurple text-subheadline mb-20">
-            {" "}
-            &gt; Front end Developer
+            <AnimatedText />
           </h4>
           <div className="text-secondaryLightBlue font-labels">
             // complete the game to continue
@@ -43,7 +43,7 @@ export default function Home() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative w-full h-full">
               <Image
-                src="/home/hero-home2.svg"
+                src="/home/hero-home3.svg"
                 alt="Hero Image"
                 layout="fill"
                 objectFit="contain"

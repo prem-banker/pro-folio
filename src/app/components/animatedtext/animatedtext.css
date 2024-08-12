@@ -1,0 +1,20 @@
+.typing-container {
+  display: inline-block;
+  /* border-right: 0.1em solid orange;  */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-cursor {
+  display: inline-block;
+  width: 0.1em;
+  background-color: orange;
+  animation: blink 0.7s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -11,9 +11,10 @@ const Header: React.FC = () => {
           <Link
             href="/"
             passHref
-            className="hover:text-secondaryFluorescentGreen"
+            className="hover:text-secondaryFluorescentGreen flex-vertical-center"
           >
-            prem-banker
+            <span>~$ ./prem-banker </span>
+            <span className="cursor bg-secondaryFluorescentGreen"></span>
           </Link>
         </div>
 
