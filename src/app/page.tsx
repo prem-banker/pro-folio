@@ -1,13 +1,19 @@
+"use client";
 import "./home.css";
+import userdata from "../../public/data/user.json";
+import ParticleAnimation from "./components/particle-animation/particleanimation";
+import BubbleAnimation from "./components/particle-animation/bubbleanimation";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-inherit flex-center-items home-bg">
+    <div className="min-h-inherit flex-center-items home-bg relative ">
+      {/* <BubbleAnimation /> */}
       <div className="mx-auto flex items-center justify-center w-[1080px]">
         <div className="w-1/2 p-8 ">
           <p className="text-body">Hi all. I am</p>
           <h1 className="text-headline font-regular leading-shrink">
-            Prem Banker
+            {userdata.user.name}
           </h1>
           <h4 className="text-secondaryBrightPurple text-subheadline mb-20">
             {" "}
@@ -35,13 +41,20 @@ export default function Home() {
           // style={{ backgroundImage: "url('/home/bg-gradient.png')" }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-[510px] h-[475px]  rounded border border-stroke"></div>
+            <div className="relative w-full h-full">
+              <Image
+                src="/home/hero-home2.svg"
+                alt="Hero Image"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
           </div>
         </div>
 
         {/* <div className="w-1/2">
      
-          <Image src="/home/bg-gradient.png" alt="Hero Image" width={600} height={400} />
+          <Image src="/home/hero-home.png" alt="Hero Image" width={600} height={400} />
         </div> */}
       </div>
     </div>

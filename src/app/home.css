@@ -1,23 +1,49 @@
 .home-bg {
-    background-image: url('/home/bg-gradient.png');
-    background-position: right 0px top -50px;
+  background-image: url("/home/bg-gradient.png");
+  background-position: right 0px top -50px;
 
-    background-repeat: no-repeat;
-    background-size: 750px 740px;
-    /* overflow: hidden; */
+  background-repeat: no-repeat;
+  background-size: 750px 740px;
+  animation: gradient 15s ease infinite;
+  /* overflow: hidden; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 80% 50%;
+  }
+  25% {
+    background-position: 90% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 90% 0%;
+  }
+  100% {
+    background-position: 80% 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .gradient-background {
-    width: 510px;
-    height: 475px;
-    border-radius: 8px;
-    border: 1px solid #0C1616;
-    background: linear-gradient(to bottom,
-            rgba(23, 85, 83, 0.7) 0%,
-            /* 70% opacity */
-            rgba(67, 217, 173, 0.7) 13%,
-            /* 70% opacity */
-            rgba(23, 85, 83, 0.7) 100%
-            /* 70% opacity */
-        );
+  width: 510px;
+  height: 475px;
+  border-radius: 8px;
+  border: 1px solid #0c1616;
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 85, 83, 0.7) 0%,
+    /* 70% opacity */ rgba(67, 217, 173, 0.7) 13%,
+    /* 70% opacity */ rgba(23, 85, 83, 0.7) 100% /* 70% opacity */
+  );
 }

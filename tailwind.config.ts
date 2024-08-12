@@ -81,6 +81,40 @@ const config: Config = {
           borderOpacity: "50%",
         },
       },
+      keyframes: {
+        vertical: {
+          "0%": { transform: "translateY(-50%)" },
+          "50%": { transform: "translateY(50%)" },
+          "100%": { transform: "translateY(-50%)" },
+        },
+        circleLeft: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(180deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        circleRight: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(180deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        horizontal: {
+          "0%": { transform: "translateX(-50%) translateY(-10%)" },
+          "50%": { transform: "translateX(50%) translateY(10%)" },
+          "100%": { transform: "translateX(-50%) translateY(-10%)" },
+        },
+        circleBottom: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(180deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        vertical: "vertical 30s ease infinite",
+        circleLeft: "circleLeft 20s reverse infinite",
+        circleRight: "circleRight 40s linear infinite",
+        horizontal: "horizontal 40s ease infinite",
+        circleBottom: "circleBottom 20s ease infinite",
+      },
     },
   },
   variants: {
