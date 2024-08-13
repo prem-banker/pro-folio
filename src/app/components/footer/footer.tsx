@@ -12,23 +12,44 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-r border-line flex-vertical-center">
-          <a href="https://twitter.com" className="px-[14px]">
-            <FaTwitter className="text-secondaryLightBlue" size={20} />
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            className="group h-full"
+          >
+            <div className="h-full border-r border-line flex-vertical-center px-[14px] group-hover:bg-gray-200 transition-all duration-300 cursor-pointer">
+              <FaTwitter
+                className="text-secondaryLightBlue group-hover:text-secondaryFluorescentGreen transition-colors duration-300"
+                size={20}
+              />
+            </div>
           </a>
         </div>
 
         <div className="border-r border-line flex-vertical-center">
-          <a href="https://twitter.com" className="px-[14px]">
-            <FaLinkedin className="text-secondaryLightBlue" size={20} />
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            className="group h-full"
+          >
+            <div className="h-full border-r border-line flex-vertical-center px-[14px] group-hover:bg-gray-200 transition-all duration-300 cursor-pointer">
+              <FaLinkedin
+                className="text-secondaryLightBlue group-hover:text-secondaryFluorescentGreen transition-colors duration-300"
+                size={20}
+              />
+            </div>
           </a>
         </div>
       </div>
-      <div className="border-r border-line flex-center-items">
+      <div className="flex-center-items">
         <a
           href="https://github.com/prem-banker"
-          className="px-[14px] flex-center-items"
+          target="_blank"
+          className="group h-full"
         >
-          <span className="mr-2">@prem-banker</span> <FaGithub />
+          <div className="h-full px-[14px] flex-vertical-center  group-hover:bg-gray-200  group-hover:text-secondaryFluorescentGreen transition-all duration-300 cursor-pointer">
+            <span className="mr-2">@prem-banker</span> <FaGithub />
+          </div>
         </a>
       </div>
     </footer>
