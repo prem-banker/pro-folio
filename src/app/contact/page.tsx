@@ -1,19 +1,18 @@
 "use client";
 
 import { javascript } from "@codemirror/lang-javascript";
-import CodeMirror, { EditorState, EditorView } from "@uiw/react-codemirror";
+import { EditorState, EditorView } from "@uiw/react-codemirror";
 import { useState } from "react";
 import { FaCaretDown, FaEnvelope } from "react-icons/fa";
 import { FaUpRightFromSquare } from "react-icons/fa6";
 import userdata from "../../../public/data/user.json";
+import CustomCodeEditor from "../components/code-editor/codeeditor";
 import "../styles/contact.css";
 import "../styles/projects.css";
-import { editorTheme } from "../utils/editortheme";
+import customKeymap from "../utils/code-editor/keymap";
 import { User } from "../utils/interfaces";
 import { capitalizeFirstLetter } from "../utils/utils";
 import FormComponent from "./form";
-import customKeymap from "../utils/code-editor/keymap";
-import CustomCodeEditor from "../components/code-editor/codeeditor";
 
 export default function Page() {
   const user: User = userdata.user;
