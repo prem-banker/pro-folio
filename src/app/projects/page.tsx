@@ -19,7 +19,7 @@ export default function Page() {
     technologies
   );
 
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
 
   useEffect(() => {
     // Filter projects based on active technologies

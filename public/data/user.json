@@ -41,7 +41,7 @@
       {
         "name": "E-commerce Website",
         "description": "A fully functional e-commerce website built with React and Node.js e-commerce website built with React and Node.js nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "image": "/projects/project_images/p1.png",
         "techstack": [
           "React",
           "Node.js",
@@ -55,7 +55,7 @@
       {
         "name": "Blog App",
         "description": "A simple blog application with user authentication built using Django",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "image": "/projects/project_images/p2.png",
         "techstack": [
           "Django",
           "HTML",
@@ -69,7 +69,7 @@
       {
         "name": "Social Media Platform",
         "description": "A social media platform built with React and Firebase",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "image": "/projects/project_images/p3.png",
         "techstack": [
           "React",
           "Firebase",
