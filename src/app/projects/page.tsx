@@ -135,8 +135,8 @@ export default function Page() {
                 className="my-4 mx-4 w-[30%] text-secondaryLightBlue"
               >
                 <div className="text-body truncate mb-2 text-secondaryFluorescentGreen">
-                  <span className="text-semibold text-secondaryBrightPurple">
-                    Project {index + 1} &nbsp;
+                  <span className="ml-1 text-semibold text-secondaryBrightPurple">
+                    Pr#{index + 1} &nbsp;
                   </span>
                   {project.name}
                 </div>
@@ -150,7 +150,12 @@ export default function Page() {
                     {project.description}
                   </div>
 
-                  <button className="mx-4 my-4 w-[150px] bg-buttonbackground py-2 px-3 rounded-md text-white">
+                  <button
+                    className="mx-4 my-4 w-[150px] bg-buttonbackground py-2 px-3 rounded-md text-white 
+  transition-colors duration-300 ease-in-out
+  hover:bg-buttonhover"
+                  >
+                    {" "}
                     view-project
                   </button>
                 </div>

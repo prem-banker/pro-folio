@@ -37,6 +37,9 @@ const config: Config = {
         buttonbackground: "#1C2B3A",
         red: "#FF0000",
         green: "#00FF00",
+        buttonhover: "#43D9AD",
+        buttonactive: "#1f6d92", // Even darker shade for active
+        buttonfocus: "#85c1ae", // Color for focus ring
       },
       fontFamily: {
         sans: ["Fira Code", "sans-serif"],
