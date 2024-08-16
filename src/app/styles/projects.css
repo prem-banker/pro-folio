@@ -1,13 +1,13 @@
 input[type="checkbox"] {
-  outline: 1px solid #607b96;
+  outline: 1px solid #ffffff;
   background-color: transparent !important;
   accent-color: transparent;
 }
 
 input:checked {
-  outline: 1px solid #607b96;
+  outline: 1px solid #ffffff;
   background: transparent;
-  accent-color: #607b96;
+  accent-color: #ffffff;
 }
 
 /* .projects-content {
@@ -40,4 +40,10 @@ input:checked {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #607b96;
   border-radius: 5px;
+}
+
+.custom-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

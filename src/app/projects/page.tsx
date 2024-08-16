@@ -14,7 +14,9 @@ import { standardizeName } from "../utils/utils";
 export default function Page() {
   const { technologies } = metadata;
   const projects: Project[] = userdata.user.projects;
-  const [activeTechnologies, setActiveTechnologies] = useState(technologies);
+  const [activeTechnologies, setActiveTechnologies] = useState<string[]>(
+    technologies
+  );
 
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
@@ -37,8 +39,12 @@ export default function Page() {
     }
   };
 
-  const clearSelectedTechnologies = () => {
-    setActiveTechnologies([]);
+  const toggleAllTechnologies = () => {
+    if (activeTechnologies.length === technologies.length) {
+      setActiveTechnologies([]);
+    } else {
+      setActiveTechnologies(technologies);
+    }
   };
 
   const getTabName = () =>
@@ -54,18 +60,18 @@ export default function Page() {
       {/* Header */}
       <div className="h-[40px] flex items-center justify-between border-b border-line">
         <div className="flex-vertical-center">
-          <div className="w-[311px] pl-[22px] border-r border-line  flex-vertical-center">
+          <div className="w-[311px] pl-[22px] border-r border-line flex-vertical-center">
             <FaCaretDown className="text-white mr-2" />
             <span className="text-white">projects</span>
           </div>
 
           {activeTechnologies.length > 0 && (
-            <div className="text-secondaryLightBlue w-[200px] px-4 border-r border-line  flex h-full items-center justify-between">
+            <div className="text-secondaryLightBlue w-[200px] px-4 border-r border-line flex h-full items-center justify-between">
               <span>{getTabName()}</span>
 
               <button
                 className="bg-transparent border-none outline-none cursor-pointer"
-                onClick={clearSelectedTechnologies}
+                onClick={() => setActiveTechnologies([])}
               >
                 <RiCloseLine className="text-xl" />
               </button>
@@ -75,34 +81,51 @@ export default function Page() {
       </div>
 
       {/* Sidebar + content */}
-
       <div className="flex-1 text-secondaryLightBlue flex items-start maintain-size-x">
         {/* Sidebar - Tech Select */}
-        <div className="w-[311px] border-r border-line h-full">
-          {technologies.map((tech, index) => (
-            <div key={index} className="flex items-center mt-4 mx-[22px]">
-              <input
-                type="checkbox"
-                id={tech}
-                className="h-4 w-4"
-                checked={activeTechnologies.includes(tech)}
-                onChange={() => toggleCheckbox(tech)}
-              />
-              <label
-                htmlFor={tech}
-                className={`flex items-center space-x-2 ml-4 ${
-                  activeTechnologies.includes(tech) ? "text-white" : ""
-                }`}
-              >
-                <TechIcon tech={tech} />
-                <span>{standardizeName(tech)}</span>
-              </label>
-            </div>
-          ))}
+        <div className="w-[311px] border-r border-line h-full flex flex-col custom-scrollbar">
+          <div className="flex items-center mt-4 px-[22px] border-b border-line pb-2">
+            <input
+              type="checkbox"
+              id="toggleAll"
+              className="h-4 w-4"
+              checked={activeTechnologies.length === technologies.length}
+              onChange={toggleAllTechnologies}
+            />
+            <label htmlFor="toggleAll" className="ml-4">
+              {activeTechnologies.length === technologies.length
+                ? "Clear All"
+                : "Select All"}
+            </label>
+          </div>
+
+          <div>
+            {technologies.map((tech, index) => (
+              <div key={index} className="flex items-center mt-4 mx-[22px]">
+                <input
+                  type="checkbox"
+                  id={tech}
+                  className="h-4 w-4"
+                  checked={activeTechnologies.includes(tech)}
+                  onChange={() => toggleCheckbox(tech)}
+                />
+                <label
+                  htmlFor={tech}
+                  className={`flex items-center space-x-2 ml-4 custom-label ${
+                    activeTechnologies.includes(tech) ? "text-white" : ""
+                  }`}
+                >
+                  <TechIcon tech={tech} />
+                  <span className="flex-1 min-w-0 custom-label">
+                    {standardizeName(tech)}
+                  </span>
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Content - Projects */}
-        {/* w-0 coz it was expanding and causing its siblings to shrink */}
         <div className="flex flex-1 w-0 h-full flex-wrap pt-8 custom-scrollbar">
           {filteredProjects.map((project, index) => (
             <div key={index} className="my-4 mx-4 w-[30%]">
@@ -110,7 +133,7 @@ export default function Page() {
                 <span className="text-semibold text-secondaryBrightPurple">
                   Project {index + 1} &nbsp;
                 </span>
-                // {project.name}
+                {project.name}
               </div>
               <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col h-[320px]">
                 <img

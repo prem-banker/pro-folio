@@ -8,7 +8,7 @@ import AnimatedText from "./components/animatedtext/animatedtext";
 
 export default function Home() {
   return (
-    <div className="min-h-inherit flex-center-items relative ">
+    <div className="min-h-inherit flex-center-items relative">
       {/* <BubbleAnimation /> */}
       <div className="mx-auto flex items-center justify-center w-[1080px]">
         <div className="w-1/2 p-8 ">
