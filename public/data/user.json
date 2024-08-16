@@ -39,136 +39,152 @@
     ],
     "projects": [
       {
-        "name": "E-commerce Website",
-        "description": "A fully functional e-commerce website built with React and Node.js e-commerce website built with React and Node.js nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs nodejs",
-        "image": "/projects/project_images/p1.png",
+        "name": "Pro-folio",
+        "description": "Portfolio for pros. This is a portfolio website for software developers. The code is open sourced, enabling anyone to make quick meta data changes and load up their own portfolio website.",
+        "image": "/projects/project_images/profolio.png",
         "techstack": [
-          "React",
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "Python"
+          "react",
+          "next",
+          "tailwind",
+          "html",
+          "css"
         ],
-        "github": "https://github.com/username/ecommerce",
-        "url": "https://example.com/ecommerce"
+        "github": "https://github.com/prem-banker/pro-folio",
+        "url": "https://github.com/prem-banker/pro-folio"
       },
       {
-        "name": "Blog App",
-        "description": "A simple blog application with user authentication built using Django",
-        "image": "/projects/project_images/p2.png",
+        "name": "CarbonKarma",
+        "description": "CarbonKarma is a decentralized finance (DeFi) application built on the Ripple XRPL blockchain that rewards users with our cryptocurrency called CRBT (CarbonReward Token) for choosing sustainable modes of transportation. The platform leverages Google's travel data and the Carbon Interface API to calculate the carbon emissions associated with different travel options and then converts the emission amount into the CRBT tokens.",
+        "image": "/projects/project_images/carbonkarma.png",
         "techstack": [
-          "Django",
+          "react",
+          "javascript",
+          "vercel",
+          "node.js",
+          "mongodb",
+          "solidity"
+        ],
+        "github": "https://github.com/kshitij101/carbonkarma",
+        "url": "https://devpost.com/software/carbonkarma-n79k3h"
+      },
+      {
+        "name": "Marubot",
+        "description": "MaruBot is an intelligent chatbot for Discord and a web extension, utilizing advanced AI to provide context-aware, personalized responses. It retrieves information from chat history and documents using a Retrieval-Augmented Generation (RAG) model, enhancing search efficiency and automating tasks with robust privacy protections.",
+        "image": "/projects/project_images/marubot.jpg",
+        "techstack": [
+          "python",
+          "gemini",
+          "llm",
+          "VectorDB",
+          "react"
+        ],
+        "github": "https://github.com/prem-banker/all-source",
+        "url": "https://devpost.com/software/marubot"
+      },
+      {
+        "name": "Meet - Quicko",
+        "description": "MEET is an online tax advisory platform where customers can come and book meetings with Tax experts to solve their income tax related problems. This was developed during my time at Quicko using Flutter, node.js and aws.",
+        "image": "/projects/project_images/meet.png",
+        "techstack": [
+          "flutter",
+          "AWS",
+          "node.js",
+          "typescript",
+          "javascript"
+        ],
+        "github": "https://meet.quicko.com",
+        "url": "https://meet.quicko.com"
+      },
+      {
+        "name": "Tax filing on Mobile - Quicko",
+        "description": "This is a mobile webapp for filing and paying income taxes in India. This was built by me while at Quicko using Flutter on the frontend and node.js and Java on the backend",
+        "image": "/projects/project_images/tax.png",
+        "techstack": [
+          "Node.js",
+          "flutter",
+          "AWS",
+          "Java",
+          "DynamoDb"
+        ],
+        "github": "https://it.quicko.com",
+        "url": "https://it.quicko.com"
+      },
+      {
+        "name": "Clique - Quicko",
+        "description": "Clique is the affiliate program for Quicko where users can manage their conversions, transactions and settlement reports of the people they have referred",
+        "image": "/projects/project_images/clique.png",
+        "techstack": [
+          "Angular",
           "HTML",
-          "CSS",
-          "JavaScript",
-          "Docker"
+          "javascript",
+          "java"
         ],
-        "github": "https://github.com/username/blog-app",
-        "url": "https://example.com/blog"
+        "github": "https://clique.quicko.com/",
+        "url": "https://clique.quicko.com/"
       },
       {
-        "name": "Social Media Platform",
-        "description": "A social media platform built with React and Firebase",
-        "image": "/projects/project_images/p3.png",
+        "name": "Kahaniyan",
+        "description": "Kahaniyan is an online bookstore which was made as a recurrent project exercise in CS5244 Web Technologies at VT. The bookstore was designed using Figma and coded out in React and Java",
+        "image": "/projects/project_images/kahaniyan.png",
         "techstack": [
           "React",
-          "Firebase",
-          "Material-UI",
-          "Angular"
+          "Java",
+          "MySQL"
         ],
-        "github": "https://github.com/username/social-media",
-        "url": "https://example.com/social-media"
+        "github": "https://github.com/prem-banker/bookstore",
+        "url": "https://github.com/prem-banker/bookstore"
       },
       {
-        "name": "Weather App",
-        "description": "An app that provides real-time weather information using OpenWeatherMap API",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "name": "Soccer Events Analytics",
+        "description": "This project analyzes soccer game events like goals, assists, shots, blocks, and clearances. Based on this data, it provides various insights into players, their playstyles, and team strategies. The analysis helps determine key patterns and trends in player and team performance.",
+        "image": "/projects/project_images/soccer.png",
         "techstack": [
-          "React",
-          "OpenWeatherMap API",
-          "Bootstrap",
-          "Go"
+          "python"
         ],
-        "github": "https://github.com/username/weather-app",
-        "url": "https://example.com/weather"
+        "github": "https://github.com/prem-banker",
+        "url": "https://github.com/prem-banker"
       },
       {
-        "name": "Task Management System",
-        "description": "A web application for managing tasks and projects",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "name": "Voice-Guided Identity Verification",
+        "description": "This project develops a cost-effective voice recognition solution for identity verification, targeting virtual settings like online education and meetings. It uses audio data converted into log mel spectrograms and classifies them with a Convolutional Neural Network (CNN) for reliable and secure identification and attendance tracking.",
+        "image": "/projects/project_images/voice.png",
         "techstack": [
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "Bootstrap",
-          "Java"
+          "python"
         ],
-        "github": "https://github.com/username/task-management",
-        "url": "https://example.com/task-management"
+        "github": "https://github.com/prem-banker",
+        "url": "https://github.com/prem-banker"
       },
       {
-        "name": "Portfolio Website",
-        "description": "A personal portfolio website showcasing projects and skills",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "name": "Instagram Bot Comment detector",
+        "description": "This Instagram bot comment remover identifies and reports bot comments, hiding them from the user's view to clean up the comments section. It uses a machine learning model and Selenium automator to scan and analyze comments. The ML classifier is trained on thousands of labeled data points using NLP techniques.",
+        "image": "/projects/project_images/instagram.png",
         "techstack": [
-          "React",
-          "Next.js",
-          "Tailwind CSS"
+          "python"
         ],
-        "github": "https://github.com/username/portfolio",
-        "url": "https://example.com/portfolio"
+        "github": "https://github.com/prem-banker",
+        "url": "https://github.com/prem-banker"
       },
       {
-        "name": "Recipe App",
-        "description": "An application for searching and saving recipes",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "name": "Visual Occupancy Detection System",
+        "description": "VODS for smart parking lot management differentiates between empty and occupied parking spaces. Utilizing a CNN model trained on over 120k images, it identifies available spots for drivers. As traffic congestion increases, this low-cost system offers significant benefits in time savings and pollution reduction.",
+        "image": "/projects/project_images/vods.png",
         "techstack": [
-          "React",
-          "Node.js",
-          "MongoDB",
-          "Tailwind CSS"
+          "python"
         ],
-        "github": "https://github.com/username/recipe-app",
-        "url": "https://example.com/recipe"
+        "github": "https://github.com/prem-banker",
+        "url": "https://github.com/prem-banker"
       },
       {
-        "name": "Chat Application",
-        "description": "A real-time chat application using Socket.io",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
+        "name": "Balley",
+        "description": "Balley is a 2D hypercasual infinite-runner type game made using Unity. The goal is to stay alive for as long as possible, gain points by bouncing off the raised platforms and to collect coins and power-ups while you're at it. The game gets progressively difficult as the points increase & also features an in-game store from where players can buy skins and powerups.",
+        "image": "/projects/project_images/balley.png",
         "techstack": [
-          "React",
-          "Node.js",
-          "Socket.io",
-          "Bootstrap"
+          "C",
+          "C#",
+          "Unity"
         ],
-        "github": "https://github.com/username/chat-app",
-        "url": "https://example.com/chat"
-      },
-      {
-        "name": "Expense Tracker",
-        "description": "An application for tracking expenses and income",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": [
-          "React",
-          "Node.js",
-          "MongoDB",
-          "Material-UI"
-        ],
-        "github": "https://github.com/username/expense-tracker",
-        "url": "https://example.com/expense-tracker"
-      },
-      {
-        "name": "Music Player",
-        "description": "A simple music player application built with React",
-        "image": "https://cdn.hackr.io/uploads/posts/attachments/1661991624L0myz9O6Qr.png",
-        "techstack": [
-          "React",
-          "HTML",
-          "CSS",
-          "JavaScript"
-        ],
-        "github": "https://github.com/username/music-player",
-        "url": "https://example.com/music-player"
+        "github": "https://github.com/prem-banker",
+        "url": "https://github.com/prem-banker"
       }
     ],
     "socials": [

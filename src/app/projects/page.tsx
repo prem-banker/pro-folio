@@ -156,7 +156,7 @@ export default function Page() {
                       <FaGithub className="text-white text-lg" />
                     </a>
                   </div>
-                  <div className="text-labels mx-4 truncate-5">
+                  <div className="text-labels mx-4 mt-2 truncate-5">
                     {project.description}
                   </div>
                   <a
@@ -184,3 +184,28 @@ export default function Page() {
     </div>
   );
 }
+
+// VT
+// Pro-folio
+// Carbonkarma
+// Marubot
+// Bookstore
+// Info viz football dataset
+// Intro to AI project
+
+// PDEU
+// Instagram bot detector
+// Occupancy detection
+// Occlusion
+// Balley
+// House Price
+// movie
+
+// Quicko
+// MEET
+// IT
+// Clique
+
+// cloud
+// ml1
+// web
