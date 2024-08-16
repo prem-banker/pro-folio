@@ -130,24 +130,27 @@ export default function Page() {
         <div className="flex flex-1 w-0 h-full flex-wrap custom-scrollbar pt-8">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
-              <div key={index} className="my-4 mx-4 w-[30%]">
-                <div className="text-body text-secondaryLightBlue truncate mb-2">
+              <div
+                key={index}
+                className="my-4 mx-4 w-[30%] text-secondaryLightBlue"
+              >
+                <div className="text-body truncate mb-2 text-secondaryFluorescentGreen">
                   <span className="text-semibold text-secondaryBrightPurple">
                     Project {index + 1} &nbsp;
                   </span>
                   {project.name}
                 </div>
-                <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col h-[320px]">
+                <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col max-h-[400px]">
                   <img
                     src={project.image}
                     alt={project.name}
                     className="h-[150px] object-cover rounded-md mb-4"
                   />
-                  <div className="text-body text-secondaryLightBlue mx-4 truncate-2">
+                  <div className="text-labels mx-4 truncate-5">
                     {project.description}
                   </div>
 
-                  <button className="mx-4 mt-4 w-[150px] bg-buttonbackground py-2.5 px-3.5 rounded-md text-white">
+                  <button className="mx-4 my-4 w-[150px] bg-buttonbackground py-2 px-3 rounded-md text-white">
                     view-project
                   </button>
                 </div>

@@ -81,6 +81,22 @@ body {
   text-overflow: ellipsis;
 }
 
+.truncate-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .maintain-size {
   overflow-y: auto;
   overflow-x: hidden;
