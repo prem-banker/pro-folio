@@ -9,6 +9,7 @@ import TechIcon from "../components/techicon";
 import "../styles/projects.css";
 import { Project, User } from "../utils/interfaces";
 import { standardizeName } from "../utils/utils";
+import EmptyState from "./emptystate";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
@@ -126,31 +127,35 @@ export default function Page() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex flex-1 w-0 h-full flex-wrap pt-8 custom-scrollbar">
-          {filteredProjects.map((project, index) => (
-            <div key={index} className="my-4 mx-4 w-[30%]">
-              <div className="text-body text-secondaryLightBlue truncate mb-2">
-                <span className="text-semibold text-secondaryBrightPurple">
-                  Project {index + 1} &nbsp;
-                </span>
-                {project.name}
-              </div>
-              <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col h-[320px]">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="h-[150px] object-cover rounded-md mb-4"
-                />
-                <div className="text-body text-secondaryLightBlue mx-4 truncate-2">
-                  {project.description}
+        <div className="flex flex-1 w-0 h-full flex-wrap custom-scrollbar pt-8">
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <div key={index} className="my-4 mx-4 w-[30%]">
+                <div className="text-body text-secondaryLightBlue truncate mb-2">
+                  <span className="text-semibold text-secondaryBrightPurple">
+                    Project {index + 1} &nbsp;
+                  </span>
+                  {project.name}
                 </div>
+                <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col h-[320px]">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="h-[150px] object-cover rounded-md mb-4"
+                  />
+                  <div className="text-body text-secondaryLightBlue mx-4 truncate-2">
+                    {project.description}
+                  </div>
 
-                <button className="mx-4 mt-4 w-[150px] bg-buttonbackground py-2.5 px-3.5 rounded-md text-white">
-                  view-project
-                </button>
+                  <button className="mx-4 mt-4 w-[150px] bg-buttonbackground py-2.5 px-3.5 rounded-md text-white">
+                    view-project
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <EmptyState />
+          )}
         </div>
       </div>
     </div>
