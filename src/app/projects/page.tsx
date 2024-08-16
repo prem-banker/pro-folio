@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown, FaGithub } from "react-icons/fa";
 import { RiCloseLine } from "react-icons/ri";
 import metadata from "../../../public/data/meta.json";
 import userdata from "../../../public/data/user.json";
@@ -141,23 +141,38 @@ export default function Page() {
                   {project.name}
                 </div>
                 <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col max-h-[400px]">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="h-[150px] object-cover rounded-md mb-4"
-                  />
+                  <div className="relative">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-[150px] object-cover rounded-t-md"
+                    />
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-2 right-2 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300 ease-in-out"
+                    >
+                      <FaGithub className="text-white text-lg" />
+                    </a>
+                  </div>
                   <div className="text-labels mx-4 truncate-5">
                     {project.description}
                   </div>
-
-                  <button
-                    className="mx-4 my-4 w-[150px] bg-buttonbackground py-2 px-3 rounded-md text-white 
-  transition-colors duration-300 ease-in-out
-  hover:bg-buttonhover"
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mx-4 my-4 w-[150px] inline-block"
                   >
-                    {" "}
-                    view-project
-                  </button>
+                    <button
+                      className="w-full bg-buttonbackground py-2 px-3 rounded-md text-white 
+      transition-colors duration-300 ease-in-out
+      hover:bg-buttonhover"
+                    >
+                      view-project
+                    </button>
+                  </a>
                 </div>
               </div>
             ))
