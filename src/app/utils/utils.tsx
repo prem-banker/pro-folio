@@ -25,6 +25,26 @@ export const addLineBreaks = (desc: string, maxLineLength: number): string => {
   return result;
 };
 
+export const addLineBreaksWoComments = (
+  desc: string,
+  maxLineLength: number
+): string => {
+  const words = desc.split(" ");
+  let result = "";
+  let currentLine = "";
+
+  for (const word of words) {
+    if (currentLine.length + word.length >= maxLineLength) {
+      result += currentLine + "\n";
+      currentLine = "" + word;
+    } else {
+      currentLine += " " + word;
+    }
+  }
+  result += currentLine + "\n";
+  return result;
+};
+
 export const getLastElement = (str, delimiter) => {
   const parts = str.split(delimiter);
   return parts[parts.length - 1];

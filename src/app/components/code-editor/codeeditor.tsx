@@ -2,6 +2,7 @@
 import customKeymap from "@/app/utils/code-editor/keymap";
 import { editorTheme } from "@/app/utils/editortheme";
 import { javascript } from "@codemirror/lang-javascript";
+import "./codeeditor.css";
 import ReactCodeMirror, {
   EditorState,
   EditorView,
@@ -10,9 +11,10 @@ import React from "react";
 
 interface EditorProps {
   code: string;
+  fontSize?: string; // Optional fontSize prop as a string
 }
 
-const CustomCodeEditor: React.FC<EditorProps> = ({ code }) => {
+const CustomCodeEditor: React.FC<EditorProps> = ({ code, fontSize }) => {
   const extensions = [
     EditorView.editable.of(false),
     EditorState.readOnly.of(true),
@@ -21,12 +23,14 @@ const CustomCodeEditor: React.FC<EditorProps> = ({ code }) => {
   ];
 
   return (
-    <ReactCodeMirror
-      editable={false}
-      extensions={extensions}
-      value={code}
-      theme={editorTheme}
-    />
+    <div className="h-full" style={fontSize ? { fontSize } : {}}>
+      <ReactCodeMirror
+        editable={false}
+        extensions={extensions}
+        value={code}
+        theme={editorTheme}
+      />
+    </div>
   );
 };
 

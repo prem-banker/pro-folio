@@ -2,7 +2,7 @@
 import React from "react";
 import userdata from "../../../../../public/data/user.json";
 import CustomCodeEditor from "@/app/components/code-editor/codeeditor";
-import { addLineBreaks } from "@/app/utils/utils";
+import { addLineBreaks, addLineBreaksWoComments } from "@/app/utils/utils";
 
 export default function EducationPage({
   params,
@@ -15,8 +15,11 @@ export default function EducationPage({
   );
 
   return (
-    <div className="h-full">
-      <CustomCodeEditor code={addLineBreaks(education.description, 50)} />
+    <div className="h-full w-full custom-scrollbar">
+      <CustomCodeEditor
+        code={addLineBreaks(education.description, 50)}
+        fontSize="1.2em"
+      />
     </div>
   );
 }

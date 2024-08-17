@@ -1,0 +1,14 @@
+.cm-scroller {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.cm-scroller::-webkit-scrollbar {
+  width: 6px;
+  border-left: 1px solid #1e2d3d;
+}
+
+.cm-scroller::-webkit-scrollbar-thumb {
+  background-color: #607b96;
+  border-radius: 3px;
+}
