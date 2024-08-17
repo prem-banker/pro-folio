@@ -69,6 +69,20 @@ body {
   /* height: 1px; */
 }
 
+.cursor {
+  display: inline-block;
+  width: 5px;
+  height: 1em;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /* html {
   line-height: 1 !important;
 } */

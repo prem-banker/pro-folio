@@ -8,9 +8,14 @@ const CustomFile: React.FC<FileProps> = ({ text, onTap }) => {
   const isOpen = usePathname().includes(text);
 
   return (
-    <div className={`flex items-center p-2 cursor-pointer`} onClick={onTap}>
+    <div
+      className={`flex items-center px-2 py-1 cursor-pointer`}
+      onClick={onTap}
+    >
       <FaFile className="mr-2" />
-      <span className={`"mr-2" ${isOpen ? "text-white" : ""}`}>{text}</span>
+      <span className={`"mr-2" ${isOpen ? "text-white" : ""}`}>
+        {text.toLowerCase()}
+      </span>
     </div>
   );
 };

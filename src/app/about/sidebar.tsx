@@ -27,8 +27,9 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className="h-full">
-      <Folder color="blue" name="education" files={educationFiles} />
-      <Folder color="green" name="work" files={workFiles} />
+      <div className="pt-2"></div>
+      <Folder color="#FEA55F" name="education" files={educationFiles} />
+      <Folder color="#43D9AD" name="work" files={workFiles} />
     </div>
   );
 };

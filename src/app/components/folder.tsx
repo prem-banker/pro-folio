@@ -22,7 +22,7 @@ const Folder: React.FC<FolderProps> = ({ color, name, files: list }) => {
   };
 
   return (
-    <div className="w-full max-w-md p-2">
+    <div className="w-full max-w-md px-6 py-1">
       <div
         className="cursor-pointer flex justify-between items-center"
         onClick={toggleFolder}
@@ -43,7 +43,7 @@ const Folder: React.FC<FolderProps> = ({ color, name, files: list }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="mt-2 ml-4">
+        <div className="mt-1 ml-4">
           {list.map((file, index) => (
             <CustomFile key={index} {...file} />
           ))}
