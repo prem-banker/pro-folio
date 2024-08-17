@@ -59,7 +59,8 @@ const TechIcon: React.FC<TechIconProps> = ({ tech, size = 20 }) => {
     return <FaPython color={iconColor} size={iconSize} />;
   } else if (
     lowerCaseTechName.includes("c++") ||
-    lowerCaseTechName.includes("cpp")
+    lowerCaseTechName.includes("cpp") ||
+    lowerCaseTechName === "c"
   ) {
     return <FaC color={iconColor} size={iconSize} />;
   } else if (lowerCaseTechName.includes("java")) {

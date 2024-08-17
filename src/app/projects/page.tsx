@@ -24,8 +24,10 @@ export default function Page() {
   useEffect(() => {
     // Filter projects based on active technologies
     const newFilteredProjects = projects.filter((project) => {
-      return project.techstack.some((tech) =>
-        activeTechnologies.includes(tech.toLowerCase())
+      return project.techstack.some(
+        (tech) =>
+          activeTechnologies.includes(tech.toLowerCase()) ||
+          activeTechnologies.includes(tech)
       );
     });
     // Update the state with the filtered projects
@@ -136,7 +138,7 @@ export default function Page() {
               >
                 <div className="text-body truncate mb-2 text-secondaryFluorescentGreen">
                   <span className="ml-1 text-semibold text-secondaryBrightPurple">
-                    Pr#{index + 1} &nbsp;
+                    Pr#{index + 1}&nbsp;
                   </span>
                   {project.name}
                 </div>
