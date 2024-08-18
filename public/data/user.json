@@ -8,14 +8,14 @@
         "title": "masters",
         "school": "Virginia Tech",
         "degree": "Masters in Computer Science",
-        "description": "I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development I joined Virginia Tech in the Fall of 23, Throughout the semester, I have taken numerous courses including but not limited to Modelling and Evaluation, Information Visualization, Artificial Intelligence, Machine Learning 1, Web Development",
+        "description": "Masters\nMasters in Computer Science, Virginia Tech\nWashington DC, USA\nAug 2023 - Present\n\nCoursework: Information Visualization, Artificial Intelligence, Modelling and Evaluation, Machine Learning, Web Tech, Cloud Computing, Software Engineering, ML in Big Data",
         "place": "Wahsington DC"
       },
       {
         "title": "bachelors",
         "school": "PDEU",
         "degree": "BTech in Computer Science",
-        "description": "I am currently pursuing my ",
+        "description": "Bachelors\nBachelors in CS, PDEU\nAhmedabad, India\nJuly 2017 - May 2021\n\nCoursework: Web Development, Software Engineering, Information Security, Computer Networks, Database Management, Data Structures and Algorithms, Distributed Systems, Optimization Techniques, Machine Learning, Natural Language Processing, Data Warehousing and Data Mining",
         "place": "Wahsington DC"
       }
     ],
@@ -25,7 +25,7 @@
         "company": "Quicko",
         "start": "May 21",
         "end": "Jun 23",
-        "description": "Have been working on certain things mayn, worked there for about 2.5 years, I built meet, pwa rtc etc. greatest team member of all time",
+        "description": "Quicko\nFull Stack Developer\nAhmedabad, India\nMay 2021 - June 2023\n\nTech Stack: Java SpringBoot, Node.js, Angular, Flutter, DynamoDb, Oracle SQL, AWS, GCP, Docker, Jenkins, Git\n\nLed development of India's top online tax advisory platform, automating scheduling, payments, and order lifecycle with Flutter, Node.js, and AWS, boosting revenue by 80%.\n\nOptimized scheduling using AWS CloudFront and EventBridge, cutting API response time from 4s to 200ms.\n\nDeveloped a PWA for income tax filing, integrated with major Indian brokerage apps, onboarding 500,000+ users in 2022.\n\nDeveloped Clique, Quicko’s affiliate app with Angular and Java SpringBoot, reaching 800,000 sign-ups through 100+ affiliates.\n\nStreamlined email marketing with Listmonk and AWS Lambda, analyzing AWS SES open events and saving $800 monthly by eliminating subscription fees.\n\nImplemented AWS Lambda middleware in Java and Node.js, reducing cold start time from 3-4s to <50ms.\n\nEstablished data retrieval patterns for DynamoDB, optimizing querying and pagination for better cost and access efficiency.",
         "place": "Ahmedabad India"
       },
       {
@@ -33,7 +33,7 @@
         "company": "Evosys",
         "start": "Jan 21",
         "end": "April 21",
-        "description": "Some Random Job Responsibilities",
+        "description": "Evosys\nApplication Development Intern\nAhmedabad, India\nJan 2021 - May 2021\n\nTech Stack: Javascript, PL-SQL, MySQL, Java, Oracle Cloud Infrastructure\n\nDeveloped Step-Function-like workflows using Oracle Integrations Cloud and PL-SQL procedures, establishing a data tunnel between Oracle Fusion Applications.\n\nImplemented an Oracle Integration Cloud Service (OICS) workflow to automate file transfer, processing, and delivery via SFTP, improving efficiency and reducing manual intervention.",
         "place": "Ahmedabad India"
       }
     ],

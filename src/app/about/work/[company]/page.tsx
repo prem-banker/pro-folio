@@ -13,7 +13,10 @@ export default function WorkPage({ params }: { params: { company: string } }) {
   // Display the details if work is found, otherwise show a message
   return (
     <div className="h-full">
-      <CustomCodeEditor code={addLineBreaks(work.description, 50)} />
+      <CustomCodeEditor
+        code={addLineBreaks(work.description, 50)}
+        fontSize="1.1em"
+      />
     </div>
   );
 }

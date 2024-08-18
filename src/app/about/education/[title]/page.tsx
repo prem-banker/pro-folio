@@ -18,7 +18,7 @@ export default function EducationPage({
     <div className="h-full w-full custom-scrollbar">
       <CustomCodeEditor
         code={addLineBreaks(education.description, 50)}
-        fontSize="1.2em"
+        fontSize="1.1em"
       />
     </div>
   );

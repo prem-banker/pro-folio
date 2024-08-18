@@ -20,10 +20,10 @@ export default function Home() {
             <AnimatedText />
           </h4>
           <div className="text-secondaryLightBlue font-labels">
-            // complete the game to continue
+            &#47;&#47; complete the game to continue
           </div>
           <div className="text-secondaryLightBlue font-labels">
-            // you can also see it on my Github page
+            &#47;&#47; you can also see it on my Github page
           </div>
 
           <div className="font-labels">
@@ -36,10 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          className="w-1/2 min-h-[400px] bg-contain bg-no-repeat bg-center relative overflow-hidden"
-          // style={{ backgroundImage: "url('/home/bg-gradient.png')" }}
-        >
+        <div className="w-1/2 min-h-[400px] bg-contain bg-no-repeat bg-center relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative w-full h-full">
               <Image
@@ -51,11 +48,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* <div className="w-1/2">
-     
-          <Image src="/home/hero-home.png" alt="Hero Image" width={600} height={400} />
-        </div> */}
       </div>
     </div>
   );

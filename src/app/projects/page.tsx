@@ -97,8 +97,8 @@ export default function Page() {
             />
             <label htmlFor="toggleAll" className="ml-4">
               {activeTechnologies.length === technologies.length
-                ? "Clear All"
-                : "Select All"}
+                ? "Clear all"
+                : "Select all"}
             </label>
           </div>
 
