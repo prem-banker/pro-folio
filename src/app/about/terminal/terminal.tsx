@@ -26,7 +26,7 @@ const Terminal: React.FC<TerminalProps> = ({ inputRef }) => {
         >
           <PreviousExecutions />
 
-          <TerminalInput />
+          <TerminalInput inputRef={inputRef} />
         </div>
       </div>
     </>

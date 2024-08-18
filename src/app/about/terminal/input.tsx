@@ -4,7 +4,11 @@ import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
 import { TerminalUsername } from "./username";
 import { banner } from "@/app/contexts/terminal";
 
-export const TerminalInput = () => {
+interface TerminalProps {
+  inputRef: React.MutableRefObject<HTMLInputElement>;
+}
+
+export const TerminalInput = ({ inputRef }) => {
   const {
     executions,
     command,
@@ -16,7 +20,7 @@ export const TerminalInput = () => {
     autocomplete,
   } = useExecutions();
 
-  const inputRef = React.useRef<HTMLInputElement>(null);
+  // const inputRef = React.useRef<HTMLInputElement>(null);
 
   const [lastViewedCommand, setLastViewedCommand] = useState<number>(0);
 

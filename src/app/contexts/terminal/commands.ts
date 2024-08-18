@@ -24,7 +24,7 @@ Type 'sumfetch' to display summary.
 
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
+  window.open(`https://github.com/prem-banker/pro-folio`);
   return "Opening Github repository...";
 };
 
@@ -145,9 +145,8 @@ export const summary = async (args?: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `       
-  Hi there. This is a simulation of a command prompt where you can get more information about me through some commands. /n               
+For my techies, this is a simulation of a terminal.
 Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+Type 'resume' to see my resume.
 `;
 };
