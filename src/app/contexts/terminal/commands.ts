@@ -2,6 +2,7 @@
 
 import * as bin from "./index";
 import config from "../../../../config.json";
+import userdata from "../../../../public/data/user.json";
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
@@ -39,56 +40,46 @@ More about me:
 };
 
 export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
+  window.open(`${userdata.user.resume_url}`);
   return "Opening resume...";
-};
-
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
 };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+  window.open(`mailto:${userdata.user.email}`);
+  return `Opening mailto:${userdata.user.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+  const githubLink = userdata.user.socials.find(
+    (social) => social.name.toLowerCase() === "github"
+  )?.link;
 
-  return "Opening github...";
+  if (githubLink) {
+    window.open(githubLink);
+    return "Opening github...";
+  } else {
+    return "User's github is not available";
+  }
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  const linkedin = userdata.user.socials.find(
+    (social) => social.name.toLowerCase() === "linkedin"
+  )?.link;
 
-  return "Opening linkedin...";
+  if (linkedin) {
+    window.open(linkedin);
+    return "Opening linkedin...";
+  } else {
+    return "user' linkedin is not available";
+  }
 };
 
 // Search
 export const google = async (args: string[]): Promise<string> => {
   window.open(`https://google.com/search?q=${args.join(" ")}`);
   return `Searching google for ${args.join(" ")}...`;
-};
-
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(" ")}`);
-  return `Searching duckduckgo for ${args.join(" ")}...`;
-};
-
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(" ")}`);
-  return `Wow, really? You are using bing for ${args.join(" ")}?`;
-};
-
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(" ")}`);
-  return `Searching reddit for ${args.join(" ")}...`;
 };
 
 // Typical linux commands
