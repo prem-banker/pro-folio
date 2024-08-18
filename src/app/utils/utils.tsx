@@ -9,18 +9,31 @@ export const capitalizeFirstLetter = (str: string): string => {
 };
 
 export const addLineBreaks = (desc: string, maxLineLength: number): string => {
-  const words = desc.split(" ");
-  let result = "";
-  let currentLine = "/** \n*";
+  // Split the input string by whitespace and newline characters, capturing delimiters
+  const words = desc.split(/(\s+|\n+)/);
+  let result = "/**\n*"; // Start the comment block
+  let currentLine = " "; // Initialize the current line
 
   for (const word of words) {
-    if (currentLine.length + word.length >= maxLineLength) {
-      result += currentLine + "\n";
-      currentLine = "* " + word;
+    if (word.match(/^\n+$/)) {
+      // Handle one or more newlines
+      // Count the number of newline characters
+      const numNewlines = word.length / 1; // Each \n is 1 character
+      result += currentLine + "\n*";
+      currentLine = " ";
+      // Add the required number of blank lines
+      result += "\n*".repeat(numNewlines - 1); // Only add additional blank lines, don't repeat on the first one
+    } else if (currentLine.length + word.length >= maxLineLength) {
+      // If adding the part would exceed the max line length, add the current line to the result
+      result += currentLine + "\n*";
+      currentLine = " " + word.trim(); // Start a new line with the current word
     } else {
-      currentLine += " " + word;
+      // Otherwise, add the part to the current line
+      currentLine += word;
     }
   }
+
+  // Add the last line and close the comment block
   result += currentLine + "\n*/";
   return result;
 };
