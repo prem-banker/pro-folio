@@ -8,7 +8,10 @@ import { addLineBreaks } from "@/app/utils/utils";
 export default function BioPage({}: {}) {
   return (
     <div className="h-full">
-      <CustomCodeEditor code={addLineBreaks(userdata.user.bio, 50)} />
+      <CustomCodeEditor
+        code={addLineBreaks(userdata.user.bio, 60)}
+        fontSize="1.1em"
+      />
     </div>
   );
 }

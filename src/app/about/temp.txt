@@ -1,14 +1,2 @@
-bio
+Masters
 
-Prem Banker, 24
-Washington DC, USA
-
-I am a technology enthusiast who is currently pursuing my masters in Computer Science from Virginia Tech. 
-
-I am a problem solver who is interested in solving everything tech. My main background and projects are in Software Development and Artificial Intelligence whhich I had the pleasure of working during my studies and at my work. I love to work in teams and make meaningful contributions with like minded people.
-
-While I am not coding, I spend my time playing soccer (should be called football) or watching youtube.
-
-
-
-const bio = "Prem Banker, 24\nWashington DC, USA\n\nI am a problem solver who is interested in solving everything tech. My main background and projects are in Software Development and Artificial Intelligence, which I had the pleasure of working on during my studies and at my work. I love to work in teams and make meaningful contributions with like-minded people.\n\nWhen I’m not coding, you’ll find me playing soccer (which should definitely be called football) or watching YouTube.";
