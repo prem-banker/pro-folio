@@ -3,13 +3,15 @@
 import * as bin from "./index";
 import config from "../../../../config.json";
 import userdata from "../../../../public/data/user.json";
+import { say } from "cowsay";
+import { Execution } from "@/app/utils/interfaces";
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(", ");
   var c = "";
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 7 === 0) {
+    if (i % 3 === 0) {
       c += Object.keys(bin).sort()[i - 1] + "\n";
     } else {
       c += Object.keys(bin).sort()[i - 1] + " ";
@@ -34,9 +36,8 @@ export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am Prem Banker. 
 Welcome to my website!
 More about me:
-'sumfetch' - short summary.
 'resume' - my latest resume.
-'readme' - my github readme.`;
+'help' - list of commands.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -84,11 +85,11 @@ export const google = async (args: string[]): Promise<string> => {
 
 // Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
-  return args.join(" ");
+  return say({ text: args.join(" "), r: true });
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
-  return `${config.ps1_username}`;
+  return `${userdata.user.name}`;
 };
 
 export const ls = async (args: string[]): Promise<string> => {
@@ -108,35 +109,65 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
-
-export const sudo = async (args?: string[]): Promise<string> => {
-  window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank"); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
-};
-
 export const summary = async (args?: string[]): Promise<string> => {
   return `tis my summary biatch.`;
 };
 
+export const easteregg = async (executions: Execution[]): Promise<string> => {
+  if (executions.length === 0) {
+    return "There is no easter egg. So please do not try again";
+  }
+
+  const lastExecution = executions[executions.length - 1];
+
+  if (lastExecution.command === "easteregg") {
+    let count = 0;
+    for (let i = executions.length - 1; i >= 0; i--) {
+      if (executions[i].command === "easteregg") {
+        count++;
+      } else {
+        break;
+      }
+    }
+    if (count === 1) {
+      return `I told you there's no easter egg. Stop trying`;
+    } else if (count === 2) {
+      return `You are just wasting your time.`;
+    } else if (count === 3) {
+      return `Can you stop bothering me ? I have better things to do`;
+    } else if (count === 4) {
+      return `For the final time, there's no easter egg`;
+    } else if (count === 5) {
+      return say({ text: `MOOOO. There's no easter egg buddy` });
+    } else if (count === 6) {
+      return `ok I will stop responding now`;
+    } else if (count === 7) {
+      return `Byeeeeee`;
+    } else if (count === 8) {
+      return `...`;
+    } else if (count === 9) {
+      return `..`;
+    } else if (count === 10) {
+      return `.`;
+    } else if (count === 11) {
+      return ``;
+    } else if (count === 12) {
+      window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+      return `HAHAHAHAHAAHAHAHAH`;
+    }
+  } else {
+    const hasEasterEgg = executions.some(
+      (execution) => execution.command === "easteregg"
+    );
+    return hasEasterEgg
+      ? "You again ?"
+      : "There is no easter egg. So please do not try again";
+  }
+};
+
 // Banner
 export const banner = (args?: string[]): string => {
-  return `       
-For my techies, this is a simulation of a terminal.
+  return `For my techies, this is a simulation of a terminal.
 Type 'help' to see the list of available commands.
 Type 'resume' to see my resume.
 `;

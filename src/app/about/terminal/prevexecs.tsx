@@ -19,9 +19,10 @@ export const PreviousExecutions: React.FC = ({}) => {
 
           <p
             className="mb-2"
-            style={{ lineHeight: "normal" }}
-            dangerouslySetInnerHTML={{ __html: entry.output }}
-          />
+            style={{ lineHeight: "normal", whiteSpace: "pre-wrap" }}
+          >
+            {entry.output}
+          </p>
         </div>
       ))}
     </>

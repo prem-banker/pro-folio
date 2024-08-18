@@ -46,9 +46,14 @@ export const TerminalProvider: React.FC<{ children: ReactNode }> = ({
         `shell: command not found: ${sanitisedCommand}. Try 'help' to get started.`
       );
     } else {
-      // pass the found command along with args
-      const output = await commands[sanitisedCommand](args);
-      addExecution(output);
+      // handling the secret command
+      if (command === "easteregg") {
+        const output = await commands[sanitisedCommand](executions);
+        addExecution(output);
+      } else {
+        const output = await commands[sanitisedCommand](args);
+        addExecution(output);
+      }
     }
 
     setCommand("");
@@ -57,7 +62,7 @@ export const TerminalProvider: React.FC<{ children: ReactNode }> = ({
   const clearExecutions = () => setExecutions([]);
 
   const isValidCommand = (command: string) => {
-    const validcommands = ["clear", ...Object.keys(commands)];
+    const validcommands = ["clear", "cls", ...Object.keys(commands)];
     return validcommands.indexOf(command.split(" ")[0].toLowerCase()) !== -1;
   };
 

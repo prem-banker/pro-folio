@@ -18,7 +18,9 @@ const NavItem: React.FC<NavItemProps> = ({
   borderLeft = false,
   borderRight = true,
 }) => {
-  const paddingClass = `px-[${paddingX}px]`;
+  // TODO: FIX THIS HARDCODE
+  // const paddingClass = `px-[${paddingX}px]`;
+  const paddingClass = "px-[18px]";
 
   const horizontalBorder = `${borderLeft ? "border-l border-line " : " "} ${
     borderRight ? "border-r border-line " : " "
