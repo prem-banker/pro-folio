@@ -1,10 +1,9 @@
 // List of commands that do not require API calls
 
-import * as bin from "./index";
-import config from "../../../../config.json";
-import userdata from "../../../../public/data/user.json";
-import { say } from "cowsay";
 import { Execution } from "@/app/utils/interfaces";
+import { say } from "cowsay";
+import userdata from "../../../../public/data/user.json";
+import * as bin from "./index";
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
@@ -21,7 +20,7 @@ export const help = async (args: string[]): Promise<string> => {
 \n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+Type 'summary' to display summary.
 `;
 };
 
@@ -92,25 +91,12 @@ export const whoami = async (args: string[]): Promise<string> => {
   return `${userdata.user.name}`;
 };
 
-export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
-};
-
-export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
-};
-
 export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
 export const summary = async (args?: string[]): Promise<string> => {
-  return `tis my summary biatch.`;
+  return userdata.user.bio;
 };
 
 export const easteregg = async (executions: Execution[]): Promise<string> => {
@@ -154,6 +140,8 @@ export const easteregg = async (executions: Execution[]): Promise<string> => {
     } else if (count === 12) {
       window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
       return `HAHAHAHAHAAHAHAHAH`;
+    } else {
+      return `You got rickrolled ! You found the easteregg though XD`;
     }
   } else {
     const hasEasterEgg = executions.some(

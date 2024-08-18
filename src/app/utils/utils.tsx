@@ -58,7 +58,7 @@ export const addLineBreaksWoComments = (
   return result;
 };
 
-export const getLastElement = (str, delimiter) => {
+export const getLastElement = (str: string, delimiter: string): string => {
   const parts = str.split(delimiter);
   return parts[parts.length - 1];
 };

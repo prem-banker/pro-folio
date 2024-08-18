@@ -46,7 +46,7 @@ export const TerminalProvider: React.FC<{ children: ReactNode }> = ({
         `shell: command not found: ${sanitisedCommand}. Try 'help' to get started.`
       );
     } else {
-      // handling the secret command
+      // handling the easteregg command
       if (command === "easteregg") {
         const output = await commands[sanitisedCommand](executions);
         addExecution(output);

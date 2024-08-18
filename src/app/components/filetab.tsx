@@ -1,12 +1,10 @@
 // File.tsx
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
-import { FaFile } from "react-icons/fa";
-import { FileTabProps } from "../utils/interfaces";
 import { RiCloseLine } from "react-icons/ri";
-import { getLastElement } from "../utils/utils";
 import { useOpenedFiles } from "../contexts/filestackcontext";
-import { useRouter } from "next/navigation";
+import { FileTabProps } from "../utils/interfaces";
+import { getLastElement } from "../utils/utils";
 
 const CustomTab: React.FC<FileTabProps> = ({ text, onTap, onClose }) => {
   const isOpen = usePathname().includes(text);
@@ -21,7 +19,7 @@ const CustomTab: React.FC<FileTabProps> = ({ text, onTap, onClose }) => {
         isOpen ? "border-b border-b-accentOrange border-b-1" : ""
       }`}
     >
-      <span>{filename}</span>
+      <span>{filename.toLowerCase()}</span>
 
       <button
         onClick={(e) => {
