@@ -57,35 +57,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-// const Footer: React.FC = () => {
-//   return (
-//     <footer className="bg-primaryLightNavyBlue text-secondaryLightBlue h-16 flex items-center justify-between border-b border-line rounded-lg">
-//       <div className="container mx-auto flex-vertical-center">
-//         <div className="flex items-center">
-//           <p className="mr-4">Find me on:</p>
-//           <div className="border border-white p-2 mr-4">
-//             <a href="https://twitter.com">
-//               <FaTwitter className="text-secondaryLightBlue" />
-//             </a>
-//           </div>
-//           <div className="border border-white p-2 mr-4">
-//             <a href="https://linkedin.com">
-//               <FaLinkedin className="text-secondaryLightBlue" />
-//             </a>
-//           </div>
-//         </div>
-//         <div className="flex items-center">
-//           <div className="border border-white p-2 mr-4">
-//             <a href="https://github.com/yourusername">
-//               <FaGithub className="text-secondaryLightBlue" />
-//             </a>
-//           </div>
-//           <p>yourusername</p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;

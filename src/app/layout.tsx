@@ -20,16 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-baseColor">
-      <body
-        className={`bg-primaryLightNavyBlue m-69px rounded-lg border border-line ${firacode.className}`}
-      >
-        <div>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Add other meta tags or link tags here */}
+      </head>
+      <body className={`${firacode.className}`}>
+        <div className="hidden md:block bg-primaryLightNavyBlue m-69px rounded-lg border border-line">
           <Header />
-
-          {/* {children} */}
           <div className="flex-col site-content">{children}</div>
-
           <Footer />
+        </div>
+        <div className="block md:hidden">
+          <Header />
+          <div className="test-box">{children}</div>
         </div>
       </body>
     </html>
