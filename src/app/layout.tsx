@@ -24,15 +24,21 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Add other meta tags or link tags here */}
       </head>
+
+      {/* handling different componets for mobile and web/ */}
       <body className={`${firacode.className}`}>
         <div className="hidden md:block bg-primaryLightNavyBlue m-69px rounded-lg border border-line">
           <Header />
-          <div className="flex-col site-content">{children}</div>
+          <div className="flex flex-col web-content site-content">
+            {children}
+          </div>
           <Footer />
         </div>
-        <div className="block md:hidden">
+        <div className="block flex flex-col min-h-screen md:hidden">
           <Header />
-          <div className="test-box">{children}</div>
+          <div className="flex-grow mobile-content flex flex-col">
+            {children}
+          </div>
         </div>
       </body>
     </html>

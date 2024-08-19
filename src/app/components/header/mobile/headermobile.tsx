@@ -1,16 +1,10 @@
 "use client";
-import {
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
-import userdata from "../../../../../public/data/user.json";
+import { Drawer, IconButton } from "@mui/material";
 import React, { useState } from "react";
+import userdata from "../../../../../public/data/user.json";
 
 import Link from "next/link";
-import { FaBars, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaBars, FaLinkedin } from "react-icons/fa";
 import { FaXmark, FaXTwitter } from "react-icons/fa6";
 
 const HeaderMobile: React.FC = () => {
@@ -53,7 +47,7 @@ const HeaderMobile: React.FC = () => {
           <div>
             <div className="flex justify-between border-b border-line px-4 pb-2 ">
               <div className="flex items-center">
-                <span className="font-semibold">
+                <span className="text-[0.8em] font-semibold">
                   ~$ ./{userdata.user.logo_text}
                 </span>
                 <span className="cursor bg-secondaryFluorescentGreen"></span>
@@ -62,6 +56,7 @@ const HeaderMobile: React.FC = () => {
                 onClick={toggleDrawer(false)}
                 className="self-end"
                 color="inherit"
+                size="small"
               >
                 <FaXmark />
               </IconButton>
