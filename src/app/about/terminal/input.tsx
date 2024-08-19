@@ -25,7 +25,8 @@ export const TerminalInput = ({ inputRef }) => {
   const [lastViewedCommand, setLastViewedCommand] = useState<number>(0);
 
   useEffect(() => {
-    addExecution(banner());
+    const bannerOutput = banner();
+    addExecution(bannerOutput);
     inputRef.current.focus();
   }, []);
 
@@ -76,7 +77,7 @@ export const TerminalInput = ({ inputRef }) => {
       const index = lastViewedCommand - 1;
       if (index < 0) {
         setLastViewedCommand(0);
-        setCommand("");
+        setCommand(commands[0]);
       } else {
         if (index < commands.length) {
           setLastViewedCommand(index);
