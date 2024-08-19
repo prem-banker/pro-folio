@@ -17,20 +17,23 @@ export default function HomeWeb() {
           <h4 className="text-secondaryBrightPurple text-subheadline mb-20">
             <AnimatedText />
           </h4>
+
           <div className="text-secondaryLightBlue font-labels">
-            &#47;&#47; complete the game to continue
-          </div>
-          <div className="text-secondaryLightBlue font-labels">
-            &#47;&#47; you can also see it on my Github page
+            &#47;&#47; you can see the code for this site here
           </div>
 
           <div className="font-labels">
             {" "}
             <span className="text-secondaryBrightPurple">const</span>{" "}
             <span className="text-accentBrightGreen"> githubLink</span> ={" "}
-            <span className="text-accentPastelPink">
-              https://github.com/prem-baner{" "}
-            </span>{" "}
+            <a
+              href="https://github.com/prem-banker/pro-folio"
+              className="text-accentOrange hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/prem-banker/pro-folio
+            </a>
           </div>
         </div>
 
