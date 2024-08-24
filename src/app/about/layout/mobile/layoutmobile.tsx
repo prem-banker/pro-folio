@@ -40,10 +40,10 @@ const AboutMobile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   }));
 
   return (
-    <div className="flex flex-col h-full text-secondaryLightBlue">
+    <div className="flex flex-col h-full text-secondaryLightBlue pt-2">
       <Folder color="#FEA55F" name="education" files={educationFiles} />
       <Folder color="#43D9AD" name="work" files={workFiles} />
-      <div className="flex-grow">{children}</div>
+      <div className="mt-2 border-t border-line flex-grow">{children}</div>
     </div>
   );
 };
