@@ -34,7 +34,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
-        <div className="block flex flex-col min-h-screen md:hidden">
+        <div className="block flex flex-col h-screen md:hidden">
           <Header />
           <div className="flex-grow mobile-content flex flex-col">
             {children}

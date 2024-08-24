@@ -24,7 +24,7 @@ export default function HomeMobile() {
         </button> */}
 
         <div className="text-secondaryLightBlue font-labels  mb-4">
-          &#47;&#47; check out this site's code on
+          &#47;&#47; check out the site code on
         </div>
         <div className="font-labels">
           <span className="text-secondaryBrightPurple">const</span>{" "}

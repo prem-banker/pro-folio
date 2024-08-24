@@ -4,22 +4,15 @@
 import React, { useEffect } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { RiCloseLine } from "react-icons/ri";
-import "../styles/about.css";
-import { useRouter } from "next/navigation";
-import {
-  FileStackProvider,
-  useOpenedFiles,
-} from "../contexts/filestackcontext";
-import CustomTab from "../components/filetab";
-import { TerminalProvider } from "../contexts/terminal/terminalcontext";
-import Terminal from "./terminal/terminal";
-import Sidebar from "./layout/web/sidebar";
-import AboutWeb from "./layout/web/layoutweb";
-import AboutMobile from "./layout/mobile/layoutmobile";
+import "../../../styles/about.css";
 
-const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+import { useRouter } from "next/navigation";
+import Sidebar from "./sidebar";
+import { useOpenedFiles } from "@/app/contexts/filestackcontext";
+import CustomTab from "@/app/components/filetab";
+import Terminal from "../../terminal/terminal";
+
+const AboutWeb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const { openedFiles, closeFile } = useOpenedFiles();
 
@@ -85,34 +78,4 @@ const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export default function AboutLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <>
-      <FileStackProvider>
-        <TerminalProvider>
-          <div className="hidden md:block md:h-full">
-            <AboutWeb> {children} </AboutWeb>
-          </div>
-          <div className="block h-full md:hidden">
-            <AboutMobile>{children}</AboutMobile>
-          </div>
-        </TerminalProvider>
-      </FileStackProvider>
-
-      {/* <div className="hidden md:block md:h-full">
-        <FileStackProvider>
-          <TerminalProvider>
-            <AboutWeb> {children} </AboutWeb>
-          </TerminalProvider>
-        </FileStackProvider>
-      </div>
-      <div className="block h-full md:hidden">
-        <AboutMobile>{children}</AboutMobile>
-      </div> */}
-    </>
-  );
-}
+export default AboutWeb;
