@@ -1,25 +1,19 @@
-"use client";
-import React from "react";
-import userdata from "../../../../../public/data/user.json";
-import CustomCodeEditor from "@/app/components/code-editor/codeeditor";
-import { addLineBreaks, addLineBreaksWoComments } from "@/app/utils/utils";
+import EducationMobile from "./mobile/educationmobile";
+import EducationWeb from "./web/educationweb";
 
 export default function EducationPage({
   params,
 }: {
   params: { title: string };
 }) {
-  // Find the education object with matching title from userData
-  const education = userdata.user.education.find(
-    (edu) => edu.title === params.title
-  );
-
   return (
-    <div className="h-full w-full custom-scrollbar">
-      <CustomCodeEditor
-        code={addLineBreaks(education.description, 50)}
-        fontSize="1.1em"
-      />
-    </div>
+    <>
+      <div className="hidden md:block md:h-full">
+        <EducationWeb params={params} />
+      </div>
+      <div className="block h-full md:hidden">
+        <EducationMobile params={params} />
+      </div>
+    </>
   );
 }
