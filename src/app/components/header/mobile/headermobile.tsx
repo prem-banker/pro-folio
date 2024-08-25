@@ -77,7 +77,7 @@ const HeaderMobile: React.FC = () => {
                 _projects
               </div>
             </Link>
-            <Link href="/projects" passHref legacyBehavior>
+            <Link href="/contact" passHref legacyBehavior>
               <div className="p-4 text-white hover:bg-gray-700 hover:text-secondaryFluorescentGreen cursor-pointer border-b border-line">
                 _contact-me
               </div>

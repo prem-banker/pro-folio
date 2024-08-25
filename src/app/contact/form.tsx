@@ -54,7 +54,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ setFormData }) => {
   };
 
   return (
-    <div className="w-[70%] flex-col h-full pt-24">
+    <div className="w-[90%] flex-col flex h-full justify-center items-center">
       {!submitted ? (
         <form
           onChange={() => setFormData(formValues)}
@@ -66,8 +66,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ setFormData }) => {
             <label className="text-labels">_name:</label>
             <input
               type="text"
+              placeholder="your name"
               {...register("name", { required: true })} // Add required validation
-              className="mt-1 w-full px-3 py-2 border border-line rounded-md focus:outline-secondaryBrightPurple focus:ring-primary focus:border-primary sm:text-sm bg-transparent"
+              className="mt-1 w-full px-3 py-2 border border-line rounded-md focus:outline-secondaryBrightPurple focus:ring-primary focus:border-primary sm:text-sm bg-transparent placeholder-gray-500"
             />
             {errors.name && (
               <p className="text-red-500 text-sm pl-2">Name is required</p> // Error message for required field
@@ -78,11 +79,12 @@ const FormComponent: React.FC<FormComponentProps> = ({ setFormData }) => {
             <label className="text-labels">_email:</label>
             <input
               type="email"
+              placeholder="your email"
               {...register("email", {
                 required: true,
                 pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i, // Regular expression for email validation
               })}
-              className="mt-1 w-full px-3 py-2 border border-line rounded-md focus:outline-secondaryBrightPurple focus:ring-primary focus:border-primary sm:text-sm bg-transparent"
+              className="placeholder-gray-500 mt-1 w-full px-3 py-2 border border-line rounded-md focus:outline-secondaryBrightPurple focus:ring-primary focus:border-primary sm:text-sm bg-transparent"
             />
             {errors.email && (
               <p className="text-red-500 text-sm pl-2">
@@ -94,8 +96,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ setFormData }) => {
           <div>
             <label className="text-labels">_message:</label>
             <textarea
-              {...register("message", { required: true })} // Add required validation
-              className="mt-1 w-full px-3 py-2 border border-line rounded-md focus:outline-secondaryBrightPurple focus:ring-primary focus:border-primary sm:text-sm bg-transparent"
+              {...register("message", { required: true })}
+              placeholder="your message"
+              className="placeholder-gray-500 mt-1 w-full px-3 py-2 border border-line rounded-md focus:outline-secondaryBrightPurple focus:ring-primary focus:border-primary sm:text-sm bg-transparent"
             />
             {errors.message && (
               <p className="text-red-500 text-sm pl-2">Message is required</p> // Error message for required field
