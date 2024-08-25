@@ -52,7 +52,7 @@ await emailjs
       setLoading(false); // Set loading state to false
     }
   );
-  })`;
+})`;
 
   //code mirror
   // forms

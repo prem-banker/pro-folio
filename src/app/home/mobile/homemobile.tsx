@@ -6,7 +6,7 @@ import "../home.css";
 export default function HomeMobile() {
   return (
     <div className="h-full flex flex-col items-center pt-32 p-4 home-bg  text-left flex-grow">
-      <div className="w-full p-4">
+      <div className="w-full p-4 text-white">
         <p className="text-body">Hi all. I am</p>
         <h1 className="text-headline font-regular leading-tight">
           {userdata.user.name}

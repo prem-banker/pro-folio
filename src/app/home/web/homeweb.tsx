@@ -8,7 +8,7 @@ export default function HomeWeb() {
   return (
     <div className="min-h-inherit flex-center-items relative">
       {/* <BubbleAnimation /> */}
-      <div className="mx-auto flex items-center justify-center w-[1080px]">
+      <div className="mx-auto flex items-center justify-center text-white w-[1080px]">
         <div className="w-1/2 p-8 ">
           <p className="text-body">Hi all. I am</p>
           <h1 className="text-headline font-regular leading-shrink">
