@@ -14,7 +14,6 @@ export default function HomeMobile() {
         <h4 className="text-accentOrange text-[1.5em] mb-2">
           <AnimatedText />
         </h4>
-
         {/* <button
           className="bg-buttonbackground py-2 px-4 mb-2 rounded-md text-white 
         transition-colors duration-300 ease-in-out
