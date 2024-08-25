@@ -1,12 +1,11 @@
 // AboutLayout.tsx
 "use client";
 
-import React, { useEffect } from "react";
-import { FaCaretDown } from "react-icons/fa";
-import userdata from "../../../../../public/data/user.json";
-import { useRouter } from "next/navigation";
 import Folder from "@/app/components/folder";
 import { useOpenedFiles } from "@/app/contexts/filestackcontext";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
+import userdata from "../../../../../public/data/user.json";
 
 const AboutMobile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);

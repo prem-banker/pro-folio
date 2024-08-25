@@ -7,7 +7,7 @@ import { addLineBreaks } from "@/app/utils/utils";
 
 export default function BioMobile({}: {}) {
   return (
-    <div className="h-full biopage p-4">
+    <div className="h-full p-4">
       {userdata.user.bio.split("\n").map((line, index) => (
         <p key={index}>{line}</p>
       ))}

@@ -14,8 +14,8 @@ import CustomTab from "../components/filetab";
 import { TerminalProvider } from "../contexts/terminal/terminalcontext";
 import Terminal from "./terminal/terminal";
 import Sidebar from "./layout/web/sidebar";
-import AboutWeb from "./layout/web/layoutweb";
-import AboutMobile from "./layout/mobile/layoutmobile";
+import AboutWeb from "./layout/web/aboutweb";
+import AboutMobile from "./layout/mobile/aboutmobile";
 
 const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
   children,

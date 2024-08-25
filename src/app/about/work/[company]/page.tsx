@@ -1,22 +1,15 @@
-"use client";
-import React from "react";
-import userdata from "../../../../../public/data/user.json";
-import CustomCodeEditor from "@/app/components/code-editor/codeeditor";
-import { addLineBreaks } from "@/app/utils/utils";
+import WorkMobile from "./mobile/workmobile";
+import WorkWeb from "./web/workweb";
 
 export default function WorkPage({ params }: { params: { company: string } }) {
-  // Find the work object with matching company from userData
-  const work = userdata.user.work.find(
-    (job) => job.company.toLowerCase() === params.company.toLowerCase()
-  );
-
-  // Display the details if work is found, otherwise show a message
   return (
-    <div className="h-full">
-      <CustomCodeEditor
-        code={addLineBreaks(work.description, 50)}
-        fontSize="1.1em"
-      />
-    </div>
+    <>
+      <div className="hidden md:block md:h-full">
+        <WorkWeb params={params} />
+      </div>
+      <div className="block h-full md:hidden">
+        <WorkMobile params={params} />
+      </div>
+    </>
   );
 }
