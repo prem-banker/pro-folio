@@ -28,6 +28,7 @@ export default function HomeWeb() {
             {" "}
             <span className="text-secondaryBrightPurple">const</span>{" "}
             <span className="text-accentBrightGreen"> codeLink</span> ={" "}
+            className
             <a
               href="https://github.com/prem-banker/pro-folio"
               className="text-accentOrange hover:underline"

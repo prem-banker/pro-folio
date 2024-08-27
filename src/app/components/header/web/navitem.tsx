@@ -37,7 +37,7 @@ const NavItem: React.FC<NavItemProps> = ({
   return (
     <Link href={`${href}`} passHref legacyBehavior>
       <div
-        className={`${paddingClass} ${verticalBorder} ${horizontalBorder} h-full flex-vertical-center hover:bg-gray-700 hover:text-secondaryFluorescentGreen cursor-pointer`}
+        className={`${verticalBorder} ${horizontalBorder} md:px-[8px] lg:px-[18px] h-full flex-vertical-center hover:bg-gray-700 hover:text-secondaryFluorescentGreen cursor-pointer`}
       >
         {text}
       </div>
