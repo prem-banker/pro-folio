@@ -17,15 +17,17 @@ export default function HomeWeb() {
           <h4 className="text-secondaryBrightPurple text-subheadline mb-20">
             <AnimatedText />
           </h4>
-
           <div className="text-secondaryLightBlue font-labels">
-            &#47;&#47; you can see the code for this site here
+            &#47;&#47; A Developer's Portfolio by Prem Banker
+          </div>
+          <div className="text-secondaryLightBlue font-labels">
+            &#47;&#47; You can see the code for this site here
           </div>
 
           <div className="font-labels">
             {" "}
             <span className="text-secondaryBrightPurple">const</span>{" "}
-            <span className="text-accentBrightGreen"> githubLink</span> ={" "}
+            <span className="text-accentBrightGreen"> codeLink</span> ={" "}
             <a
               href="https://github.com/prem-banker/pro-folio"
               className="text-accentOrange hover:underline"
