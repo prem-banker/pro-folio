@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
+import userdata from "../../../../public/data/user.json";
 import "./animatedtext.css"; // Add your CSS styles in this file
 
 const AnimatedText = () => {
-  const strings = ["Full Stack Dev", "Problem Solver", "Tech Nerd"];
+  const strings = userdata.user.user_preferred_titles;
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
