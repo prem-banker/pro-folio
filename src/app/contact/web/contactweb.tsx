@@ -107,7 +107,7 @@ await emailjs
           </div>
           <div className="w-1/2">
             {/* codeeditor */}
-            <CustomCodeEditor code={codesnippet} />
+            <CustomCodeEditor code={codesnippet} fontSize="1.1em" />
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@ export default function BioWeb({}: {}) {
     <div className="h-full">
       <CustomCodeEditor
         code={addLineBreaks(userdata.user.bio, getLineBreakLength())}
-        fontSize="1.1em"
       />
     </div>
   );

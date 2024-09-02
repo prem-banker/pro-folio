@@ -16,10 +16,7 @@ export default function EducationWeb({
 
   return (
     <div className="h-full w-full custom-scrollbar">
-      <CustomCodeEditor
-        code={addLineBreaks(education.description, 50)}
-        fontSize="1.1em"
-      />
+      <CustomCodeEditor code={addLineBreaks(education.description, 50)} />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-// components/CustomCodeEditor.tsx
 import customKeymap from "@/app/utils/code-editor/keymap";
 import { editorTheme } from "@/app/utils/editortheme";
 import { javascript } from "@codemirror/lang-javascript";
@@ -23,7 +22,10 @@ const CustomCodeEditor: React.FC<EditorProps> = ({ code, fontSize }) => {
   ];
 
   return (
-    <div className="h-full editor-font">
+    <div
+      className={`h-full ${fontSize ? "" : "editor-font"}`}
+      style={fontSize ? { fontSize } : {}}
+    >
       <ReactCodeMirror
         editable={false}
         extensions={extensions}

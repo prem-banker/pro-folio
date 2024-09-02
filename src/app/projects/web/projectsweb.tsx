@@ -129,7 +129,7 @@ export default function ProjectsWeb() {
 
         {/* Content - Projects */}
         {/* <div className="flex flex-wrap justify-between pt-8"> */}
-        <div className="flex h-full flex-wrap justify-start custom-scrollbar pt-8">
+        <div className="flex h-full flex-wrap justify-start custom-scrollbar pt-8 w-full">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
               <div
