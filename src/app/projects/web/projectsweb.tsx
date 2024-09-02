@@ -85,7 +85,7 @@ export default function ProjectsWeb() {
       {/* Sidebar + content */}
       <div className="flex-1 text-secondaryLightBlue flex items-start maintain-size-x">
         {/* Sidebar - Tech Select */}
-        <div className="w-[220px] border-r border-line h-full flex flex-col custom-scrollbar">
+        <div className="w-[220px] flex-shrink-0 border-r border-line h-full flex flex-col custom-scrollbar">
           <div className="flex items-center mt-4 px-[22px] border-b border-line pb-2">
             <input
               type="checkbox"
@@ -128,12 +128,13 @@ export default function ProjectsWeb() {
         </div>
 
         {/* Content - Projects */}
-        <div className="flex flex-1 w-0 h-full flex-wrap custom-scrollbar pt-8">
+        {/* <div className="flex flex-wrap justify-between pt-8"> */}
+        <div className="flex h-full flex-wrap justify-start custom-scrollbar pt-8">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="my-4 mx-4 w-[30%] text-secondaryLightBlue"
+                className="flex-grow max-w-[450px] w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)] xl:w-[calc(25%-1rem)] my-4 mx-4 text-secondaryLightBlue"
               >
                 <div className="text-body truncate mb-2 text-secondaryFluorescentGreen">
                   <span className="ml-1 text-semibold text-secondaryBrightPurple">
@@ -168,8 +169,8 @@ export default function ProjectsWeb() {
                   >
                     <button
                       className="w-full bg-buttonbackground py-2 px-3 rounded-md text-white 
-      transition-colors duration-300 ease-in-out
-      hover:bg-buttonhover"
+  transition-colors duration-300 ease-in-out
+  hover:bg-buttonhover"
                     >
                       view-project
                     </button>
