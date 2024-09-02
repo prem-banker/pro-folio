@@ -61,7 +61,7 @@ await emailjs
       {/* Header */}
       <div className="h-[40px] flex items-center justify-between border-b border-line">
         <div className="flex-vertical-center">
-          <div className="w-[311px] pl-[22px] border-r border-line flex-vertical-center">
+          <div className="w-[220px] pl-[22px] border-r border-line flex-vertical-center">
             <FaCaretDown className="text-white mr-2" />
             <span className="text-white">contacts</span>
           </div>
@@ -72,10 +72,21 @@ await emailjs
 
       <div className="text-secondaryLightBlue flex items-start h-full maintain-size">
         {/* Sidebar - Contact */}
-        <div className="w-[311px] border-r border-line h-full flex-col">
+        <div className="w-[220px] border-r border-line h-full flex-col">
           <div className="flex items-center mt-4 px-[22px]">
-            <FaEnvelope />
-            <span className="ml-2">{email}</span>
+            <a
+              href={`mailto:${user.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondaryLightBlue hover:text-white flex items-center overflow-hidden text-ellipsis"
+            >
+              <span className="flex flex-row space-x-2">
+                <FaEnvelope size={20} /> &nbsp;
+                {user.email}
+              </span>
+            </a>
+            {/* <FaEnvelope />
+            <span className="ml-2 overflow-hidden text-ellipsis">{email}</span> */}
           </div>
 
           <div className="h-[40px] border-y border-line  flex items-center my-4 px-[22px]">
@@ -102,7 +113,7 @@ await emailjs
 
         {/* contact form */}
         <div className="flex flex-grow  h-full maintain-size custom-scrollbar">
-          <div className="w-1/2 flex justify-center items-center">
+          <div className="w-1/2 flex justify-center items-center font-[1.5em]">
             <FormComponent setFormData={setFormData} />
           </div>
           <div className="w-1/2">

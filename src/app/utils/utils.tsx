@@ -82,8 +82,4 @@ export const getLineBreakLength = () => {
   } else {
     return 30;
   }
-
-  // if (screenWidth < 640) return 30; // Small screens (mobile)
-  // if (screenWidth < 1024) return 50; // Medium screens (tablets)
-  // return 120; // Large screens (laptops, desktops)
 };
