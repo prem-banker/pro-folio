@@ -23,7 +23,7 @@ const CustomCodeEditor: React.FC<EditorProps> = ({ code, fontSize }) => {
   ];
 
   return (
-    <div className="h-full" style={fontSize ? { fontSize } : {}}>
+    <div className="h-full editor-font">
       <ReactCodeMirror
         editable={false}
         extensions={extensions}

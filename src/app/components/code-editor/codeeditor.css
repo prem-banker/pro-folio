@@ -12,3 +12,22 @@
   background-color: #607b96;
   border-radius: 3px;
 }
+
+.editor-font {
+  font-size: 16px; /* Default font size */
+
+  /* Medium screens (md) */
+  @media (min-width: 768px) {
+    font-size: 1em;
+  }
+
+  /* Large screens (lg) */
+  @media (min-width: 1024px) {
+    font-size: 1.2em;
+  }
+
+  /* Extra-large screens (2xl) */
+  @media (min-width: 1536px) {
+    font-size: 1.4em;
+  }
+}

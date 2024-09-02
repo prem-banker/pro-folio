@@ -68,9 +68,9 @@ export const getLineBreakLength = () => {
   const screenWidth = window.innerWidth;
 
   if (screenWidth > 1800) {
-    return 80;
-  } else if (screenWidth > 1650) {
     return 70;
+  } else if (screenWidth > 1650) {
+    return 60;
   } else if (screenWidth > 1400) {
     return 55;
   } else if (screenWidth > 1300) {

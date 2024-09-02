@@ -9,7 +9,7 @@ export const TerminalUsername = () => {
   const username = githubLink.split(".com/")[1];
 
   return (
-    <div>
+    <div className="flex-shrink-0">
       <span className="text-green">{username}</span>
       <span className="text-green">@</span>
       <span className="text-accentMagenta">github</span>

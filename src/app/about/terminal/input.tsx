@@ -4,10 +4,6 @@ import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
 import { TerminalUsername } from "./username";
 import { banner } from "@/app/contexts/terminal";
 
-interface TerminalProps {
-  inputRef: React.MutableRefObject<HTMLInputElement>;
-}
-
 export const TerminalInput = ({ inputRef }) => {
   const {
     executions,
@@ -110,15 +106,13 @@ export const TerminalInput = ({ inputRef }) => {
 
   return (
     <div className="flex flex-row space-x-2">
-      <label htmlFor="prompt" className="flex-shrink">
-        <TerminalUsername />
-      </label>
-
+      {/* Ensure TerminalUsername does not shrink */}
+      <TerminalUsername />
       <input
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-black focus:outline-none flex-grow ${
+        className={`bg-black w-0 focus:outline-none flex-grow ${
           isValidCommand(command) || command === "" ? "text-green" : "text-red"
         }`}
         value={command}

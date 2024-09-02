@@ -10,15 +10,14 @@ export const PreviousExecutions: React.FC = ({}) => {
       {executions.map((entry: Execution, index: number) => (
         <div key={entry.command + index}>
           <div className="flex flex-row space-x-2">
-            <div className="flex-shrink">
-              <TerminalUsername />
-            </div>
-
-            <div className="flex-grow">{entry.command}</div>
+            <TerminalUsername />
+            <span className="flex-grow min-w-0 break-words">
+              {entry.command}
+            </span>
           </div>
 
           <p
-            className="mb-2"
+            className="mb-2 break-words"
             style={{ lineHeight: "normal", whiteSpace: "pre-wrap" }}
           >
             {entry.output}

@@ -65,7 +65,7 @@ body {
 }
 
 .site-content {
-  height: calc(100vh - 56px - 56px - 69px - 69px);
+  height: calc(100vh - 56px - 56px - 56px - 56px);
   /* height: 1px; */
 }
 
