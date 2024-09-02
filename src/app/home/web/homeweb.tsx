@@ -7,12 +7,14 @@ import "../home.css";
 export default function HomeWeb() {
   return (
     // md:w-[250px] lg:w-[311px]
-    <div className="min-h-inherit flex-center-items relative">
+    <div className="min-h-inherit flex-center-items relative test-box">
       {/* <BubbleAnimation /> */}
       <div className="mx-auto flex flex-row items-center justify-center text-white w-full max-w-[1080px] px-4 lg:px-0">
         <div className="w-1/2 p-8 ">
-          <p className="md:text-code lg:text-body">Hi all. I am</p>
-          <h1 className="md:text-[48px] lg:text-headline font-regular leading-shrink">
+          <p className="md:text-code lg:text-body 2xl:text-[1.5em]">
+            Hi all. I am
+          </p>
+          <h1 className="md:text-[48px] lg:text-headline 2xl:text-[4em] font-regular leading-shrink">
             {userdata.user.name}
           </h1>
           <h4 className="text-secondaryBrightPurple md:text-[24px] lg:text-subheadline mb-20">

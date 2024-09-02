@@ -40,7 +40,7 @@ const AboutWeb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       {/* Header */}
       <div className="h-[40px] flex items-center justify-between border-b border-line">
         <div className="flex-vertical-center">
-          <div className="w-[311px] pl-[22px] border-r border-line flex-vertical-center">
+          <div className="w-[220px] pl-[22px] border-r border-line flex-vertical-center">
             <FaCaretDown className="text-white mr-2" />
             <span className="text-white">about-me</span>
           </div>
@@ -59,7 +59,7 @@ const AboutWeb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       </div>
 
       <div className="text-secondaryLightBlue flex items-start flex-1 maintain-size">
-        <div className="w-[311px] border-r border-line h-full flex-col">
+        <div className="w-[220px] border-r border-line h-full flex-col">
           {/* Contains information in form of folders and files */}
           <Sidebar />
         </div>

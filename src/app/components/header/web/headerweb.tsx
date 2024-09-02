@@ -7,7 +7,7 @@ const HeaderWeb: React.FC = () => {
   return (
     <header className="bg-primaryLightNavyBlue text-secondaryLightBlue h-[56px] flex items-center justify-between border-b border-line rounded-lg">
       <div className="flex-vertical-center">
-        <div className="md:w-[250px] lg:w-[311px]  pl-[22px] border-r border-line flex-vertical-center">
+        <div className="md:w-[250px] lg:w-[220px]  pl-[22px] border-r border-line flex-vertical-center">
           <Link
             href="/"
             passHref

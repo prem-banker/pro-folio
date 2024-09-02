@@ -62,3 +62,28 @@ export const getLastElement = (str: string, delimiter: string): string => {
   const parts = str.split(delimiter);
   return parts[parts.length - 1];
 };
+
+export const getLineBreakLength = () => {
+  if (typeof window === "undefined") return 60; // Default value for server-side rendering
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth > 1800) {
+    return 80;
+  } else if (screenWidth > 1650) {
+    return 70;
+  } else if (screenWidth > 1400) {
+    return 55;
+  } else if (screenWidth > 1300) {
+    return 45;
+  } else if (screenWidth > 1200) {
+    return 40;
+  } else if (screenWidth > 1100) {
+    return 35;
+  } else {
+    return 30;
+  }
+
+  // if (screenWidth < 640) return 30; // Small screens (mobile)
+  // if (screenWidth < 1024) return 50; // Medium screens (tablets)
+  // return 120; // Large screens (laptops, desktops)
+};

@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`${firacode.className}`}>
         <div className="hidden md:block bg-primaryLightNavyBlue m-69px rounded-lg border border-line">
           <Header />
-          <div className="flex flex-col web-content site-content">
+          <div className="flex flex-col web-content site-content overflow-y-auto">
             {children}
           </div>
           <Footer />
