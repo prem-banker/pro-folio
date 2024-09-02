@@ -99,6 +99,48 @@ export const summary = async (args?: string[]): Promise<string> => {
   return userdata.user.bio;
 };
 
+export const ls = async (args?: string[]): Promise<string> => {
+  let output = "education/\n";
+  userdata.user.education.forEach(
+    (edu) => (output += "├─ " + edu.title.toLowerCase() + "\n")
+  );
+
+  output += "work/ \n";
+
+  userdata.user.work.forEach(
+    (exp) => (output += "├─ " + exp.company.toLowerCase() + "\n")
+  );
+
+  output += "\nType `cat [entity_name]` to know more ";
+  return output;
+};
+
+export const cat = async (args?: string[]): Promise<string> => {
+  if (!args || args.length === 0) {
+    return "Please specify an entity name.";
+  }
+
+  const entityName = args[0].toLowerCase();
+
+  // Search in education
+  const education = userdata.user.education.find(
+    (edu) => edu.title.toLowerCase() === entityName
+  );
+  if (education) {
+    return education.description;
+  }
+
+  // Search in work experience
+  const work = userdata.user.work.find(
+    (exp) => exp.company.toLowerCase() === entityName
+  );
+  if (work) {
+    return work.description;
+  }
+
+  return "Entity not found. Please check the name and try again.";
+};
+
 export const easteregg = async (executions: Execution[]): Promise<string> => {
   if (executions.length === 0) {
     return "There is no easter egg. So please do not try again";
