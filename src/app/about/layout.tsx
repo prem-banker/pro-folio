@@ -17,74 +17,6 @@ import Sidebar from "./layout/web/sidebar";
 import AboutWeb from "./layout/web/aboutweb";
 import AboutMobile from "./layout/mobile/aboutmobile";
 
-const AboutLayoutContent: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const { openedFiles, closeFile } = useOpenedFiles();
-
-  const onClickAnywhere = () => {
-    inputRef.current?.focus();
-  };
-
-  const router = useRouter();
-
-  useEffect(() => {
-    // initial route
-    router.push("/about/bio");
-  }, [router]);
-
-  const handleTabClick = (file: string) => {
-    router.push(file);
-  };
-
-  const handleTabClose = (file: string) => {
-    closeFile(file);
-  };
-
-  return (
-    <div className="flex flex-col h-full">
-      {/* Header */}
-      <div className="h-[40px] flex items-center justify-between border-b border-line">
-        <div className="flex-vertical-center">
-          <div className="w-[311px] pl-[22px] border-r border-line flex-vertical-center">
-            <FaCaretDown className="text-white mr-2" />
-            <span className="text-white">about-me</span>
-          </div>
-
-          {/* The tab bar consisting of files that are opened previously */}
-
-          {openedFiles.map((file, index) => (
-            <CustomTab
-              key={index}
-              text={file}
-              onTap={() => handleTabClick(file)}
-              onClose={() => handleTabClose(file)}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="text-secondaryLightBlue flex items-start flex-1 maintain-size">
-        <div className="w-[311px] border-r border-line h-full flex-col">
-          {/* Contains information in form of folders and files */}
-          <Sidebar />
-        </div>
-
-        <div className="flex flex-1 h-full">
-          <div className="w-1/2 justify-center items-center">{children}</div>
-          <div
-            className="w-1/2 h-full border-x border-line maintain-size"
-            onClick={onClickAnywhere}
-          >
-            <Terminal inputRef={inputRef} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default function AboutLayout({
   children,
 }: {
@@ -102,17 +34,6 @@ export default function AboutLayout({
           </div>
         </TerminalProvider>
       </FileStackProvider>
-
-      {/* <div className="hidden md:block md:h-full">
-        <FileStackProvider>
-          <TerminalProvider>
-            <AboutWeb> {children} </AboutWeb>
-          </TerminalProvider>
-        </FileStackProvider>
-      </div>
-      <div className="block h-full md:hidden">
-        <AboutMobile>{children}</AboutMobile>
-      </div> */}
     </>
   );
 }

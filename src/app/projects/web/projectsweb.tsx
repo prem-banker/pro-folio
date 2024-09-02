@@ -62,7 +62,7 @@ export default function ProjectsWeb() {
       {/* Header */}
       <div className="h-[40px] flex items-center justify-between border-b border-line">
         <div className="flex-vertical-center">
-          <div className="w-[311px] pl-[22px] border-r border-line flex-vertical-center">
+          <div className="w-[220px] pl-[22px] border-r border-line flex-vertical-center">
             <FaCaretDown className="text-white mr-2" />
             <span className="text-white">projects</span>
           </div>
@@ -85,7 +85,7 @@ export default function ProjectsWeb() {
       {/* Sidebar + content */}
       <div className="flex-1 text-secondaryLightBlue flex items-start maintain-size-x">
         {/* Sidebar - Tech Select */}
-        <div className="w-[311px] border-r border-line h-full flex flex-col custom-scrollbar">
+        <div className="w-[220px] border-r border-line h-full flex flex-col custom-scrollbar">
           <div className="flex items-center mt-4 px-[22px] border-b border-line pb-2">
             <input
               type="checkbox"
@@ -141,7 +141,7 @@ export default function ProjectsWeb() {
                   </span>
                   {project.name}
                 </div>
-                <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col max-h-[400px]">
+                <div className="border border-line shadow-md bg-primaryDeepNavyBlue rounded-lg flex flex-col max-h-[450px]">
                   <div className="relative">
                     <img
                       src={project.image}
@@ -157,7 +157,7 @@ export default function ProjectsWeb() {
                       <FaGithub className="text-white text-lg" />
                     </a>
                   </div>
-                  <div className="text-labels mx-4 mt-2 truncate-5">
+                  <div className="text-labels mx-4 mt-2 truncate-7">
                     {project.description}
                   </div>
                   <a
