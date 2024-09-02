@@ -16,18 +16,17 @@ export const TerminalInput = ({ inputRef }) => {
     autocomplete,
   } = useExecutions();
 
-  // const inputRef = React.useRef<HTMLInputElement>(null);
-
   const [lastViewedCommand, setLastViewedCommand] = useState<number>(0);
 
   useEffect(() => {
+    // load up the banner
     const bannerOutput = banner();
     addExecution(bannerOutput);
     inputRef.current.focus();
   }, []);
 
   useEffect(() => {
-    setLastViewedCommand(executions.length - 1);
+    setLastViewedCommand(executions.length);
 
     if (inputRef.current) {
       inputRef.current.scrollIntoView();
@@ -78,6 +77,9 @@ export const TerminalInput = ({ inputRef }) => {
         if (index < commands.length) {
           setLastViewedCommand(index);
           setCommand(commands[index]);
+        } else {
+          setLastViewedCommand(commands.length - 1);
+          setCommand(commands[commands.length - 1]);
         }
       }
     }

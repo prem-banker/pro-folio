@@ -2,7 +2,7 @@ import { banner } from "@/app/contexts/terminal";
 import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
 import React, { useEffect, useRef } from "react";
 import PreviousExecutions from "./prevexecs";
-import TerminalInput from "./input";
+import TerminalInput from "./terminalinput";
 
 interface TerminalProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
