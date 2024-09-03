@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Checkbox, IconButton, Menu, MenuItem } from "@mui/material";
+import { useEffect, useState } from "react";
 import { FaCaretDown, FaGithub } from "react-icons/fa";
-import { RiCloseLine } from "react-icons/ri";
 import metadata from "../../../../public/data/meta.json";
 import userdata from "../../../../public/data/user.json";
 import TechIcon from "../../components/techicon";
-import "../../styles/projects.css";
-import { Project, User } from "../../utils/interfaces";
+import { Project } from "../../utils/interfaces";
 import { standardizeName } from "../../utils/utils";
 import EmptyState from "../emptystate";
-import { Button, Checkbox, IconButton, Menu, MenuItem } from "@mui/material";
 
 export default function ProjectsMobile() {
   const { technologies } = metadata;
@@ -19,12 +17,6 @@ export default function ProjectsMobile() {
   const [activeTechnologies, setActiveTechnologies] = useState<string[]>(
     technologies
   );
-
-  const [isFilterMenuOpen, setFilterMenuOpen] = useState(false);
-
-  const toggleFilterMenu = (state) => {
-    setFilterMenuOpen(state);
-  };
 
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
 
@@ -56,13 +48,6 @@ export default function ProjectsMobile() {
       setActiveTechnologies(technologies);
     }
   };
-
-  const getTabName = () =>
-    activeTechnologies.length > 0
-      ? activeTechnologies.length === 1
-        ? activeTechnologies[0]
-        : `${activeTechnologies[0]} + ${activeTechnologies.length - 1}`
-      : "Tech";
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -151,14 +136,16 @@ export default function ProjectsMobile() {
                     alt={project.name}
                     className="w-full h-[150px] object-cover rounded-t-md"
                   />
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-2 right-2 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300 ease-in-out"
-                  >
-                    <FaGithub className="text-white text-lg" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-2 right-2 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300 ease-in-out"
+                    >
+                      <FaGithub className="text-white text-lg" />
+                    </a>
+                  )}
                 </div>
                 <div className="text-labels mx-4 mt-2 truncate-5">
                   {project.description}

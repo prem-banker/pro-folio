@@ -32,7 +32,7 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am Prem Banker. 
+  return `Hi, I am ${userdata.user.name}. 
 Welcome to my website!
 More about me:
 'resume' - my latest resume.

@@ -6,7 +6,6 @@ import { RiCloseLine } from "react-icons/ri";
 import metadata from "../../../../public/data/meta.json";
 import userdata from "../../../../public/data/user.json";
 import TechIcon from "../../components/techicon";
-import "../../styles/projects.css";
 import { Project, User } from "../../utils/interfaces";
 import { standardizeName } from "../../utils/utils";
 import EmptyState from "../emptystate";
@@ -21,7 +20,6 @@ export default function ProjectsWeb() {
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
 
   useEffect(() => {
-    // Filter projects based on active technologies
     const newFilteredProjects = projects.filter((project) => {
       return project.techstack.some(
         (tech) =>
@@ -64,7 +62,7 @@ export default function ProjectsWeb() {
         <div className="flex-vertical-center">
           <div className="w-[220px] pl-[22px] border-r border-line flex-vertical-center">
             <FaCaretDown className="text-white mr-2" />
-            <span className="text-white">projects</span>
+            <span className="text-white">My Tech Stack</span>
           </div>
 
           {activeTechnologies.length > 0 && (
@@ -149,14 +147,16 @@ export default function ProjectsWeb() {
                       alt={project.name}
                       className="w-full h-[150px] object-cover rounded-t-md"
                     />
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="absolute bottom-2 right-2 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300 ease-in-out"
-                    >
-                      <FaGithub className="text-white text-lg" />
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute bottom-2 right-2 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300 ease-in-out"
+                      >
+                        <FaGithub className="text-white text-lg" />
+                      </a>
+                    )}
                   </div>
                   <div className="text-labels mx-4 mt-2 truncate-7">
                     {project.description}
