@@ -55,4 +55,4 @@ Deploy the website on Vercel or any other hosting service by following their dep
 
 I Love that! Feel free to fork the repo and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-Special thanks to [Yanka](https://www.linkedin.com/in/yanka-darelova/) Who is creator of this [design](https://www.figma.com/community/file/1100794861710979147/portfolio-for-developers-concept-v-2). Her open sourcing this design was important motivation for me to open-source my design as well.
+Special thanks to [Yanka](https://www.linkedin.com/in/yanka-darelova/) Who is creator of this [design](https://www.figma.com/community/file/1100794861710979147/portfolio-for-developers-concept-v-2). Her open sourcing this design was important motivation for me to open-source my code as well.
