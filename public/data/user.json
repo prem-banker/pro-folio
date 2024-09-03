@@ -85,7 +85,6 @@
           "VectorDB",
           "react"
         ],
-        "github": "https://github.com/prem-banker/all-source",
         "url": "https://devpost.com/software/marubot"
       },
       {
@@ -99,8 +98,7 @@
           "typescript",
           "javascript"
         ],
-        "github": "https://meet.quicko.com",
-        "url": "https://meet.quicko.com"
+        "url": "https://quicko.com/meet"
       },
       {
         "name": "Tax filing on Mobile - Quicko",
@@ -113,8 +111,7 @@
           "Java",
           "DynamoDb"
         ],
-        "github": "https://it.quicko.com",
-        "url": "https://it.quicko.com"
+        "url": "https://quicko.com/income-tax"
       },
       {
         "name": "Clique - Quicko",
@@ -126,7 +123,6 @@
           "javascript",
           "java"
         ],
-        "github": "https://clique.quicko.com/",
         "url": "https://clique.quicko.com/"
       },
       {
@@ -148,8 +144,8 @@
         "techstack": [
           "python"
         ],
-        "github": "https://github.com/prem-banker",
-        "url": "https://github.com/prem-banker"
+        "github": "https://github.com/prem-banker/football-visualization",
+        "url": "https://github.com/prem-banker/football-visualization"
       },
       {
         "name": "Voice-Guided Identity Verification",
@@ -191,7 +187,7 @@
           "Unity"
         ],
         "github": "",
-        "url": "https://github.com/prem-banker"
+        "url": "https://play.google.com/store/apps/details?id=com.Teknack.Balley"
       }
     ],
     "socials": [
