@@ -28,7 +28,10 @@ const NavItem: React.FC<NavItemProps> = ({
 
   const pathname = usePathname();
 
-  const isActive = href === "/" ? pathname === href : pathname.startsWith(href);
+  const parentpath = `/${href.split("/")[1]}`;
+
+  const isActive =
+    href === "/" ? pathname === href : pathname.startsWith(parentpath);
 
   const verticalBorder = `${
     isActive ? "border-b border-b-accentOrange border-b-4" : ""

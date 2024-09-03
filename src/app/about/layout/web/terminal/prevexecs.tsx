@@ -1,7 +1,7 @@
 import { Execution } from "@/app/utils/interfaces";
 import React from "react";
-import TerminalUsername from "./username";
 import { useExecutions } from "@/app/contexts/terminal/terminalcontext";
+import TerminalUsername from "./username";
 
 export const PreviousExecutions: React.FC = ({}) => {
   const { executions } = useExecutions();

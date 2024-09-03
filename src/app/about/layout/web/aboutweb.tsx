@@ -3,13 +3,13 @@
 
 import React from "react";
 import { FaCaretDown } from "react-icons/fa";
-import "../../../styles/about.css";
+import "./aboutweb.css";
 
 import CustomTab from "@/app/components/filetab";
 import { useOpenedFiles } from "@/app/contexts/filestackcontext";
 import { useRouter } from "next/navigation";
-import Terminal from "./terminal/terminal";
 import Sidebar from "./sidebar";
+import Terminal from "./terminal/terminal";
 
 const AboutWeb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);

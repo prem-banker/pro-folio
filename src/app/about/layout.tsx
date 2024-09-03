@@ -1,15 +1,13 @@
 // AboutLayout.tsx
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { FileStackProvider } from "../contexts/filestackcontext";
 import { TerminalProvider } from "../contexts/terminal/terminalcontext";
-import "../styles/about.css";
+import { useWindowSize } from "../hooks/windowsize";
 import AboutMobile from "./layout/mobile/aboutmobile";
 import AboutWeb from "./layout/web/aboutweb";
-import { useWindowSize } from "../hooks/windowsize";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
 
 export default function AboutLayout({
   children,
