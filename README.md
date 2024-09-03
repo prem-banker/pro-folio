@@ -17,6 +17,25 @@ To set up the portfolio on your local machine, follow these simple steps:
 1. **Clone the Repository:**
 
    ```bash
+   git clone https://github.com/prem-banker/pro-folio.git
+   cd pro-folio
+   ```
+
+1) **Clone the Repository:**
+
+   ```bash
    git clone https://github.com/yourusername/pro-folio.git
    cd pro-folio
    ```
+
+2) **Install deps:**
+
+   ```bash
+   npm install
+   ```
+
+3. **EmailJS Setup:**
+
+Create an account on EmailJS.
+Create a new service and template.
+Update the .env.local file with your EmailJS SERVICE_ID, TEMPLATE_ID, and PUBLIC_KEY
