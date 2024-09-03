@@ -7,8 +7,6 @@ import { FaCaretDown, FaEnvelope } from "react-icons/fa";
 import { FaUpRightFromSquare } from "react-icons/fa6";
 import userdata from "../../../../public/data/user.json";
 import CustomCodeEditor from "../../components/code-editor/codeeditor";
-import "../../styles/contact.css";
-// import "../styles/projects.css";
 import customKeymap from "../../utils/code-editor/keymap";
 import { User } from "../../utils/interfaces";
 import { capitalizeFirstLetter } from "../../utils/utils";

@@ -1,16 +1,23 @@
-import "../styles/contact.css";
+"use client";
+import { useWindowSize } from "../hooks/windowsize";
+import "./contact.css";
 import ContactMobile from "./mobile/contactmobile";
 import ContactWeb from "./web/contactweb";
 
 export default function Page() {
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
   return (
     <>
-      <div className="hidden md:block md:h-full">
-        <ContactWeb />
-      </div>
-      <div className="block h-full md:hidden">
-        <ContactMobile />
-      </div>
+      {isMobile ? (
+        <div className="block h-full">
+          <ContactMobile />
+        </div>
+      ) : (
+        <div className="block h-full">
+          <ContactWeb />
+        </div>
+      )}
     </>
   );
 }
