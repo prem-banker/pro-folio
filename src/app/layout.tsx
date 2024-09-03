@@ -9,7 +9,7 @@ import "./globals.css";
 const firacode = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pro-folio",
+  title: "Prem Banker",
   description: "Prem Banker's Developer Portfolio",
   keywords: "Portfolio, Developer, Software Engineer, Full Stack, Prem Banker",
   authors: {
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Pro-folio",
+    title: "Prem Banker",
     description: "Prem Banker's Developer Portfolio",
     url: "https://www.prembanker.com",
     type: "website",
     images: [
       {
-        url: "/public/images/og-image.png",
+        url: "/og-image.png",
         width: 800,
         height: 600,
         alt: "Pro-folio Preview",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pro-folio",
+    title: "Prem Banker",
     description: "Prem Banker's Developer Portfolio",
-    images: ["/public/images/og-image.png"],
+    images: ["/og-image.png"],
   },
 };
 export default function RootLayout({
@@ -47,7 +47,28 @@ export default function RootLayout({
     <html lang="en" className="bg-baseColor">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Add other meta tags or link tags here */}
+        <meta
+          name="keywords"
+          content="Portfolio, Developer, Software Engineer, Full Stack, Prem Banker"
+        />
+        <meta name="author" content="Prem Banker" />
+        <meta property="og:title" content="Prem Banker" />
+        <meta
+          property="og:description"
+          content="Prem Banker's Developer Portfolio"
+        />
+        <meta property="og:url" content="https://www.prembanker.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pro-folio" />
+        <meta
+          name="twitter:description"
+          content="Prem Banker's Developer Portfolio"
+        />
+        <meta name="twitter:image" content="/og-image.png" />
+        <link rel="canonical" href="https://www.prembanker.com" />
+        <link rel="icon" href="/icon.svg" />
       </head>
 
       {/* handling different componets for mobile and web/ */}
