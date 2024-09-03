@@ -1,5 +1,5 @@
 import React from "react";
-import userdata from "../../../../public/data/user.json";
+import userdata from "../../../../../../public/data/user.json";
 
 export const TerminalUsername = () => {
   const githubLink = userdata.user.socials.find(
