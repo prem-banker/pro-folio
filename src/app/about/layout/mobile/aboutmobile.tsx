@@ -4,7 +4,7 @@
 import Folder from "@/app/components/folder";
 import { useOpenedFiles } from "@/app/contexts/filestackcontext";
 import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import React from "react";
 import userdata from "../../../../../public/data/user.json";
 
 const AboutMobile: React.FC<{ children: React.ReactNode }> = ({ children }) => {

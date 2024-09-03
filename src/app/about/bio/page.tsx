@@ -1,15 +1,22 @@
+"use client";
+import { useWindowSize } from "@/app/hooks/windowsize";
 import BioMobile from "./mobile/biomobile";
 import BioWeb from "./web/bioweb";
 
 export default function BioPage({}: {}) {
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
   return (
     <>
-      <div className="hidden md:block md:h-full">
-        <BioWeb />
-      </div>
-      <div className="block h-full md:hidden">
-        <BioMobile />
-      </div>
+      {isMobile ? (
+        <div className="block h-full">
+          <BioMobile />
+        </div>
+      ) : (
+        <div className="block h-full">
+          <BioWeb />
+        </div>
+      )}
     </>
   );
 }

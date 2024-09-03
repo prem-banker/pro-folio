@@ -67,8 +67,10 @@ export const getLineBreakLength = () => {
   if (typeof window === "undefined") return 60; // Default value for server-side rendering
   const screenWidth = window.innerWidth;
 
-  if (screenWidth > 1800) {
+  if (screenWidth > 1850) {
     return 70;
+  } else if (screenWidth > 1750) {
+    return 65;
   } else if (screenWidth > 1650) {
     return 60;
   } else if (screenWidth > 1400) {

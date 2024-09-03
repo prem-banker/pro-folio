@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import userdata from "../../../../../../public/data/user.json";
 import CustomCodeEditor from "@/app/components/code-editor/codeeditor";
-import { addLineBreaks, addLineBreaksWoComments } from "@/app/utils/utils";
+import { addLineBreaks, getLineBreakLength } from "@/app/utils/utils";
+import userdata from "../../../../../../public/data/user.json";
 
 export default function EducationWeb({
   params,
@@ -16,7 +15,9 @@ export default function EducationWeb({
 
   return (
     <div className="h-full w-full custom-scrollbar">
-      <CustomCodeEditor code={addLineBreaks(education.description, 50)} />
+      <CustomCodeEditor
+        code={addLineBreaks(education.description, getLineBreakLength())}
+      />
     </div>
   );
 }
