@@ -22,7 +22,7 @@ const HeaderWeb: React.FC = () => {
         <div className="flex h-full">
           <NavItem href="/" text="_hello" paddingX={18} />
 
-          <NavItem href="/about" text="_about-me" paddingX={18} />
+          <NavItem href="/about/bio" text="_about-me" paddingX={18} />
 
           <NavItem href="/projects" text="_projects" paddingX={18} />
         </div>

@@ -8,19 +8,9 @@ import React, { useEffect } from "react";
 import userdata from "../../../../../public/data/user.json";
 
 const AboutMobile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const inputRef = React.useRef<HTMLInputElement>(null);
   const { openFile } = useOpenedFiles();
 
-  const onClickAnywhere = () => {
-    inputRef.current?.focus();
-  };
-
   const router = useRouter();
-
-  useEffect(() => {
-    // initial route
-    router.push("/about/bio");
-  }, [router]);
 
   const educationFiles = userdata.user.education.map((edu, index) => ({
     text: edu.title,

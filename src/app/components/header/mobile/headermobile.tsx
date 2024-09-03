@@ -80,7 +80,7 @@ const HeaderMobile: React.FC = () => {
                 _hello
               </div>
             </Link>
-            <Link href="/about" passHref legacyBehavior>
+            <Link href="/about/bio" passHref legacyBehavior>
               <div className="p-4 text-white hover:bg-gray-700 hover:text-secondaryFluorescentGreen cursor-pointer border-b border-line">
                 _about
               </div>

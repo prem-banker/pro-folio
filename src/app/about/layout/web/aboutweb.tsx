@@ -1,16 +1,15 @@
 // AboutLayout.tsx
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { FaCaretDown } from "react-icons/fa";
-import { RiCloseLine } from "react-icons/ri";
 import "../../../styles/about.css";
 
-import { useRouter } from "next/navigation";
-import Sidebar from "./sidebar";
-import { useOpenedFiles } from "@/app/contexts/filestackcontext";
 import CustomTab from "@/app/components/filetab";
+import { useOpenedFiles } from "@/app/contexts/filestackcontext";
+import { useRouter } from "next/navigation";
 import Terminal from "../../terminal/terminal";
+import Sidebar from "./sidebar";
 
 const AboutWeb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -21,11 +20,6 @@ const AboutWeb: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   const router = useRouter();
-
-  useEffect(() => {
-    // initial route
-    router.push("/about/bio");
-  }, [router]);
 
   const handleTabClick = (file: string) => {
     router.push(file);

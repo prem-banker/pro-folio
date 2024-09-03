@@ -2,36 +2,45 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { FaCaretDown } from "react-icons/fa";
-import { RiCloseLine } from "react-icons/ri";
-import "../styles/about.css";
-import { useRouter } from "next/navigation";
-import {
-  FileStackProvider,
-  useOpenedFiles,
-} from "../contexts/filestackcontext";
-import CustomTab from "../components/filetab";
+import { FileStackProvider } from "../contexts/filestackcontext";
 import { TerminalProvider } from "../contexts/terminal/terminalcontext";
-import Terminal from "./terminal/terminal";
-import Sidebar from "./layout/web/sidebar";
-import AboutWeb from "./layout/web/aboutweb";
+import "../styles/about.css";
 import AboutMobile from "./layout/mobile/aboutmobile";
+import AboutWeb from "./layout/web/aboutweb";
+import { useWindowSize } from "../hooks/windowsize";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function AboutLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (pathname.endsWith("about")) {
+      router.replace("/about/bio");
+    }
+  }, []);
+
   return (
     <>
       <FileStackProvider>
         <TerminalProvider>
-          <div className="hidden md:block md:h-full">
-            <AboutWeb> {children} </AboutWeb>
-          </div>
-          <div className="block h-full md:hidden">
-            <AboutMobile>{children}</AboutMobile>
-          </div>
+          {isMobile ? (
+            <div className="block h-full">
+              <AboutMobile>{children}</AboutMobile>
+            </div>
+          ) : (
+            <div className="block h-full">
+              <AboutWeb> {children} </AboutWeb>
+            </div>
+          )}
         </TerminalProvider>
       </FileStackProvider>
     </>
