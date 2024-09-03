@@ -9,6 +9,7 @@ import TechIcon from "../../components/techicon";
 import { Project, User } from "../../utils/interfaces";
 import { standardizeName } from "../../utils/utils";
 import EmptyState from "../emptystate";
+import Loader from "@/app/components/loader/loader";
 
 export default function ProjectsWeb() {
   const { technologies } = metadata;
