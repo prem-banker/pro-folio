@@ -23,11 +23,22 @@ const HeaderMobile: React.FC = () => {
     setIsDrawerOpen(open);
   };
 
+  const user = userdata.user;
+  const socials = user.socials;
+
+  const findSocialLink = (name: string) =>
+    socials.find((social) => social.name.toLowerCase() === name.toLowerCase())
+      ?.link;
+  const devpostLink = findSocialLink("dev post");
+  const linkedinLink = findSocialLink("linkedin");
+
   return (
     <header className="bg-primaryLightNavyBlue text-secondaryLightBlue h-[56px] flex items-center justify-between p-4">
       <div className="flex items-center">
-        <span className="font-semibold">~$ ./{userdata.user.logo_text}</span>
-        <span className="cursor bg-secondaryFluorescentGreen"></span>
+        <Link href="/" passHref>
+          <span className="font-semibold">~$ ./{userdata.user.logo_text}</span>
+          <span className="cursor bg-secondaryFluorescentGreen"></span>
+        </Link>
       </div>
       <IconButton
         edge="start"
@@ -46,11 +57,13 @@ const HeaderMobile: React.FC = () => {
         >
           <div>
             <div className="flex justify-between border-b border-line px-4 pb-2 ">
-              <div className="flex items-center">
-                <span className="text-[0.8em] font-semibold">
-                  ~$ ./{userdata.user.logo_text}
-                </span>
-                <span className="cursor bg-secondaryFluorescentGreen"></span>
+              <div className="flex items-center justify-center">
+                <Link href="/" passHref className="flex items-center">
+                  <span className="text-[0.8em] font-semibold">
+                    ~$ ./{userdata.user.logo_text}
+                  </span>
+                  <span className="cursor bg-secondaryFluorescentGreen"></span>
+                </Link>
               </div>
               <IconButton
                 onClick={toggleDrawer(false)}
@@ -85,34 +98,53 @@ const HeaderMobile: React.FC = () => {
           </div>
 
           <div className="h-[56px] border-t border-line rounded-sm flex items-center">
-            <div className="border-r border-line flex items-center pl-4 h-full flex-grow">
+            <div className="border-r border-line flex items-center pl-4 h-full flex-grow text-[0.8em]">
               find me on:
             </div>
             <div className="flex h-full">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                className="group h-full"
-              >
-                <div className="border-r border-line flex-vertical-center px-[14px] group-hover:bg-gray-200 transition-all duration-300 cursor-pointer">
-                  <FaXTwitter
-                    className="text-secondaryLightBlue group-hover:text-secondaryFluorescentGreen transition-colors duration-300"
-                    size={20}
-                  />
+              {linkedinLink && (
+                <div className="border-r border-line flex-vertical-center">
+                  <a
+                    href={linkedinLink}
+                    target="_blank"
+                    className="group h-full"
+                  >
+                    <div className="border-r border-line flex-vertical-center px-[14px] group-hover:bg-gray-200 transition-all duration-300 cursor-pointer">
+                      <FaLinkedin
+                        className="text-secondaryLightBlue group-hover:text-secondaryFluorescentGreen transition-colors duration-300"
+                        size={20}
+                      />
+                    </div>
+                  </a>
                 </div>
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                className="group h-full"
-              >
-                <div className="border-r border-line flex-vertical-center px-[14px] group-hover:bg-gray-200 transition-all duration-300 cursor-pointer">
-                  <FaLinkedin
-                    className="text-secondaryLightBlue group-hover:text-secondaryFluorescentGreen transition-colors duration-300"
-                    size={20}
-                  />
+              )}
+
+              {devpostLink && (
+                <div className="border-r border-line flex-vertical-center">
+                  <a
+                    href={devpostLink}
+                    target="_blank"
+                    className="group h-full"
+                  >
+                    <div className="h-full border-r border-line flex-vertical-center px-[14px] group-hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+                      <img
+                        src="/icons/devpost.svg"
+                        alt="Devpost"
+                        className="text-secondaryLightBlue group-hover:hidden transition-colors duration-300"
+                        width={20}
+                        height={20}
+                      />
+                      <img
+                        src="/icons/devpostactive.svg"
+                        alt="Devpost Active"
+                        className="hidden group-hover:inline-block transition-colors duration-300"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                  </a>
                 </div>
-              </a>
+              )}
             </div>
           </div>
         </div>

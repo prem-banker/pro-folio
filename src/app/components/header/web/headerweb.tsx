@@ -1,6 +1,7 @@
 // components/WebHeader.tsx
-import React from "react";
 import Link from "next/link";
+import React from "react";
+import userdata from "../../../../../public/data/user.json";
 import NavItem from "./navitem";
 
 const HeaderWeb: React.FC = () => {
@@ -13,7 +14,7 @@ const HeaderWeb: React.FC = () => {
             passHref
             className="hover:text-secondaryFluorescentGreen flex-vertical-center"
           >
-            <span>~$ ./prem-banker </span>
+            <span>~$ ./{userdata.user.logo_text} </span>
             <span className="cursor bg-secondaryFluorescentGreen"></span>
           </Link>
         </div>

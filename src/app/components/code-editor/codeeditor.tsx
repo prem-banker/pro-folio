@@ -1,5 +1,4 @@
 import customKeymap from "@/app/utils/code-editor/keymap";
-import { editorTheme } from "@/app/utils/editortheme";
 import { javascript } from "@codemirror/lang-javascript";
 import "./codeeditor.css";
 import ReactCodeMirror, {
@@ -7,6 +6,7 @@ import ReactCodeMirror, {
   EditorView,
 } from "@uiw/react-codemirror";
 import React from "react";
+import { editorTheme } from "@/app/utils/code-editor/editortheme";
 
 interface EditorProps {
   code: string;

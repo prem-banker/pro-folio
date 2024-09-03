@@ -1,19 +1,14 @@
-// components/header/Header.tsx
-import React, { useState } from "react";
-import HeaderWeb from "./web/headerweb";
+"use client";
+import React from "react";
 import HeaderMobile from "./mobile/headermobile";
+import HeaderWeb from "./web/headerweb";
+import { useWindowSize } from "@/app/hooks/windowsize";
 
 const Header: React.FC = () => {
-  return (
-    <>
-      <div className="hidden md:block">
-        <HeaderWeb />
-      </div>
-      <div className="block md:hidden">
-        <HeaderMobile />
-      </div>
-    </>
-  );
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
+
+  return <>{isMobile ? <HeaderMobile /> : <HeaderWeb />}</>;
 };
 
 export default Header;

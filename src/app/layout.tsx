@@ -27,6 +27,7 @@ export default function RootLayout({
 
       {/* handling different componets for mobile and web/ */}
       <body className={`${firacode.className}`}>
+        {/* Web */}
         <div className="hidden md:block bg-primaryLightNavyBlue m-[56px] rounded-lg border border-line">
           <Header />
           <div className="flex flex-col web-content site-content overflow-y-auto">
@@ -34,6 +35,8 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
+
+        {/* Mobile */}
         <div className="block flex flex-col h-screen md:hidden">
           <Header />
           <div className="flex-grow mobile-content flex flex-col">
