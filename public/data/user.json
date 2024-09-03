@@ -154,7 +154,7 @@
       {
         "name": "Voice-Guided Identity Verification",
         "description": "This project develops a cost-effective voice recognition solution for identity verification, targeting virtual settings like online education and meetings. It uses audio data converted into log mel spectrograms and classifies them with a Convolutional Neural Network (CNN) for reliable and secure identification and attendance tracking.",
-        "image": "/projects/project_images/voice.png",
+        "image": "/projects/project_images/voice.webp",
         "techstack": [
           "python"
         ],
@@ -174,7 +174,7 @@
       {
         "name": "Visual Occupancy Detection System",
         "description": "VODS for smart parking lot management differentiates between empty and occupied parking spaces. Utilizing a CNN model trained on over 120k images, it identifies available spots for drivers. As traffic congestion increases, this low-cost system offers significant benefits in time savings and pollution reduction.",
-        "image": "/projects/project_images/vods.png",
+        "image": "/projects/project_images/vods.webp",
         "techstack": [
           "python"
         ],
@@ -184,7 +184,7 @@
       {
         "name": "Balley",
         "description": "Balley is a 2D hypercasual infinite-runner type game made using Unity. The goal is to stay alive for as long as possible, gain points by bouncing off the raised platforms and to collect coins and power-ups while you're at it. The game gets progressively difficult as the points increase & also features an in-game store from where players can buy skins and powerups.",
-        "image": "/projects/project_images/balley.png",
+        "image": "/projects/project_images/balley.webp",
         "techstack": [
           "C",
           "C#",
