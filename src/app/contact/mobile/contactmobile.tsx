@@ -22,27 +22,18 @@ export default function ContactMobile() {
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
-      <div className="flex items-center justify-between  px-4">
-        <div className="flex items-center space-x-2">
-          {/* <FaEnvelope /> */}
-          <span className="text-2xl text-secondaryFluorescentGreen py-2">
-            _contact-me
-          </span>
-        </div>
-      </div>
-
       {/* Mobile Layout Content */}
       <div className="flex flex-col flex-grow p-4 text-secondaryLightBlue">
-        {/* <p>Shoot me a mail at </p>
+        <p>Shoot me a mail at </p>
         <a
           href={`mailto:${user.email}`}
-          className="flex items-center text-secondaryFluorescentGreen  hover:text-secondaryFluorescentGreen transition-colors duration-200 "
+          className="my-4 flex items-center text-secondaryFluorescentGreen  hover:text-secondaryFluorescentGreen transition-colors duration-200 "
         >
           <FaEnvelope />
           <span className="ml-2">{user.email}</span>
         </a>
 
-        <p>OR Write me here 👇</p> */}
+        <p>OR Write me here 👇</p>
 
         {/* Contact Form */}
         <div className="flex flex-col flex-grow mt-4">
