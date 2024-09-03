@@ -21,7 +21,7 @@ export default function HomeWeb() {
             <AnimatedText />
           </h4>
           <div className="text-secondaryLightBlue font-labels">
-            &#47;&#47; A Developer's Portfolio by Prem Banker
+            &#47;&#47; A Developer&apos;s Portfolio by Prem Banker
           </div>
           <div className="text-secondaryLightBlue font-labels">
             &#47;&#47; You can see the code for this site here
