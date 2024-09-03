@@ -35,7 +35,7 @@ const HeaderMobile: React.FC = () => {
   return (
     <header className="bg-primaryLightNavyBlue text-secondaryLightBlue h-[56px] flex items-center justify-between p-4">
       <div className="flex items-center">
-        <Link href="/" passHref>
+        <Link href="/" className="flex items-center" passHref>
           <span className="font-semibold">~$ ./{userdata.user.logo_text}</span>
           <span className="cursor bg-secondaryFluorescentGreen"></span>
         </Link>
