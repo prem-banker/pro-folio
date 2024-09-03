@@ -111,10 +111,10 @@ await emailjs
 
         {/* contact form */}
         <div className="flex flex-grow  h-full maintain-size custom-scrollbar">
-          <div className="w-1/2 flex justify-center items-center font-[1.5em]">
+          <div className="w-full lg:w-2/5 xl:w-1/2 flex justify-center items-center font-[1.5em]">
             <FormComponent setFormData={setFormData} />
           </div>
-          <div className="w-1/2">
+          <div className="w-0 lg:w-3/5 xl:w-1/2">
             {/* codeeditor */}
             <CustomCodeEditor code={codesnippet} fontSize="1.1em" />
           </div>
