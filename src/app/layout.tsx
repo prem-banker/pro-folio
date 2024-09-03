@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://www.prembanker.com/images/og-image.png",
         width: 800,
         height: 600,
         alt: "Pro-folio Preview",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prem Banker",
     description: "Prem Banker's Developer Portfolio",
-    images: ["/og-image.png"],
+    images: ["https://www.prembanker.com/images/og-image.png"],
   },
 };
 export default function RootLayout({
@@ -59,14 +59,20 @@ export default function RootLayout({
         />
         <meta property="og:url" content="https://www.prembanker.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/og-image.png" />
+        <meta
+          property="og:image"
+          content="https://www.prembanker.com/images/og-image.png"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pro-folio" />
         <meta
           name="twitter:description"
           content="Prem Banker's Developer Portfolio"
         />
-        <meta name="twitter:image" content="/og-image.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.prembanker.com/images/og-image.png"
+        />
         <link rel="canonical" href="https://www.prembanker.com" />
         <link rel="icon" href="/icon.svg" />
       </head>
