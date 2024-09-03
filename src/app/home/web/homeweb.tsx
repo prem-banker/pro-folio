@@ -2,13 +2,10 @@
 import Image from "next/image";
 import userdata from "../../../../public/data/user.json";
 import AnimatedText from "../../components/animatedtext/animatedtext";
-import "../home.css";
 
 export default function HomeWeb() {
   return (
-    // md:w-[250px] lg:w-[311px]
     <div className="min-h-inherit flex-center-items relative">
-      {/* <BubbleAnimation /> */}
       <div className="mx-auto flex flex-row items-center justify-center text-white w-full max-w-[1080px] px-4 lg:px-0">
         <div className="w-1/2 p-8 ">
           <p className="md:text-code lg:text-body 2xl:text-[1.5em]">

@@ -1,7 +1,7 @@
 "use client";
 import userdata from "../../../../public/data/user.json";
 import AnimatedText from "../../components/animatedtext/animatedtext";
-import "../home.css";
+import "./homemobile.css";
 
 export default function HomeMobile() {
   return (
@@ -14,20 +14,13 @@ export default function HomeMobile() {
         <h4 className="text-accentOrange text-[1.5em] mb-2">
           <AnimatedText />
         </h4>
-        {/* <button
-          className="bg-buttonbackground py-2 px-4 mb-2 rounded-md text-white 
-        transition-colors duration-300 ease-in-out
-        hover:bg-buttonhover"
-        >
-          about-me
-        </button> */}
 
         <div className="text-secondaryLightBlue font-labels  mb-4">
           &#47;&#47; check out the site code on
         </div>
         <div className="font-labels">
           <span className="text-secondaryBrightPurple">const</span>{" "}
-          <span className="text-accentBrightGreen">githubLink</span> ={" "}
+          <span className="text-accentBrightGreen">codeLink</span> ={" "}
           <a
             href="https://github.com/prem-banker/pro-folio"
             className="text-accentOrange underline"
