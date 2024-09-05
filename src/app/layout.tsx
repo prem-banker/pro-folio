@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import "./globals.css";
@@ -95,6 +95,8 @@ export default function RootLayout({
             {children}
           </div>
         </div>
+
+        <Analytics />
       </body>
     </html>
   );
