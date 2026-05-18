@@ -1,0 +1,65 @@
+Obviant: 
+
+
+
+Obviant - Dec 2024 - July 2025
+It is an early defense tech startup. The product is about ingesting all of the defense information from all the various sources
+luike (sam.gov) and structurize the semi structured data, process pdfs into structured entities and provide
+valuable actionable insights on that defense information.  
+
+
+My work
+I workedo as an early software engineer on the full stack development of the main product. Worked in a small team of 5 engineers and resulted in
+a 7.1$ seed round funding while i was at the company.
+
+ Some of the main things i did was
+--  Implemented Role-Based Access Control (RBAC) for file-access and sharing features, enabling granular, Google Drive-like
+permissions across projects as security for the customers was extremely important.
+-- Worked on building Recon -- Recon is an offering where customers can talk to the data in natural language and on the backend,
+using proper rag and chatgpt wrappers, we provide proepr answers and valuable responses based on the defense data and the customer query
+(it is similar to chatgpt but specifically trained on the latest defense data). Key technical details included using Query expansion,
+RAG and using a combined results of vectordb as well as Elasticsearch for kyword specific as well as context rich results (hybrid search).
+
+-- Worked on building Projects -- Users give us some information about what kind of defense sub area they are looking for and based on 
+that, help them find different opporutnities involving solitications, contracts, programs and relevant defense organizations.
+Key technical details include using RAG based hybrid result lookups which find the most relevany content as we have vector embeddings
+of the data we have ingested and we work it 
+
+-- Creating defense news feed in customers projects : Based on the interests of the customer, built a full pipeline which injests 
+news articles from various sources (dvids, army.mil etc) and built a whole notification flow which would come up as a news feed in the 
+users projects
+-- Worked on making a master slave configuration where we ingest defense info in our RDS and they directly flow into our Elasticsearch and
+vectordb (pinecone) by listening to event triggers on the RDS tables. Complexities involved injestion at scale (solved thru queuing mechanisms
+and batch processing),
+ and handling complex updates and deletes which would not only affect one entities but affect multiple .
+
+
+
+
+
+ New York Life Insurance - Aug 2025 - Present
+ NYL is one of the largest life insurance company in America.
+
+ My work
+ I primarily work as a software engineer in the GuideMe Team of NYL. GuideMe is a product which is used by NYL agents to manage
+ their customers, presentation tool for selling to customer,  takign customer input data and then
+  proviign them different life insurances, idis etc.
+
+  My works include
+  -- Built and delviered a sub ~5ms ABAC based Authorization service which uses REGO to handle complex atribute based decision making. Also sub 
+  ~5ms was under strong perfomrnace testing loads (500req/second). Implemented an enterprise authorization solution 
+  using a sidecar architecture with OPA for attribute-based access control (ABAC). Developed policy-management workflows using
+   AWS S3 and Lambda for dynamic, centralized policy updates
+
+  -- Build Sidekick's AI Backend -- sidekick is the inhouse tool of NYL agnet which is used to capture the meetings, transcribing and diarzing them
+  and then combines customer information along w the meeting insights to deliver actionables. Key technical details including building a 
+  wghole AI python backend from ground up involving the correct EC2 provisioning and proper CI/CD pipelines. Using huggingface models locally to make
+  sure we do not make external http requests and developing proper architechture so that the server does not get overwhelmed.
+ -- Spearheaded the PEGA work. Moving away from PEGA and bringing in new decisioning vendor where it is inhouses reducing vendor lockin and saving hundrers
+ of thousands in licensing costs. Key tehcnical details involes making POC in different rule engines, successfully providing a migration plan.
+ -- Worked on AWS RDS cost reduction saving ~53k$ yearly in AWS bills. Details including strategizing cost saving approaches,
+  looking into aurora Serverless, deep diving into RDS usage metrics and also workign on downsizing necessary non prod instances without
+  downtimes and reliability issues. 
+
+
+

@@ -9,30 +9,38 @@
       "Problem Solver",
       "Tech Nerd"
     ],
-    "bio": "ABOUT ME\n\nPrem Banker, 24\nWashington DC, USA\n\nI am a problem solver who is interested in solving everything tech. My main background and projects are in Software Development and Artificial Intelligence, which I had the pleasure of working on during my studies and at my work. I love to work in teams and make meaningful contributions with like-minded people.\n\nWhen I'm not coding, you'll find me playing soccer (which should definitely be called football) or watching YouTube.\n\nFeel free to drop me a message if you want to chat about tech, football, or the best YouTube rabbit holes—I'm always up for a good conversation!",
+    "bio": "ABOUT ME\n\nPrem Banker, 24\nNew York, NY, USA\n\nI am a problem solver who is interested in solving everything tech. My main background and projects are in Software Development and Artificial Intelligence, which I had the pleasure of working on during my studies and at my work. I love to work in teams and make meaningful contributions with like-minded people.\n\nWhen I'm not coding, you'll find me playing soccer (which should definitely be called football) or watching YouTube.\n\nFeel free to drop me a message if you want to chat about tech, football, or the best YouTube rabbit holes—I'm always up for a good conversation!",
     "education": [
       {
         "title": "Masters",
         "school": "Virginia Tech",
         "degree": "Masters in Computer Science",
         "description": "Masters\nMasters in Computer Science, Virginia Tech\nWashington DC, USA\nAug 2023 - May 2025\n\nCoursework: Information Visualization, Artificial Intelligence, Modelling and Evaluation, Machine Learning, Web Tech, Cloud Computing, Software Engineering, ML in Big Data",
-        "place": "Wahsington DC"
+        "place": "New York NY"
       },
       {
         "title": "Bachelors",
         "school": "PDEU",
         "degree": "BTech in Computer Science",
         "description": "Bachelors\nBachelors in CS, PDEU\nAhmedabad, India\nJuly 2017 - May 2021\n\nCoursework: Web Development, Software Engineering, Information Security, Computer Networks, Database Management, Data Structures and Algorithms, Distributed Systems, Optimization Techniques, Machine Learning, Natural Language Processing, Data Warehousing and Data Mining",
-        "place": "Wahsington DC"
+        "place": "Ahmedabad India"
       }
     ],
     "work": [
       {
         "title": "Software Engineer",
+        "company": "New York Life",
+        "start": "Aug 25",
+        "end": "Present",
+        "description": "New York Life\nSoftware Engineer\nNew York, NY, USA\nAug 2025 - Present\n\nTech Stack: Golang, Java, Python, AWS, OPA/Rego, HuggingFace, Electron\n\nBuilt a sub-5ms ABAC authorization service using a sidecar architecture with Golang, OPA and Rego, validated under 500 req/s load with centralized policy management via AWS S3 and Lambda.\n\nArchitected Sidekick’s AI backend from scratch – an internal tool for meeting transcription, speaker diarization, and actionable insight generation using locally hosted HuggingFace models on EC2 with full CI/CD pipelines.\n\nLed migration to an in-house business rules engine, delivering a full POC and migration plan that eliminates vendor lock-in, saving hundreds of thousands in annual licensing costs.\n\nDrove AWS RDS cost optimization by analyzing CPU usage metrics and downsizing non-prod instances with zero downtime, saving $53,000+ annually.",
+        "place": "New York NY"
+      },
+      {
+        "title": "Software Engineer",
         "company": "Obviant",
         "start": "Dec 24",
-        "end": "Present",
-        "description": "Obviant\nSoftware Engineer\nArlington, Virginia, USA\nDec 2024 - Present\n\nTech Stack: React, Next.js, Node.js, TypeScript, AWS, Python, Terraform, Pinecone VectorDB, Elasticsearch, Redis, Cohere\n\nSpearheaded full-stack development at a Defense startup, contributing to defense intelligence using web and NLP solutions as a Founding Engineer.\n\nBuilt a Retrieval-Augmented Generation (RAG) recommender system that delivers personalized Department of Defense insights based on user feedback and relationships.\n\nImplemented Role-Based Access Control (RBAC) for file-sharing features, enabling granular, Google Drive-like permissions across projects.\n\nEnhanced semantic search by optimizing Pinecone and Elasticsearch, reducing response time by 500ms.",
+        "end": "Jul 25",
+        "description": "Obviant\nSoftware Engineer\nArlington, Virginia, USA\nDec 2024 - July 2025\n\nTech Stack: React, Next.js, Node.js, TypeScript, AWS, Python, Terraform, Pinecone, Elasticsearch, Redis\n\nJoined as the fourth engineer at an early-stage defense-tech startup, contributing to a $7.1M seed round through rapid full-stack product delivery.\n\nBuilt Recon, a natural-language intelligence tool powered by RAG and hybrid search (Pinecone + Elasticsearch) with query expansion, enabling customers to query defense data conversationally.\n\nDesigned a master-replica data pipeline syncing ~2M rows from RDS to Elasticsearch and Pinecone via event triggers, handling complex multi-entity updates at scale with queuing and batch processing.\n\nImplemented RBAC for file-sharing with granular, Google Drive-like permissions, addressing critical customer security requirements.",
         "place": "Arlington Virginia"
       },
       {
@@ -40,7 +48,7 @@
         "company": "Quicko",
         "start": "May 21",
         "end": "Jun 23",
-        "description": "Quicko\nFull Stack Developer\nAhmedabad, India\nMay 2021 - June 2023\n\nTech Stack: Java SpringBoot, Node.js, Angular, Flutter, DynamoDb, Oracle SQL, AWS, GCP, Docker, Jenkins, Git\n\nLed development of India's top online tax advisory platform, automating scheduling, payments, and order lifecycle with Flutter, Node.js, and AWS, boosting revenue by 80%.\n\nOptimized scheduling using AWS CloudFront and EventBridge, cutting API response time from 4s to 200ms.\n\nDeveloped a PWA for income tax filing, integrated with major Indian brokerage apps, onboarding 500,000+ users in 2022.\n\nDeveloped Clique, Quicko's affiliate app with Angular and Java SpringBoot, reaching 800,000 sign-ups through 100+ affiliates.\n\nStreamlined email marketing with Listmonk and AWS Lambda, analyzing AWS SES open events and saving $800 monthly by eliminating subscription fees.\n\nImplemented AWS Lambda middleware in Java and Node.js, reducing cold start time from 3-4s to <50ms.\n\nEstablished data retrieval patterns for DynamoDB, optimizing querying and pagination for better cost and access efficiency.",
+        "description": "Quicko\nFull Stack Developer\nAhmedabad, India\nMay 2021 - June 2023\n\nTech Stack: Java SpringBoot, Node.js, Angular, Flutter, DynamoDb, Oracle SQL, AWS, GCP, Docker, Jenkins, Git\n\nLed development of India's top online tax advisory platform, automating scheduling, payments, and order lifecycle with Flutter, Node.js, and AWS, boosting revenue by 80%.\n\nOptimized scheduling using AWS CloudFront and EventBridge, cutting API response time from 4s to 200ms.\n\nBuilt a Calendly-like booking system with Google Calendar APIs and OAuth, saving over $10k annually.\n\nDeveloped a PWA for income tax filing, integrated with major Indian brokerage apps, onboarding 500,000+ users in 2022.\n\nDeveloped Clique, Quicko's affiliate app with Angular and Java SpringBoot, reaching 800,000 sign-ups through 100+ affiliates.\n\nStreamlined email marketing with Listmonk and AWS Lambda, analyzing AWS SES open events and saving $800 monthly by eliminating subscription fees.\n\nEstablished data retrieval patterns for DynamoDB, optimizing querying and pagination for better cost and access efficiency.",
         "place": "Ahmedabad India"
       },
       {
@@ -48,7 +56,7 @@
         "company": "Evosys",
         "start": "Jan 21",
         "end": "April 21",
-        "description": "Evosys\nApplication Development Intern\nAhmedabad, India\nJan 2021 - May 2021\n\nTech Stack: Javascript, PL-SQL, MySQL, Java, Oracle Cloud Infrastructure\n\nDeveloped Step-Function-like workflows using Oracle Integrations Cloud and PL-SQL procedures, establishing a data tunnel between Oracle Fusion Applications.\n\nImplemented an Oracle Integration Cloud Service (OICS) workflow to automate file transfer, processing, and delivery via SFTP, improving efficiency and reducing manual intervention.",
+        "description": "Evosys\nApplication Development Intern\nAhmedabad, India\nJan 2021 - April 2021\n\nTech Stack: Javascript, PL-SQL, MySQL, Java, Oracle Cloud Infrastructure\n\nDeveloped Step-Function-like workflows using Oracle Integrations Cloud and PL-SQL procedures, establishing a data tunnel between Oracle Fusion Applications.\n\nImplemented an Oracle Integration Cloud Service (OICS) workflow to automate file transfer, processing, and delivery via SFTP, improving efficiency and reducing manual intervention.",
         "place": "Ahmedabad India"
       }
     ],

@@ -7,8 +7,13 @@ export default function WorkMobile({
 }) {
   // Find the work object with matching company from userData
   const work = userdata.user.work.find(
-    (job) => job.company.toLowerCase() === params.company.toLowerCase()
+    (job) =>
+      job.company.toLowerCase() === decodeURIComponent(params.company).toLowerCase()
   );
+
+  if (!work) {
+    return <div>Work experience not found</div>;
+  }
 
   return (
     <div className="h-full p-4">

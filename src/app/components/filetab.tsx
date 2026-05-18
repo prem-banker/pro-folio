@@ -7,7 +7,9 @@ import { FileTabProps } from "../utils/interfaces";
 import { getLastElement } from "../utils/utils";
 
 const CustomTab: React.FC<FileTabProps> = ({ text, onTap, onClose }) => {
-  const isOpen = usePathname().includes(text);
+  const pathname = usePathname();
+  const isOpen =
+    pathname.includes(text) || pathname.includes(encodeURIComponent(text));
   const filename = getLastElement(text, "/");
   const { openedFiles } = useOpenedFiles();
   const router = useRouter();

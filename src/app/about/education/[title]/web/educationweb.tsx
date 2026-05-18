@@ -10,8 +10,12 @@ export default function EducationWeb({
 }) {
   // Find the education object with matching title from userData
   const education = userdata.user.education.find(
-    (edu) => edu.title === params.title
+    (edu) => edu.title === decodeURIComponent(params.title)
   );
+
+  if (!education) {
+    return <div>Education details not found</div>;
+  }
 
   return (
     <div className="h-full w-full custom-scrollbar">
